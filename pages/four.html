@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../image/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../image/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../image/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../image/favicon/favicon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../image/favicon/favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../image/favicon/favicon-512x512.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fours Électriques TECHVISION — HeatPro Series | 45L à 75L Maroc</title>
+  <meta name="description" content="TECHVISION HeatPro Series : fours électriques 45L, 55L, 65L, 75L. Turbo Fan, 300°C max, Double Glass, Rotisserie. Classic, Inox et Inox+Rotisserie. Garantie 2 ans, livraison Maroc." />
+  <meta name="keywords" content="four electrique maroc, four techvision, four 65 litres maroc, four inox rotisserie, four turbo fan, four heatpro" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .page-hero.four-hero {
+      background:
+        linear-gradient(to right, rgba(20,8,0,.85) 0%, rgba(40,16,0,.65) 55%, rgba(20,8,0,.35) 100%),
+        url('../image/four/lifestyle/3.webp') center/cover no-repeat !important;
+    }
+    .model-variant-tabs { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+    .variant-tab { padding: 9px 20px; border-radius: 20px; font-size: .83rem; font-weight: 600; border: 2px solid var(--border); background: #fff; color: var(--text-muted); cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 7px; }
+    .variant-tab.active, .variant-tab:hover { background: var(--cta); border-color: var(--cta); color: #fff; }
+    .variant-tab i { font-size: .8rem; }
+    .oven-card { background: #fff; border-radius: var(--radius-lg); border: 2px solid var(--border); overflow: hidden; transition: var(--transition-slow); }
+    .oven-card:hover { border-color: #FF5A1F; box-shadow: 0 12px 48px rgba(255,90,31,.15); transform: translateY(-6px); }
+    .oven-card.popular { border-color: var(--gold); }
+    .oven-card-media { height: 220px; background: linear-gradient(135deg, #FFF8F5, #FFEEE5); display: flex; align-items: center; justify-content: center; padding: 20px; position: relative; overflow: hidden; }
+    .oven-card-media img { max-height: 180px; object-fit: contain; transition: transform .4s ease; }
+    .oven-card:hover .oven-card-media img { transform: scale(1.06); }
+    .oven-badge { position: absolute; top: 12px; left: 12px; }
+    .oven-card-body { padding: 20px; }
+    .oven-name { font-size: 1rem; font-weight: 700; margin-bottom: 5px; }
+    .oven-cap { font-size: .78rem; color: var(--text-muted); margin-bottom: 12px; font-weight: 500; }
+    .spec-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: .82rem; }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-row .spec-label { color: var(--text-muted); font-weight: 500; }
+    .spec-row .spec-val { font-weight: 700; color: var(--text); }
+    .oven-footer { padding: 16px 20px; background: var(--light); border-top: 1px solid var(--border); }
+    .feature-pill { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; background: #FFF4EF; color: var(--cta); border-radius: 20px; font-size: .73rem; font-weight: 600; }
+    .feature-pill i { font-size: .7rem; }
+    .how-it-works { background: linear-gradient(135deg, #FFF8F5, #FFFCFA); border: 1px solid rgba(255,90,31,.12); border-radius: var(--radius-lg); padding: 32px; }
+    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .step { text-align: center; }
+    .step-num { width: 44px; height: 44px; border-radius: 50%; background: var(--cta); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 800; margin: 0 auto 12px; }
+    .step h4 { font-size: .85rem; margin-bottom: 5px; }
+    .step p { font-size: .75rem; color: var(--text-muted); line-height: 1.5; }
+    @media (max-width: 640px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* Oven brand strip (uses inline grid style) */
+    .oven-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 768px) {
+      .oven-strip-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 400px) {
+      .oven-strip-grid { grid-template-columns: 1fr !important; }
+    }
+
+    /* === MOBILE FIXES === */
+    @media (max-width: 900px) {
+      .models-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; }
+    }
+    @media (max-width: 768px) {
+      .page-hero.four-hero { padding: 40px 0 56px !important; min-height: 360px; }
+      .oven-card-media { height: 180px !important; }
+      .oven-card-media img { max-height: 150px !important; }
+      .model-variant-tabs { overflow-x: auto; flex-wrap: nowrap !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 4px; }
+      .model-variant-tabs::-webkit-scrollbar { display: none; }
+      .variant-tab { flex-shrink: 0; white-space: nowrap; }
+      .how-it-works { padding: 24px !important; }
+      .steps-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 560px) {
+      .models-grid { grid-template-columns: 1fr !important; max-width: 400px; margin: 0 auto; }
+    }
+    @media (max-width: 400px) {
+      .steps-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProductGroup",
+    "name": "TECHVISION HeatPro Series",
+    "brand": { "@type": "Brand", "name": "TECHVISION" },
+    "description": "Fours électriques HeatPro Series de 45L à 75L avec Turbo Fan et Double Glass.",
+    "variesBy": "capacity"
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container-lg">
+    <a href="../index.html" class="nav-logo">
+      <img src="../image/logo/logo.webp" alt="TECHVISION Logo" />
+    </a>
+                <ul class="nav-menu">
+      <!-- TV -->
+      <li class="nav-item has-mega">
+        <a href="tv.html" class="nav-link">TV <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-tv"></i></div>
+                <div>
+                  <div class="mega-cat-title">Téléviseurs QLED 4K</div>
+                  <div class="mega-cat-desc">Design ultra-fin, image cristalline,<br>son immersif Dolby Atmos</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> QLED 4K · 60Hz HDR</li>
+                <li><i class="fas fa-check-circle"></i> Double Verre Acoustique</li>
+                <li><i class="fas fa-check-circle"></i> Dolby Atmos · Dolby Vision</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="tv.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/tv/lifestyle/hf_20260506_185846_3cda74e5-ab5c-4370-a955-bb98612d6482.webp" alt="TV TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Frameless</div>
+                    <a href="tv-frameless-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="tv-frameless-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="tv-frameless-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="tv-frameless-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="tv-frameless-65.html" class="mega-nav-link">TV 65&quot;</a>
+                    <a href="tv-frameless-75.html" class="mega-nav-link">TV 75&quot;</a>
+                  </div>
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Double Glass</div>
+                    <a href="tv-double-glass-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="tv-double-glass-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="tv-double-glass-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="tv-double-glass-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="tv-double-glass-65.html" class="mega-nav-link">TV 65&quot;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Fours -->
+      <li class="nav-item has-mega">
+        <a href="four.html" class="nav-link">Fours <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-fire"></i></div>
+                <div>
+                  <div class="mega-cat-title">Fours Électriques</div>
+                  <div class="mega-cat-desc">Cuisson précise, design premium,<br>performance professionnelle</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Multi-fonctions 8 modes</li>
+                <li><i class="fas fa-check-circle"></i> Résistance inox longue durée</li>
+                <li><i class="fas fa-check-circle"></i> Thermostat précis ±5°C</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="four.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/four/lifestyle/hf_20260506_194417_9fc32bd4-d673-4772-b05e-dc1843d011a0.webp" alt="Four TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="four.html" class="mega-nav-link">Four 45 L</a>
+                    <a href="four.html" class="mega-nav-link">Four 55 L</a>
+                    <a href="four.html" class="mega-nav-link">Four 75 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Climatiseurs -->
+      <li class="nav-item has-mega">
+        <a href="clim.html" class="nav-link">Climatiseurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-snowflake"></i></div>
+                <div>
+                  <div class="mega-cat-title">Climatiseurs Inverter</div>
+                  <div class="mega-cat-desc">Confort thermique optimal,<br>économie d'énergie classe A+++</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie Inverter DC</li>
+                <li><i class="fas fa-check-circle"></i> Classe énergie A+++</li>
+                <li><i class="fas fa-check-circle"></i> Mode Chaud/Froid réversible</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="clim.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="Climatiseur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par puissance</div>
+                    <a href="clim.html" class="mega-nav-link">9 000 BTU</a>
+                    <a href="clim.html" class="mega-nav-link">12 000 BTU</a>
+                    <a href="clim.html" class="mega-nav-link">18 000 BTU</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Réfrigérateurs -->
+      <li class="nav-item has-mega">
+        <a href="refrigerateur.html" class="nav-link">Réfrigérateurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-temperature-low"></i></div>
+                <div>
+                  <div class="mega-cat-title">Réfrigérateurs</div>
+                  <div class="mega-cat-desc">Conservation optimale, design élégant,<br>technologie No Frost intelligente</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie No Frost</li>
+                <li><i class="fas fa-check-circle"></i> Dégivrage automatique</li>
+                <li><i class="fas fa-check-circle"></i> Éclairage LED intérieur</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="refrigerateur.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/refrigerateur/lifestyle/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.webp" alt="Réfrigérateur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="refrigerateur.html" class="mega-nav-link">108 L</a>
+                    <a href="refrigerateur.html" class="mega-nav-link">120 L</a>
+                    <a href="refrigerateur.html" class="mega-nav-link">138 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="grossiste.html" class="nav-link">Grossiste</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle"><button class="lang-btn active" data-lang="fr">FR</button><button class="lang-btn" data-lang="ar">ع</button></div>
+      <a href="https://wa.me/212663603675" target="_blank" class="nav-whatsapp"><i class="fab fa-whatsapp"></i><span class="nav-wa-text">Commander</span></a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mega-backdrop" id="megaBackdrop"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="tv.html"><i class="fas fa-tv"></i> Téléviseurs QLED 4K</a>
+  <a href="four.html"><i class="fas fa-fire"></i> Fours Électriques</a>
+  <a href="clim.html"><i class="fas fa-snowflake"></i> Climatiseurs Inverter</a>
+  <a href="refrigerateur.html"><i class="fas fa-temperature-low"></i> Réfrigérateurs</a>
+  <a href="grossiste.html"><i class="fas fa-boxes"></i> Grossiste</a>
+  <a href="blog.html"><i class="fas fa-newspaper"></i> Blog &amp; Conseils</a>
+  <a href="contact.html"><i class="fas fa-headset"></i> SAV &amp; Contact</a>
+  <a href="https://wa.me/212663603675" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp"></i> Commander via WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero four-hero" style="margin-top:76px;">
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a>
+      <i class="fas fa-chevron-right"></i>
+      <a href="../index.html#categories">Produits</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Fours Électriques</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div>
+        <div class="series-badge" style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,90,31,.15);border:1px solid rgba(255,90,31,.3);color:#FF8C66;padding:5px 14px;border-radius:50px;font-size:.75rem;font-weight:600;margin-bottom:14px;">
+          <i class="fas fa-fire"></i> HeatPro Series — 4 modèles
+        </div>
+        <h1 style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:16px;color:#fff;">Fours Électriques <span style="color:#FF8C66;">HeatPro</span></h1>
+        <p style="color:rgba(255,255,255,.78);font-size:1.05rem;margin-bottom:28px;line-height:1.7;">De 45L à 75L avec Turbo Fan, Double Glass et Rotisserie en option. La puissance d'un four professionnel pour votre cuisine à domicile.</p>
+        <div class="btn-group">
+          <a href="#models" class="btn btn-cta btn-lg"><i class="fas fa-fire"></i> Voir les modèles</a>
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20des%20info%20sur%20vos%20fours" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Prix & Disponibilité</a>
+        </div>
+      </div>
+      <div>
+        <div class="hero-carousel">
+          <div class="hero-carousel-main">
+            <img id="fourMainImg" src="../image/four/product/65l/hf_20260506_150113_5ab01d6b-a040-4346-9413-ab988eef6fb5.webp" alt="TECHVISION HeatPro Four électrique"  loading="lazy">
+            <button class="hc-btn hc-prev" onclick="fourCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="hc-btn hc-next" onclick="fourCarousel(1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="hc-counter"><span id="fourIdx">1</span> / <span id="fourTotal">8</span></div>
+          </div>
+          <div class="hero-carousel-thumbs" id="fourThumbs">
+            <img src="../image/four/product/65l/hf_20260506_150113_5ab01d6b-a040-4346-9413-ab988eef6fb5.webp" class="hc-thumb active" onclick="fourGo(0)" alt=""  loading="lazy">
+            <img src="../image/four/product/65l/hf_20260506_150621_8c8bd845-86ac-4dc8-84ac-8cb6b1b559c8.webp" class="hc-thumb" onclick="fourGo(1)" alt=""  loading="lazy">
+            <img src="../image/four/product/65l/hf_20260506_150628_f2f4dbc4-acde-4320-94e2-76606389045c.webp" class="hc-thumb" onclick="fourGo(2)" alt=""  loading="lazy">
+            <img src="../image/four/product/65l/hf_20260506_150635_06f73d47-53b6-4173-8ef2-141fcf246421.webp" class="hc-thumb" onclick="fourGo(3)" alt=""  loading="lazy">
+            <img src="../image/four/product/65l/hf_20260506_150642_f65d9c19-ab13-45b9-93de-675eb870ef15.webp" class="hc-thumb" onclick="fourGo(4)" alt=""  loading="lazy">
+            <img src="../image/four/product/65l/hf_20260506_150651_3e66d605-4844-4bb9-bb26-443ea2ef1554.webp" class="hc-thumb" onclick="fourGo(5)" alt=""  loading="lazy">
+            <img src="../image/four/product/65l/hf_20260506_150659_9a95deb4-0077-4f20-8981-1b6f53f1ba1e.webp" class="hc-thumb" onclick="fourGo(6)" alt=""  loading="lazy">
+            <img src="../image/four/product/65l/hf_20260506_150718_263d5177-5b3a-49bd-ae4d-ffaee29803a0.webp" class="hc-thumb" onclick="fourGo(7)" alt=""  loading="lazy">
+          </div>
+          <div style="display:flex;gap:8px;justify-content:center;margin-top:12px;flex-wrap:wrap;">
+            <button onclick="fourSwitchModel('45L')" id="btn45" style="padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:.72rem;font-weight:600;cursor:pointer;">45L</button>
+            <button onclick="fourSwitchModel('55L')" id="btn55" style="padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:.72rem;font-weight:600;cursor:pointer;">55L</button>
+            <button onclick="fourSwitchModel('65L')" id="btn65" style="padding:4px 12px;border-radius:20px;border:2px solid rgba(255,255,255,.8);background:rgba(255,255,255,.2);color:#fff;font-size:.72rem;font-weight:700;cursor:pointer;">65L ★</button>
+            <button onclick="fourSwitchModel('75L')" id="btn75" style="padding:4px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:.72rem;font-weight:600;cursor:pointer;">75L</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BRAND STRIP for oven -->
+<div style="background:var(--cta);padding:0;">
+  <div class="container">
+    <div class="oven-strip-grid">
+      <div style="display:flex;align-items:center;gap:12px;padding:20px 24px;border-right:1px solid rgba(255,255,255,.2);color:#fff;">
+        <i class="fas fa-fire" style="font-size:1.3rem;opacity:.9;"></i>
+        <div><strong style="display:block;font-size:.88rem;">Jusqu'à 300°C</strong><span style="font-size:.72rem;opacity:.8;">Haute performance</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:20px 24px;border-right:1px solid rgba(255,255,255,.2);color:#fff;">
+        <i class="fas fa-wind" style="font-size:1.3rem;opacity:.9;"></i>
+        <div><strong style="display:block;font-size:.88rem;">Turbo Fan</strong><span style="font-size:.72rem;opacity:.8;">Chaleur uniforme</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:20px 24px;border-right:1px solid rgba(255,255,255,.2);color:#fff;">
+        <i class="fas fa-layer-group" style="font-size:1.3rem;opacity:.9;"></i>
+        <div><strong style="display:block;font-size:.88rem;">Double Glass</strong><span style="font-size:.72rem;opacity:.8;">Sécurité & design</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:20px 24px;color:#fff;">
+        <i class="fas fa-rotate" style="font-size:1.3rem;opacity:.9;"></i>
+        <div><strong style="display:block;font-size:.88rem;">Rotisserie</strong><span style="font-size:.72rem;opacity:.8;">Modèles Premium</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODELS -->
+<section style="background:#fff;padding:80px 0;" id="models">
+  <div class="container">
+    <div data-reveal="up" style="margin-bottom:36px;">
+      <span class="section-label">Nos Modèles</span>
+      <h2 class="section-title">La gamme <span>HeatPro Series</span></h2>
+      <p class="section-desc">4 capacités, 3 finitions. Trouvez le four parfait pour votre famille.</p>
+    </div>
+
+    <!-- Capacity Filter -->
+    <div class="model-variant-tabs">
+      <button class="variant-tab active" data-tab="all"><i class="fas fa-th"></i> Tous</button>
+      <button class="variant-tab" data-tab="classic"><i class="fas fa-cube"></i> Classic</button>
+      <button class="variant-tab" data-tab="inox"><i class="fas fa-star"></i> Inox</button>
+      <button class="variant-tab" data-tab="rotisserie"><i class="fas fa-rotate"></i> Inox + Rotisserie</button>
+    </div>
+
+    <div class="models-grid">
+
+      <!-- 45L Classic -->
+      <div class="oven-card tab-panel" data-panel="classic" data-reveal="up">
+        <div class="oven-card-media">
+          <img src="../image/four/product/45l/hf_20260506_154004_1d0d3460-b089-4055-baa3-b275bdbf1c73.webp" alt="TECHVISION HeatPro 45L Classic"  loading="lazy">
+          <div class="oven-badge"><span class="badge badge-primary">Classic</span></div>
+        </div>
+        <div class="oven-card-body">
+          <div class="oven-name">HeatPro 45L – Classic Edition</div>
+          <div class="oven-cap">Réf. TV45-F01 • Idéal 2-3 personnes</div>
+          <div class="spec-row"><span class="spec-label">Capacité</span><span class="spec-val">45 Litres</span></div>
+          <div class="spec-row"><span class="spec-label">Puissance</span><span class="spec-val">1400W</span></div>
+          <div class="spec-row"><span class="spec-label">Température max</span><span class="spec-val">300°C</span></div>
+          <div class="spec-row"><span class="spec-label">Turbo Fan</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Double Glass</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Rotisserie</span><span class="spec-val">— Non</span></div>
+          <div class="spec-row"><span class="spec-label">Timer</span><span class="spec-val">✓ Inclus</span></div>
+        </div>
+        <div class="oven-footer">
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20four%2045L%20Classic" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Demander le prix
+          </a>
+        </div>
+      </div>
+
+      <!-- 55L Classic -->
+      <div class="oven-card tab-panel" data-panel="classic" data-reveal="up" data-delay="80">
+        <div class="oven-card-media">
+          <img src="../image/four/product/55l/hf_20260506_153130_dbc63ee2-30e9-409f-a76f-18be33fab6d2.webp" alt="TECHVISION HeatPro 55L Classic"  loading="lazy">
+          <div class="oven-badge"><span class="badge badge-primary">Classic</span></div>
+        </div>
+        <div class="oven-card-body">
+          <div class="oven-name">HeatPro 55L – Classic Edition</div>
+          <div class="oven-cap">Réf. TV55-F01 • Idéal 3-4 personnes</div>
+          <div class="spec-row"><span class="spec-label">Capacité</span><span class="spec-val">55 Litres</span></div>
+          <div class="spec-row"><span class="spec-label">Puissance</span><span class="spec-val">1400W</span></div>
+          <div class="spec-row"><span class="spec-label">Température max</span><span class="spec-val">300°C</span></div>
+          <div class="spec-row"><span class="spec-label">Turbo Fan</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Double Glass</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Rotisserie</span><span class="spec-val">— Non</span></div>
+          <div class="spec-row"><span class="spec-label">Timer</span><span class="spec-val">✓ Inclus</span></div>
+        </div>
+        <div class="oven-footer">
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20four%2055L%20Classic" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Demander le prix
+          </a>
+        </div>
+      </div>
+
+      <!-- 65L Inox -->
+      <div class="oven-card tab-panel" data-panel="inox" data-reveal="up" data-delay="160">
+        <div class="oven-card-media">
+          <img src="../image/four/product/65l/hf_20260506_150621_8c8bd845-86ac-4dc8-84ac-8cb6b1b559c8.webp" alt="TECHVISION HeatPro 65L Inox"  loading="lazy">
+          <div class="oven-badge"><span class="badge badge-accent">Inox</span></div>
+        </div>
+        <div class="oven-card-body">
+          <div class="oven-name">HeatPro 65L – Inox Edition</div>
+          <div class="stock-badge" style="margin-bottom:6px;">Stock Limité — 5 restants</div>
+          <div class="oven-cap">Réf. TV65-F01 • Idéal 4-5 personnes</div>
+          <div class="spec-row"><span class="spec-label">Capacité</span><span class="spec-val">65 Litres</span></div>
+          <div class="spec-row"><span class="spec-label">Puissance</span><span class="spec-val">1600W</span></div>
+          <div class="spec-row"><span class="spec-label">Température max</span><span class="spec-val">300°C</span></div>
+          <div class="spec-row"><span class="spec-label">Turbo Fan</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Double Glass</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Finition</span><span class="spec-val">Inox Premium</span></div>
+          <div class="spec-row"><span class="spec-label">Timer</span><span class="spec-val">✓ Inclus</span></div>
+        </div>
+        <div class="oven-footer">
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20four%2065L%20Inox" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Demander le prix
+          </a>
+        </div>
+      </div>
+
+      <!-- 65L Inox Rotisserie -->
+      <div class="oven-card popular tab-panel" data-panel="rotisserie" data-reveal="up">
+        <div class="oven-card-media">
+          <img src="../image/four/product/65l/hf_20260506_150621_8c8bd845-86ac-4dc8-84ac-8cb6b1b559c8.webp" alt="TECHVISION HeatPro 65L Inox Rotisserie"  loading="lazy">
+          <div class="oven-badge"><span class="badge badge-gold">⭐ Best-seller</span></div>
+        </div>
+        <div class="oven-card-body">
+          <div class="oven-name">HeatPro 65L – Inox + Rotisserie</div>
+          <div class="stock-badge" style="margin-bottom:6px;">Stock Limité — 3 restants</div>
+          <div class="oven-cap">Réf. TV65-F01-R • Le choix des chefs</div>
+          <div class="spec-row"><span class="spec-label">Capacité</span><span class="spec-val">65 Litres</span></div>
+          <div class="spec-row"><span class="spec-label">Puissance</span><span class="spec-val">1600W</span></div>
+          <div class="spec-row"><span class="spec-label">Température max</span><span class="spec-val">300°C</span></div>
+          <div class="spec-row"><span class="spec-label">Turbo Fan</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Double Glass</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row" style="background:rgba(255,90,31,.04);"><span class="spec-label">Rotisserie</span><span class="spec-val" style="color:var(--cta);">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Timer</span><span class="spec-val">✓ Inclus</span></div>
+        </div>
+        <div class="oven-footer">
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20four%2065L%20Inox%20Rotisserie" target="_blank" class="btn btn-cta" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Demander le prix
+          </a>
+        </div>
+      </div>
+
+      <!-- 75L Classic -->
+      <div class="oven-card tab-panel" data-panel="classic" data-reveal="up" data-delay="80">
+        <div class="oven-card-media">
+          <img src="../image/four/product/75l/hf_20260506_151754_14bc3368-f19f-448e-8f58-ed799533a6a9.webp" alt="TECHVISION HeatPro 75L Classic"  loading="lazy">
+          <div class="oven-badge"><span class="badge badge-primary">Classic</span></div>
+        </div>
+        <div class="oven-card-body">
+          <div class="oven-name">HeatPro 75L – Classic Edition</div>
+          <div class="oven-cap">Réf. TV75-F01 • Idéal famille 5+ personnes</div>
+          <div class="spec-row"><span class="spec-label">Capacité</span><span class="spec-val">75 Litres</span></div>
+          <div class="spec-row"><span class="spec-label">Puissance</span><span class="spec-val">2000W</span></div>
+          <div class="spec-row"><span class="spec-label">Température max</span><span class="spec-val">300°C</span></div>
+          <div class="spec-row"><span class="spec-label">Turbo Fan</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Double Glass</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Rotisserie</span><span class="spec-val">— Non</span></div>
+          <div class="spec-row"><span class="spec-label">Timer</span><span class="spec-val">✓ Inclus</span></div>
+        </div>
+        <div class="oven-footer">
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20four%2075L%20Classic" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Demander le prix
+          </a>
+        </div>
+      </div>
+
+      <!-- 75L Inox Rotisserie -->
+      <div class="oven-card tab-panel" data-panel="rotisserie" data-reveal="up" data-delay="160">
+        <div class="oven-card-media">
+          <img src="../image/four/product/75l/hf_20260506_151754_14bc3368-f19f-448e-8f58-ed799533a6a9.webp" alt="TECHVISION HeatPro 75L Inox Rotisserie"  loading="lazy">
+          <div class="oven-badge"><span class="badge badge-promo">Premium</span></div>
+        </div>
+        <div class="oven-card-body">
+          <div class="oven-name">HeatPro 75L – Inox + Rotisserie</div>
+          <div class="oven-cap">Réf. TV75-F01-R • Le plus complet</div>
+          <div class="spec-row"><span class="spec-label">Capacité</span><span class="spec-val">75 Litres</span></div>
+          <div class="spec-row"><span class="spec-label">Puissance</span><span class="spec-val">2000W</span></div>
+          <div class="spec-row"><span class="spec-label">Température max</span><span class="spec-val">300°C</span></div>
+          <div class="spec-row"><span class="spec-label">Turbo Fan</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Double Glass</span><span class="spec-val">✓ Inclus</span></div>
+          <div class="spec-row" style="background:rgba(255,90,31,.04);"><span class="spec-label">Rotisserie</span><span class="spec-val" style="color:var(--cta);">✓ Inclus</span></div>
+          <div class="spec-row"><span class="spec-label">Finition</span><span class="spec-val">Inox Premium</span></div>
+        </div>
+        <div class="oven-footer">
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20four%2075L%20Inox%20Rotisserie" target="_blank" class="btn btn-cta" style="width:100%;justify-content:center;">
+            <i class="fab fa-whatsapp"></i> Demander le prix
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section style="background:var(--light);padding:80px 0;">
+  <div class="container">
+    <div class="text-center" data-reveal="up" style="margin-bottom:40px;">
+      <span class="section-label">Tableau Comparatif</span>
+      <h2 class="section-title">Tous les modèles <span>en un coup d'œil</span></h2>
+    </div>
+    <div style="overflow-x:auto;" data-reveal="up">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Modèle</th>
+            <th>HeatPro 45L</th>
+            <th>HeatPro 55L</th>
+            <th class="highlight">HeatPro 65L ⭐</th>
+            <th>HeatPro 75L</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Capacité</td><td>45 L</td><td>55 L</td><td class="highlight">65 L</td><td>75 L</td></tr>
+          <tr><td>Puissance</td><td>1400W</td><td>1400W</td><td class="highlight">1600W</td><td>2000W</td></tr>
+          <tr><td>Température Max</td><td>300°C</td><td>300°C</td><td class="highlight">300°C</td><td>300°C</td></tr>
+          <tr><td>Turbo Fan</td><td class="check"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td><td class="check highlight"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Double Glass</td><td class="check"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td><td class="check highlight"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Timer intégré</td><td class="check"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td><td class="check highlight"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Rotisserie</td><td class="cross"><i class="fas fa-minus"></i></td><td class="cross"><i class="fas fa-minus"></i></td><td class="highlight" style="color:var(--whatsapp);">Optionnel</td><td style="color:var(--whatsapp);">Optionnel</td></tr>
+          <tr><td>Finition Inox</td><td class="cross"><i class="fas fa-minus"></i></td><td class="cross"><i class="fas fa-minus"></i></td><td class="highlight" style="color:var(--whatsapp);">Disponible</td><td style="color:var(--whatsapp);">Disponible</td></tr>
+          <tr><td>Famille recommandée</td><td>2-3 pers.</td><td>3-4 pers.</td><td class="highlight">4-5 pers.</td><td>5+ pers.</td></tr>
+          <tr><td>Garantie</td><td>2 ans</td><td>2 ans</td><td class="highlight">2 ans</td><td>2 ans</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20aidez-moi%20à%20choisir%20un%20four%20selon%20ma%20famille" target="_blank" class="btn btn-cta btn-lg">
+        <i class="fab fa-whatsapp"></i> Aide au choix via WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE / TIPS -->
+<section style="background:#fff;padding:80px 0;">
+  <div class="container">
+    <div class="text-center" data-reveal="up" style="margin-bottom:48px;">
+      <span class="section-label">Conseils d'utilisation</span>
+      <h2 class="section-title">Tirez le <span>meilleur</span> de votre HeatPro</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;" data-reveal="up">
+      <div class="how-it-works">
+        <h3 style="margin-bottom:20px;color:var(--cta);display:flex;align-items:center;gap:10px;"><i class="fas fa-lightbulb"></i> Pourquoi le Turbo Fan ?</h3>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:14px;">Le Turbo Fan fait circuler l'air chaud de manière uniforme dans toute la cavité du four. Résultat : vos plats cuisent de façon homogène, sans zones froides ou brûlées.</p>
+        <p style="color:var(--text-muted);line-height:1.8;">Idéal pour la pâtisserie, les viandes rôties et les pizzas. Le Turbo Fan réduit aussi le temps de cuisson de 20-30% par rapport à un four sans ventilation.</p>
+      </div>
+      <div class="how-it-works">
+        <h3 style="margin-bottom:20px;color:var(--cta);display:flex;align-items:center;gap:10px;"><i class="fas fa-layer-group"></i> Double Glass : sécurité avant tout</h3>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:14px;">La double vitre isole thermiquement la porte du four. La face extérieure reste fraîche au toucher, même à 300°C — protection essentielle si vous avez des enfants.</p>
+        <p style="color:var(--text-muted);line-height:1.8;">Elle maintient aussi mieux la chaleur à l'intérieur, améliorant l'efficacité énergétique du four de 15 à 20%.</p>
+      </div>
+    </div>
+    <div style="margin-top:32px;" data-reveal="up">
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Préchauffage</h4>
+          <p>Préchauffez toujours 10 minutes avant d'enfourner pour une cuisson optimale.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Bon niveau</h4>
+          <p>Utilisez le niveau central pour la plupart des recettes, grille du bas pour les pizzas.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Timer</h4>
+          <p>Réglez le timer selon la recette. Un signal sonore vous alertera en fin de cuisson.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h4>Nettoyage</h4>
+          <p>Nettoyez après refroidissement complet avec un chiffon humide et du vinaigre blanc.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE BANNER -->
+<div style="position:relative;overflow:hidden;height:380px;display:flex;align-items:center;justify-content:center;">
+  <img src="../image/four/lifestyle/hf_20260506_194417_9fc32bd4-d673-4772-b05e-dc1843d011a0.webp" alt="TECHVISION HeatPro Lifestyle" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;"  loading="lazy">
+  <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(26,10,0,.92) 0%, rgba(74,24,0,.65) 50%, rgba(26,10,0,.15) 100%);"></div>
+  <div class="container" style="position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:32px;">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,90,31,.2);border:1px solid rgba(255,90,31,.35);color:#FF8C66;padding:4px 12px;border-radius:20px;font-size:.72rem;font-weight:600;margin-bottom:14px;"><i class="fas fa-fire"></i> HeatPro Series — Turbo Fan 300°C</div>
+      <h2 style="color:#fff;font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:10px;">Cuisinez comme<br/><span style="color:#FF8C66;">un chef.</span></h2>
+      <p style="color:rgba(255,255,255,.78);font-size:.95rem;max-width:440px;">Turbo Fan, Double Glass et Rotisserie pour des résultats dignes des plus grands restaurants. Jusqu'à 300°C de précision.</p>
+    </div>
+    <div style="flex-shrink:0;">
+      <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20un%20four%20HeatPro" target="_blank" class="btn btn-whatsapp btn-lg" style="white-space:nowrap;"><i class="fab fa-whatsapp"></i> Demander le prix</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#1A0A00,#4A1800,#6B2200);padding:80px 0;text-align:center;color:#fff;">
+  <div class="container" data-reveal="up">
+    <h2 style="margin-bottom:14px;">Prêt à cuisiner <span style="color:#FF8C66;">comme un Chef ?</span></h2>
+    <p style="color:rgba(255,255,255,.75);margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto;font-size:1.05rem;">
+      Contactez-nous sur WhatsApp pour connaître les prix, la disponibilité et organiser la livraison dans votre ville.
+    </p>
+    <div class="btn-group" style="justify-content:center;">
+      <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20commander%20un%20four" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Commander sur WhatsApp</a>
+      <a href="tel:+212663603675" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> +212 663 603 675</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUITS SIMILAIRES -->
+<section class="similar-products">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px;" data-reveal="up">
+      <span class="section-label">Découvrez aussi</span>
+      <h2 class="section-title">Produits <span>Complémentaires</span></h2>
+      <p class="section-desc">Équipez votre maison avec nos autres gammes premium.</p>
+    </div>
+    <div class="similar-grid">
+      <a href="clim.html" class="sim-card" data-reveal="up">
+        <div class="sim-card-bg">
+          <img src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="Climatiseurs TECHVISION"  loading="lazy">
+        </div>
+        <div class="sim-card-body">
+          <span class="sim-card-label">Climatiseurs</span>
+          <h3 class="sim-card-name">AirSmart Inverter A++</h3>
+          <span class="sim-card-cta">Explorer <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="refrigerateur.html" class="sim-card" data-reveal="up" data-delay="80">
+        <div class="sim-card-bg">
+          <img src="../image/refrigerateur/lifestyle/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.webp" alt="Réfrigérateurs TECHVISION"  loading="lazy">
+        </div>
+        <div class="sim-card-body">
+          <span class="sim-card-label">Réfrigérateurs</span>
+          <h3 class="sim-card-name">FreshTech No Frost A++</h3>
+          <span class="sim-card-cta">Explorer <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="tv.html" class="sim-card" data-reveal="up" data-delay="160">
+        <div class="sim-card-bg">
+          <img src="../image/tv/lifestyle/hf_20260506_191020_917e0f0f-53f4-4fc5-9f88-ef750bce547c.webp" alt="TV QLED 4K TECHVISION"  loading="lazy">
+        </div>
+        <div class="sim-card-body">
+          <span class="sim-card-label">Téléviseurs</span>
+          <h3 class="sim-card-name">Vision Series QLED 4K</h3>
+          <span class="sim-card-cta">Explorer <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<!-- ORDER FORM -->
+<section class="order-section" id="commander">
+  <div class="container">
+    <div class="order-trust-strip">
+      <div class="order-trust-item"><i class="fas fa-truck"></i> Livraison 24h à domicile</div>
+      <div class="order-trust-item"><i class="fas fa-box-open"></i> Gratuite partout au Maroc</div>
+      <div class="order-trust-item"><i class="fas fa-shield-alt"></i> Garantie 2 ans</div>
+      <div class="order-trust-item"><i class="fas fa-headset"></i> SAV 24/24</div>
+    </div>
+    <div class="order-card">
+      <div class="order-card-header">
+        <div class="order-eyebrow"><i class="fas fa-star"></i> Commande Officielle</div>
+        <h2 class="order-headline">TECHVISION vous livre en <span>24h</span><br>jusqu'à votre porte — <span>Gratuitement</span></h2>
+        <p class="order-subline">Remplissez le formulaire · Notre équipe vous rappelle dans les 2h</p>
+      </div>
+      <div id="orderFormWrap">
+        <div class="order-form-body">
+          <div class="order-product-label"><i class="fas fa-fire"></i> Four Électrique HeatPro</div>
+          <form id="orderForm" onsubmit="submitOrder(event)">
+            <input type="hidden" name="prix" id="orderPrix" value="" />
+            <div class="order-form-row">
+              <div class="order-field order-full">
+                <label>Article *</label>
+                <input type="text" id="orderArticle" name="article" placeholder="Ex: Four Électrique HeatPro..." required />
+              </div>
+            </div>
+            <div class="order-form-row">
+              <div class="order-field order-full">
+                <label>Nom &amp; Prénom *</label>
+                <input type="text" name="nom_prenom" placeholder="Votre nom et prénom complets" required autocomplete="name" />
+              </div>
+            </div>
+            <div class="order-form-row">
+              <div class="order-field">
+                <label>Téléphone *</label>
+                <input type="tel" name="telephone" placeholder="06 XX XX XX XX" required autocomplete="tel" />
+              </div>
+              <div class="order-field">
+                <label>WhatsApp</label>
+                <input type="tel" name="whatsapp" placeholder="06 XX XX XX XX" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="order-form-row">
+              <div class="order-field">
+                <label>Ville *</label>
+                <input type="text" name="ville" placeholder="Casablanca, Rabat..." required />
+              </div>
+              <div class="order-field">
+                <label>Quantité</label>
+                <select name="quantite" id="orderQte">
+                  <option value="1">1 unité</option>
+                  <option value="2">2 unités</option>
+                  <option value="3">3 unités</option>
+                  <option value="4">4 unités</option>
+                  <option value="5">5+ unités</option>
+                </select>
+              </div>
+            </div>
+            <div class="order-form-row">
+              <div class="order-field order-full">
+                <label>Adresse complète *</label>
+                <textarea name="adresse" placeholder="N° rue, quartier, ville — pour la livraison à votre porte" required></textarea>
+              </div>
+            </div>
+            <div class="order-error-msg" id="orderError">Une erreur s'est produite. Réessayez ou appelez le +212 663 603 675.</div>
+            <button type="submit" class="order-submit" id="orderSubmitBtn">
+              <i class="fas fa-shopping-bag"></i> Commander maintenant
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="order-success" id="orderSuccess" style="display:none;">
+        <div class="order-success-icon"><i class="fas fa-check"></i></div>
+        <h3>Commande confirmée !</h3>
+        <p>✅ Merci ! Votre commande a été reçue. Notre équipe vous contactera rapidement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function() {
+  var BASE_PRICE = '';
+
+  function getPrice() {
+    var unitPrice = parseFloat(BASE_PRICE) || 0;
+    if (!unitPrice) return '';
+    var qte = parseInt(document.getElementById('orderQte') ? document.getElementById('orderQte').value : 1) || 1;
+    return (unitPrice * qte) + ' DH';
+  }
+
+  window.submitOrder = function(e) {
+    e.preventDefault();
+    // Validate required fields
+    var form   = document.getElementById('orderForm');
+    var inputs = form.querySelectorAll('[required]');
+    var valid  = true;
+    inputs.forEach(function(inp) {
+      inp.style.borderColor = '';
+      if (!inp.value.trim()) {
+        inp.style.borderColor = 'rgba(220,0,0,.6)';
+        valid = false;
+      }
+    });
+    if (!valid) return;
+
+    var btn   = document.getElementById('orderSubmitBtn');
+    var errEl = document.getElementById('orderError');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+    errEl.style.display = 'none';
+
+    // Set prix before reading FormData
+    var prixEl = document.getElementById('orderPrix');
+    if (prixEl) prixEl.value = getPrice();
+
+    var data = {};
+    new FormData(form).forEach(function(v, k) { data[k] = v; });
+    data.date = new Date().toLocaleString('fr-MA', {timeZone: 'Africa/Casablanca'});
+    data.url  = window.location.href;
+
+    fetch('https://script.google.com/macros/s/AKfycbycmgPI82VpziU9BcFnEMAJrzf5hYlUlWQ9deoh6vUmR-mPq7E5XcUhI4PvxUUd41Fx_A/exec', {
+      method:  'POST',
+      mode:    'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body:    JSON.stringify(data)
+    })
+    .then(function() {
+      document.getElementById('orderFormWrap').style.display = 'none';
+      document.getElementById('orderSuccess').style.display  = 'block';
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead', {content_name: data.article || 'Four Électrique HeatPro'});
+      if (typeof ttq !== 'undefined') ttq.track('SubmitForm', {content_id: data.article || 'Four Électrique HeatPro'});
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-shopping-bag"></i> Commander maintenant';
+      errEl.style.display = 'block';
+    });
+  };
+})();
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="footer-logo-link">
+          <img src="../image/logo/logo.webp" alt="TECHVISION Logo" class="footer-logo-img" />
+        </a>
+        <p class="footer-desc">L'électroménager premium au meilleur prix au Maroc. SAV 24/24 · Garantie 2 ans · Livraison partout.</p>
+        <div class="footer-contacts">
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/212663603675">+212 663 603 675</a></div>
+          <div class="footer-contact-item"><i class="fas fa-headset"></i><a href="tel:+212660240276">SAV: +212 660 240 276</a></div>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/tech_vision.ma/" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/212663603675" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div><div class="footer-heading">NOS PRODUITS</div><ul class="footer-links"><li><a href="tv.html">Téléviseurs QLED 4K</a></li><li><a href="four.html">Fours HeatPro Series</a></li><li><a href="clim.html">Climatiseurs AirSmart</a></li><li><a href="refrigerateur.html">Réfrigérateurs FreshTech</a></li></ul></div>
+      <div><div class="footer-heading">SERVICES</div><ul class="footer-links"><li><a href="grossiste.html">Vente en Gros</a></li><li><a href="contact.html#taksit">Paiement Taksit</a></li><li><a href="contact.html#sav">SAV & Garantie</a></li><li><a href="blog.html">Blog & Conseils</a></li></ul></div>
+      <div><div class="footer-heading">BLOG</div><ul class="footer-links"><li><a href="blog-four.html">Choisir son four électrique</a></li><li><a href="blog-tv.html">Guide TV 4K</a></li><li><a href="blog-clim.html">Climatiseur Inverter guide</a></li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container">© 2024 TECHVISION Maroc. Tous droits réservés.</div></div>
+</footer>
+
+<div class="whatsapp-float" id="waFloat">
+  <div class="wa-chat-panel" id="waChatPanel" aria-hidden="true">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar"><i class="fab fa-whatsapp"></i></div>
+      <div class="wa-chat-info">
+        <strong>TECHVISION Maroc</strong>
+        <span><span class="wa-online-dot"></span> En ligne</span>
+      </div>
+      <button class="wa-chat-close" id="waClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-bubble">
+        <p>👋 Je souhaite avoir plus d'informations</p>
+        <time>Maintenant</time>
+      </div>
+    </div>
+    <a href="https://wa.me/212663603675?text=%F0%9F%91%8B%20Je%20souhaite%20avoir%20plus%20d%27informations" target="_blank" class="wa-chat-send">
+      <i class="fab fa-whatsapp"></i>
+      <span>Envoyer ce message</span>
+    </a>
+  </div>
+  <button class="wa-main-btn" id="waMainBtn" aria-label="WhatsApp TECHVISION">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-notification">1</span>
+  </button>
+</div>
+
+<!-- STICKY CTA BAR -->
+<div class="product-sticky-bar" id="stickyBar">
+  <div class="product-sticky-bar-inner">
+    <div>
+      <div class="product-sticky-name">TECHVISION HeatPro — Fours Électriques</div>
+      <div class="product-sticky-sub">45L à 75L · Inox · Rotisserie · 300°C · Garantie 2 ans</div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20d%27un%20four%20HeatPro" target="_blank" class="btn btn-primary" style="gap:8px;display:flex;align-items:center;"><i class="fab fa-whatsapp"></i> Commander via WhatsApp</a>
+      <a href="tel:+212663603675" class="btn btn-outline" style="gap:8px;display:flex;align-items:center;"><i class="fas fa-phone"></i> Appeler</a>
+    </div>
+  </div>
+</div>
+
+<button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+<script src="../js/main.js"></script>
+<script>
+  const _stb=document.getElementById('scrollTopBtn');
+  const _sticky=document.getElementById('stickyBar');
+  window.addEventListener('scroll',()=>{
+    _stb.classList.toggle('visible',window.scrollY>400);
+    _sticky.classList.toggle('show',window.scrollY>500);
+  });
+</script>
+<script>
+  (function(){
+    const models = {
+      '45L': ['../image/four/product/45l/hf_20260506_154004_1d0d3460-b089-4055-baa3-b275bdbf1c73.webp','../image/four/product/45l/hf_20260506_154012_275a5c74-c774-4112-9b72-cb5a4112a0c3.webp','../image/four/product/45l/hf_20260506_154019_bacbb6bc-47bf-42aa-bee5-115702cd8f52.webp','../image/four/product/45l/hf_20260506_154025_9a74679e-2833-4db6-acdf-3162d6a9fd85.webp','../image/four/product/45l/hf_20260506_154033_38147b10-9b6b-40e9-b525-4c4abdcbfcf0.webp','../image/four/product/45l/hf_20260506_154041_6ac0db3e-0f5a-4941-9734-ca61896ff2f6.webp','../image/four/product/45l/hf_20260506_154048_6b667b92-c7b9-410f-9ed2-4240a4e8d38e.webp'],
+      '55L': ['../image/four/product/55l/hf_20260506_153130_dbc63ee2-30e9-409f-a76f-18be33fab6d2.webp','../image/four/product/55l/hf_20260506_153138_075d24bf-08ac-4ab5-9c52-2edf5db175e4.webp','../image/four/product/55l/hf_20260506_153153_868d218a-e70a-4450-8c9f-a7b35f79f4d8.webp','../image/four/product/55l/hf_20260506_153200_2bd38111-831c-4137-b884-43bd59fc0756.webp','../image/four/product/55l/hf_20260506_153211_04514d3d-68b9-4497-815b-ad566e2456b3.webp','../image/four/product/55l/hf_20260506_153222_361afc75-6ea9-441b-95b5-fa65ec17687a.webp','../image/four/product/55l/hf_20260506_153235_1efa9fbc-a209-4421-8163-19254f5b73e4.webp'],
+      '65L': ['../image/four/product/65l/hf_20260506_150113_5ab01d6b-a040-4346-9413-ab988eef6fb5.webp','../image/four/product/65l/hf_20260506_150621_8c8bd845-86ac-4dc8-84ac-8cb6b1b559c8.webp','../image/four/product/65l/hf_20260506_150628_f2f4dbc4-acde-4320-94e2-76606389045c.webp','../image/four/product/65l/hf_20260506_150635_06f73d47-53b6-4173-8ef2-141fcf246421.webp','../image/four/product/65l/hf_20260506_150642_f65d9c19-ab13-45b9-93de-675eb870ef15.webp','../image/four/product/65l/hf_20260506_150651_3e66d605-4844-4bb9-bb26-443ea2ef1554.webp','../image/four/product/65l/hf_20260506_150659_9a95deb4-0077-4f20-8981-1b6f53f1ba1e.webp','../image/four/product/65l/hf_20260506_150718_263d5177-5b3a-49bd-ae4d-ffaee29803a0.webp'],
+      '75L': ['../image/four/product/75l/hf_20260506_151754_14bc3368-f19f-448e-8f58-ed799533a6a9.webp','../image/four/product/75l/hf_20260506_151802_05b8da2a-7ff8-4c91-bbc0-fd28e2d2e88c.webp','../image/four/product/75l/hf_20260506_151808_a8206ca4-cdef-4496-837a-55275856b405.webp','../image/four/product/75l/hf_20260506_151822_4da1d8e2-fa8a-4a8d-bee6-7b7e786a14de.webp','../image/four/product/75l/hf_20260506_151829_0e653d1d-9120-4d7a-ada8-a1b5e73b1784.webp','../image/four/product/75l/hf_20260506_151835_eeb439ac-1991-4c5e-b1f7-9e5712cef12f.webp','../image/four/product/75l/hf_20260506_151842_f521f630-9ac7-40aa-a530-0a8abbf78b7f.webp','../image/four/product/75l/hf_20260506_151852_1de726a1-0ed8-46c3-8dd1-eedca6dfc70e.webp']
+    };
+    let imgs = models['65L'], cur = 0;
+    const mainImg = document.getElementById('fourMainImg');
+    const idxEl = document.getElementById('fourIdx');
+    const totalEl = document.getElementById('fourTotal');
+    const thumbsEl = document.getElementById('fourThumbs');
+    function renderThumbs(){
+      thumbsEl.innerHTML = imgs.map((src,i)=>`<img src="${src}" class="hc-thumb${i===cur?' active':''}" onclick="fourGo(${i})" alt=""  loading="lazy">`).join('');
+    }
+    function update(){ mainImg.classList.add('fading'); setTimeout(()=>{ mainImg.src=imgs[cur]; mainImg.classList.remove('fading'); },200); idxEl.textContent=cur+1; totalEl.textContent=imgs.length; thumbsEl.querySelectorAll('.hc-thumb').forEach((t,i)=>t.classList.toggle('active',i===cur)); }
+    window.fourCarousel = function(d){ cur=(cur+d+imgs.length)%imgs.length; update(); };
+    window.fourGo = function(i){ cur=i; update(); };
+    window.fourSwitchModel = function(m){
+      imgs=models[m]; cur=0; renderThumbs(); update();
+      ['45L','55L','65L','75L'].forEach(k=>{ const b=document.getElementById('btn'+k); if(b){ b.style.border=k===m?'2px solid rgba(255,255,255,.8)':'1px solid rgba(255,255,255,.3)'; b.style.fontWeight=k===m?'700':'600'; b.style.background=k===m?'rgba(255,255,255,.2)':'rgba(255,255,255,.1)'; } });
+    };
+    let autoTimer = setInterval(()=>fourCarousel(1), 3800);
+  })();
+</script>
+<script>
+  (function () {
+    var mainBtn = document.getElementById('waMainBtn');
+    var panel   = document.getElementById('waChatPanel');
+    var closeBtn = document.getElementById('waClose');
+    var float   = document.getElementById('waFloat');
+    if (!mainBtn || !panel) return;
+    mainBtn.addEventListener('click', function () {
+      var isOpen = panel.classList.toggle('open');
+      panel.setAttribute('aria-hidden', !isOpen);
+    });
+    if (closeBtn) closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      panel.classList.remove('open');
+      panel.setAttribute('aria-hidden', 'true');
+    });
+    document.addEventListener('click', function (e) {
+      if (float && !float.contains(e.target)) {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+      }
+    });
+  })();
+</script>
+</body>
+</html>

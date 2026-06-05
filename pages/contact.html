@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../image/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../image/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../image/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../image/favicon/favicon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../image/favicon/favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../image/favicon/favicon-512x512.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & SAV — TECHVISION Maroc | Électroménager Premium</title>
+  <meta name="description" content="Contactez TECHVISION Maroc par WhatsApp, téléphone ou formulaire. SAV 24/24, livraison partout au Maroc, paiement en plusieurs fois. Commander: 0663603675." />
+  <meta name="keywords" content="contact techvision maroc, sav electromenager maroc, commander whatsapp, livraison maroc, taksit electromenager" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .contact-hero{background:linear-gradient(135deg,#050E2B,#0D2B6B,#1A45A8);padding:80px 0 60px;color:#fff;text-align:center;}
+    .contact-hero h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;margin-bottom:14px;}
+    .contact-hero p{font-size:1.05rem;opacity:.8;max-width:580px;margin:0 auto;}
+
+    .contact-channels{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin:-40px 0 0;position:relative;z-index:10;}
+    .channel-card{background:#fff;border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 40px rgba(13,43,107,.12);border:2px solid transparent;transition:all .3s;}
+    .channel-card:hover{transform:translateY(-6px);box-shadow:0 16px 60px rgba(13,43,107,.18);}
+    .channel-card.wa-commander{border-color:rgba(37,211,102,.3);}
+    .channel-card.wa-sav{border-color:rgba(255,90,31,.3);}
+    .channel-card.insta{border-color:rgba(225,48,108,.3);}
+    .channel-icon{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 16px;}
+    .channel-icon.green{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;}
+    .channel-icon.orange{background:linear-gradient(135deg,#FF5A1F,#E83E00);color:#fff;}
+    .channel-icon.insta-grad{background:linear-gradient(135deg,#833AB4,#FD1D1D,#F77737);color:#fff;}
+    .channel-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:6px;}
+    .channel-title{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:4px;}
+    .channel-number{font-size:1.3rem;font-weight:800;margin-bottom:16px;}
+    .channel-number.green{color:#25D366;}
+    .channel-number.orange{color:#FF5A1F;}
+    .channel-number.insta-c{background:linear-gradient(135deg,#833AB4,#FD1D1D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+    .contact-form-section{padding:80px 0;background:var(--light);}
+    .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start;}
+    .form-card{background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 30px rgba(13,43,107,.08);}
+    .form-card h2{font-size:1.5rem;font-weight:800;margin-bottom:8px;color:var(--text);}
+    .form-card p{font-size:.9rem;color:var(--text-muted);margin-bottom:28px;}
+    .form-group{margin-bottom:20px;}
+    .form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em;}
+    .form-group input,.form-group select,.form-group textarea{width:100%;border:2px solid var(--border);border-radius:10px;padding:12px 16px;font-family:inherit;font-size:.92rem;color:var(--text);transition:border-color .2s;outline:none;background:#fff;}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);}
+    .form-group textarea{height:120px;resize:vertical;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .form-submit{width:100%;padding:15px;font-size:1rem;font-weight:700;border:none;border-radius:12px;cursor:pointer;background:linear-gradient(135deg,var(--whatsapp),#128C7E);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .3s;}
+    .form-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.35);}
+    .form-note{font-size:.78rem;color:var(--text-muted);text-align:center;margin-top:10px;}
+
+    .info-cards{display:flex;flex-direction:column;gap:20px;}
+    .info-card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(13,43,107,.07);border-left:4px solid var(--accent);}
+    .info-card h3{font-size:1rem;font-weight:700;margin-bottom:10px;color:var(--text);}
+    .info-card p,.info-card li{font-size:.88rem;color:var(--text-muted);line-height:1.7;}
+    .info-card ul{padding-left:16px;margin:0;}
+    .info-card.sav-card{border-left-color:#25D366;}
+    .info-card.delivery-card{border-left-color:var(--accent);}
+    .info-card.taksit-card{border-left-color:var(--gold);}
+
+    .sav-section{padding:80px 0;background:#fff;}
+    .sav-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .sav-card{text-align:center;padding:36px 24px;border-radius:20px;border:2px solid var(--border);transition:all .3s;}
+    .sav-card:hover{border-color:var(--accent);transform:translateY(-4px);}
+    .sav-card-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 16px;}
+    .sav-card h3{font-size:1rem;font-weight:700;margin-bottom:8px;}
+    .sav-card p{font-size:.85rem;color:var(--text-muted);line-height:1.7;}
+
+    .taksit-section{padding:80px 0;background:linear-gradient(135deg,#FFF8F0,#FFF5EA);}
+    .taksit-header{text-align:center;margin-bottom:48px;}
+    .taksit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .taksit-card{background:#fff;border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 4px 20px rgba(201,168,76,.15);border:2px solid rgba(201,168,76,.2);position:relative;overflow:hidden;}
+    .taksit-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),#E8BE5A);}
+    .taksit-badge{display:inline-block;background:linear-gradient(135deg,var(--gold),#E8BE5A);color:#fff;font-size:.72rem;font-weight:700;padding:4px 14px;border-radius:50px;margin-bottom:12px;text-transform:uppercase;letter-spacing:.07em;}
+    .taksit-payments{font-size:2.4rem;font-weight:800;color:var(--primary);line-height:1;}
+    .taksit-payments span{font-size:1rem;font-weight:600;color:var(--text-muted);}
+    .taksit-label{font-size:.82rem;color:var(--text-muted);margin:8px 0 16px;}
+    .taksit-features li{font-size:.82rem;color:var(--text-muted);padding:5px 0;border-bottom:1px solid var(--border);list-style:none;display:flex;align-items:center;gap:8px;}
+    .taksit-features li:last-child{border-bottom:none;}
+    .taksit-features li i{color:var(--gold);font-size:.75rem;}
+
+    .delivery-section{padding:64px 0;background:linear-gradient(135deg,var(--primary),#1A45A8);}
+    .delivery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+    .delivery-item{text-align:center;color:#fff;}
+    .delivery-item i{font-size:2rem;margin-bottom:14px;opacity:.85;}
+    .delivery-item h3{font-size:1rem;font-weight:700;margin-bottom:6px;}
+    .delivery-item p{font-size:.82rem;opacity:.7;line-height:1.6;}
+
+    @media(max-width:900px){
+      .contact-grid{grid-template-columns:1fr;}
+      .sav-grid,.taksit-grid{grid-template-columns:1fr 1fr;}
+      .delivery-grid{grid-template-columns:1fr 1fr;}
+      .form-row{grid-template-columns:1fr;}
+    }
+    @media(max-width:600px){
+      .contact-channels{grid-template-columns:1fr;}
+      .sav-grid,.taksit-grid,.delivery-grid{grid-template-columns:1fr;}
+    }
+
+    /* === MOBILE FIXES === */
+    @media(max-width:768px){
+      .contact-hero{padding:60px 0 40px !important;}
+      .contact-hero h1{font-size:clamp(1.5rem,5.5vw,2rem);}
+      .contact-channels{margin-top:-28px;}
+      .channel-card{padding:24px 18px;}
+      .contact-form-section{padding:48px 0;}
+      .contact-grid{grid-template-columns:1fr !important;gap:24px;}
+      .form-card{padding:24px !important;}
+      .sav-section{padding:48px 0;}
+      .taksit-section{padding:48px 0 !important;}
+      .delivery-section{padding:40px 0;}
+      .taksit-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
+      .taksit-card{padding:24px 18px;}
+      .taksit-payments{font-size:2rem;}
+      .delivery-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
+      .sav-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
+      .channel-number{font-size:1.1rem;}
+    }
+    @media(max-width:480px){
+      .sav-grid,.delivery-grid,.taksit-grid{grid-template-columns:1fr;}
+      .form-row{grid-template-columns:1fr !important;}
+      .channel-card{padding:20px 14px;}
+    }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact TECHVISION Maroc","description":"Contactez TECHVISION pour commander, obtenir un conseil ou contacter le SAV","url":"https://techvision.ma/pages/contact.html","mainEntity":{"@type":"Organization","name":"TECHVISION","telephone":["+212663603675","+212660240276"],"sameAs":["https://www.instagram.com/tech_vision.ma/"]}}</script>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container-lg">
+    <a href="../index.html" class="nav-logo">
+      <img src="../image/logo/logo.webp" alt="TECHVISION Logo" />
+    </a>
+                <ul class="nav-menu">
+      <!-- TV -->
+      <li class="nav-item has-mega">
+        <a href="tv.html" class="nav-link">TV <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-tv"></i></div>
+                <div>
+                  <div class="mega-cat-title">Téléviseurs QLED 4K</div>
+                  <div class="mega-cat-desc">Design ultra-fin, image cristalline,<br>son immersif Dolby Atmos</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> QLED 4K · 60Hz HDR</li>
+                <li><i class="fas fa-check-circle"></i> Double Verre Acoustique</li>
+                <li><i class="fas fa-check-circle"></i> Dolby Atmos · Dolby Vision</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="tv.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/tv/lifestyle/hf_20260506_185846_3cda74e5-ab5c-4370-a955-bb98612d6482.webp" alt="TV TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Frameless</div>
+                    <a href="tv-frameless-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="tv-frameless-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="tv-frameless-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="tv-frameless-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="tv-frameless-65.html" class="mega-nav-link">TV 65&quot;</a>
+                    <a href="tv-frameless-75.html" class="mega-nav-link">TV 75&quot;</a>
+                  </div>
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Double Glass</div>
+                    <a href="tv-double-glass-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="tv-double-glass-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="tv-double-glass-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="tv-double-glass-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="tv-double-glass-65.html" class="mega-nav-link">TV 65&quot;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Fours -->
+      <li class="nav-item has-mega">
+        <a href="four.html" class="nav-link">Fours <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-fire"></i></div>
+                <div>
+                  <div class="mega-cat-title">Fours Électriques</div>
+                  <div class="mega-cat-desc">Cuisson précise, design premium,<br>performance professionnelle</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Multi-fonctions 8 modes</li>
+                <li><i class="fas fa-check-circle"></i> Résistance inox longue durée</li>
+                <li><i class="fas fa-check-circle"></i> Thermostat précis ±5°C</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="four.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/four/lifestyle/hf_20260506_194417_9fc32bd4-d673-4772-b05e-dc1843d011a0.webp" alt="Four TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="four.html" class="mega-nav-link">Four 45 L</a>
+                    <a href="four.html" class="mega-nav-link">Four 55 L</a>
+                    <a href="four.html" class="mega-nav-link">Four 75 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Climatiseurs -->
+      <li class="nav-item has-mega">
+        <a href="clim.html" class="nav-link">Climatiseurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-snowflake"></i></div>
+                <div>
+                  <div class="mega-cat-title">Climatiseurs Inverter</div>
+                  <div class="mega-cat-desc">Confort thermique optimal,<br>économie d'énergie classe A+++</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie Inverter DC</li>
+                <li><i class="fas fa-check-circle"></i> Classe énergie A+++</li>
+                <li><i class="fas fa-check-circle"></i> Mode Chaud/Froid réversible</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="clim.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="Climatiseur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par puissance</div>
+                    <a href="clim.html" class="mega-nav-link">9 000 BTU</a>
+                    <a href="clim.html" class="mega-nav-link">12 000 BTU</a>
+                    <a href="clim.html" class="mega-nav-link">18 000 BTU</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Réfrigérateurs -->
+      <li class="nav-item has-mega">
+        <a href="refrigerateur.html" class="nav-link">Réfrigérateurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-temperature-low"></i></div>
+                <div>
+                  <div class="mega-cat-title">Réfrigérateurs</div>
+                  <div class="mega-cat-desc">Conservation optimale, design élégant,<br>technologie No Frost intelligente</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie No Frost</li>
+                <li><i class="fas fa-check-circle"></i> Dégivrage automatique</li>
+                <li><i class="fas fa-check-circle"></i> Éclairage LED intérieur</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="refrigerateur.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/refrigerateur/lifestyle/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.webp" alt="Réfrigérateur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="refrigerateur.html" class="mega-nav-link">108 L</a>
+                    <a href="refrigerateur.html" class="mega-nav-link">120 L</a>
+                    <a href="refrigerateur.html" class="mega-nav-link">138 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="grossiste.html" class="nav-link">Grossiste</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle"><button class="lang-btn active" data-lang="fr">FR</button><button class="lang-btn" data-lang="ar">ع</button></div>
+      <a href="https://wa.me/212663603675" target="_blank" class="nav-whatsapp"><i class="fab fa-whatsapp"></i><span class="nav-wa-text" data-fr="Commander" data-ar="اطلب الآن">Commander</span></a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mega-backdrop" id="megaBackdrop"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="tv.html"><i class="fas fa-tv"></i> Téléviseurs QLED 4K</a>
+  <a href="four.html"><i class="fas fa-fire"></i> Fours Électriques</a>
+  <a href="clim.html"><i class="fas fa-snowflake"></i> Climatiseurs Inverter</a>
+  <a href="refrigerateur.html"><i class="fas fa-temperature-low"></i> Réfrigérateurs</a>
+  <a href="grossiste.html"><i class="fas fa-boxes"></i> Grossiste</a>
+  <a href="blog.html"><i class="fas fa-newspaper"></i> Blog &amp; Conseils</a>
+  <a href="contact.html"><i class="fas fa-headset"></i> SAV &amp; Contact</a>
+  <a href="https://wa.me/212663603675" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp"></i> Commander via WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<div class="contact-hero">
+  <div class="container">
+    <div class="breadcrumb" style="justify-content:center;margin-bottom:20px;">
+      <a href="../index.html" style="color:rgba(255,255,255,.6);">Accueil</a>
+      <i class="fas fa-chevron-right" style="font-size:.6rem;opacity:.5;"></i>
+      <span style="color:rgba(255,255,255,.85);">Contact & SAV</span>
+    </div>
+    <h1 data-fr="Nous Sommes Là Pour Vous" data-ar="نحن هنا من أجلك">Nous Sommes Là Pour Vous</h1>
+    <p data-fr="Commander, poser une question ou suivre votre SAV — notre équipe répond rapidement 7j/7." data-ar="للطلب أو الاستفسار أو متابعة ما بعد البيع — فريقنا يجيب سريعاً 7 أيام في الأسبوع.">Commander, poser une question ou suivre votre SAV — notre équipe répond rapidement 7j/7.</p>
+    <div style="display:flex;justify-content:center;gap:12px;margin-top:28px;flex-wrap:wrap;">
+      <a href="https://wa.me/212663603675" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Commander maintenant</a>
+      <a href="#sav" class="btn btn-outline-light btn-lg"><i class="fas fa-headset"></i> SAV & Garantie</a>
+    </div>
+  </div>
+</div>
+
+<!-- CHANNEL CARDS -->
+<section style="padding:0 0 64px;background:#fff;">
+  <div class="container">
+    <div class="contact-channels">
+      <div class="channel-card wa-commander" data-reveal="up" data-delay="0">
+        <div class="channel-icon green"><i class="fab fa-whatsapp"></i></div>
+        <div class="channel-label">Commandes & Devis</div>
+        <div class="channel-title">WhatsApp Commander</div>
+        <div class="channel-number green">0663 603 675</div>
+        <p style="font-size:.83rem;color:var(--text-muted);margin-bottom:20px;">Disponible 7j/7 · Réponse en moins de 5 min</p>
+        <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20souhaite%20commander%20un%20produit" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;">
+          <i class="fab fa-whatsapp"></i> Contacter pour commander
+        </a>
+      </div>
+
+      <div class="channel-card wa-sav" data-reveal="up" data-delay="100">
+        <div class="channel-icon orange"><i class="fas fa-headset"></i></div>
+        <div class="channel-label">Après-vente & Dépannage</div>
+        <div class="channel-title">SAV Technique</div>
+        <div class="channel-number orange">0660 240 276</div>
+        <p style="font-size:.83rem;color:var(--text-muted);margin-bottom:20px;">SAV 24/24 · Techniciens certifiés · Garantie 2 ans</p>
+        <a href="https://wa.me/212660240276?text=Bonjour%20TECHVISION%20SAV%2C%20j%27ai%20besoin%20d%27assistance%20technique" target="_blank" class="btn btn-cta" style="width:100%;justify-content:center;">
+          <i class="fas fa-headset"></i> Contacter le SAV
+        </a>
+      </div>
+
+      <div class="channel-card insta" data-reveal="up" data-delay="200">
+        <div class="channel-icon insta-grad"><i class="fab fa-instagram"></i></div>
+        <div class="channel-label">Réseaux Sociaux</div>
+        <div class="channel-title">Instagram</div>
+        <div class="channel-number insta-c">@tech_vision.ma</div>
+        <p style="font-size:.83rem;color:var(--text-muted);margin-bottom:20px;">Suivez nos nouveautés, promotions & démonstrations produits</p>
+        <a href="https://www.instagram.com/tech_vision.ma/" target="_blank" class="btn" style="width:100%;justify-content:center;background:linear-gradient(135deg,#833AB4,#FD1D1D,#F77737);color:#fff;border:none;">
+          <i class="fab fa-instagram"></i> Nous suivre
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM + INFO -->
+<section class="contact-form-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="form-card" data-reveal="left">
+        <h2 data-fr="Envoyez-nous un message" data-ar="أرسل لنا رسالة">Envoyez-nous un message</h2>
+        <p data-fr="Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais." data-ar="املأ النموذج أدناه وسنرد عليك في أقرب وقت ممكن.">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+
+        <form id="contactForm" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Prénom & Nom</label>
+              <input type="text" name="name" placeholder="Mohamed Alami" required />
+            </div>
+            <div class="form-group">
+              <label>Téléphone</label>
+              <input type="tel" name="phone" placeholder="06XX XX XX XX" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Produit qui vous intéresse</label>
+            <select name="product" required>
+              <option value="">-- Sélectionnez un produit --</option>
+              <option value="TV">Téléviseur Vision Series (QLED 4K)</option>
+              <option value="Four">Four HeatPro Series</option>
+              <option value="Clim">Climatiseur AirSmart Series</option>
+              <option value="Frigo">Réfrigérateur FreshTech Series</option>
+              <option value="Grossiste">Commande en gros / Grossiste</option>
+              <option value="SAV">SAV & Garantie</option>
+              <option value="Autre">Autre demande</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Type de demande</label>
+            <select name="type">
+              <option value="commander">Commander un produit</option>
+              <option value="devis">Demander un devis</option>
+              <option value="info">Demande d'information</option>
+              <option value="taksit">Paiement en plusieurs fois (Taksit)</option>
+              <option value="sav">SAV / Garantie</option>
+              <option value="gros">Achat en gros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Votre message</label>
+            <textarea name="message" placeholder="Décrivez votre demande en détail..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i>
+            Envoyer via WhatsApp
+          </button>
+          <p class="form-note"><i class="fas fa-lock" style="font-size:.7rem;"></i> Votre message sera envoyé directement sur WhatsApp de façon sécurisée.</p>
+        </form>
+      </div>
+
+      <div class="info-cards" data-reveal="right">
+        <div class="info-card sav-card">
+          <h3><i class="fas fa-clock" style="color:#25D366;margin-right:8px;"></i> Horaires & Disponibilité</h3>
+          <ul>
+            <li><strong>Ventes :</strong> Lundi – Samedi, 9h – 20h</li>
+            <li><strong>SAV Technique :</strong> 24h/24 · 7j/7</li>
+            <li><strong>WhatsApp :</strong> Réponse en moins de 5 min</li>
+            <li><strong>Livraison :</strong> J+1 à J+3 partout au Maroc</li>
+          </ul>
+        </div>
+
+        <div class="info-card delivery-card">
+          <h3><i class="fas fa-truck" style="color:var(--accent);margin-right:8px;"></i> Livraison Maroc</h3>
+          <ul>
+            <li><strong>Casablanca & axe urbain :</strong> Livraison J+1</li>
+            <li><strong>Autres villes :</strong> Livraison J+2 / J+3</li>
+            <li>Emballage soigné, produit testé avant envoi</li>
+            <li>Suivi de commande par WhatsApp</li>
+            <li>Livraison à domicile incluse</li>
+          </ul>
+        </div>
+
+        <div class="info-card taksit-card">
+          <h3><i class="fas fa-calendar-check" style="color:var(--gold);margin-right:8px;"></i> Paiement Taksit</h3>
+          <ul>
+            <li>Disponible sans banque ni justificatif</li>
+            <li>3, 6 ou 12 mensualités selon le montant</li>
+            <li>Acompte dès 30% à la commande</li>
+            <li>Reste payable à la livraison ou en mensualités</li>
+          </ul>
+          <a href="#taksit" style="display:inline-block;margin-top:12px;font-size:.82rem;font-weight:700;color:var(--gold);">Voir les détails <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="info-card" style="border-left-color:var(--cta);">
+          <h3><i class="fas fa-shield-alt" style="color:var(--cta);margin-right:8px;"></i> Garantie TECHVISION</h3>
+          <ul>
+            <li><strong>2 ans garantie</strong> pièces et main d'œuvre</li>
+            <li>Technicien à domicile sous 24h (grandes villes)</li>
+            <li>Prise en charge totale des pièces défectueuses</li>
+            <li>Remplacement produit si non réparable en 7 jours</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAV SECTION -->
+<section class="sav-section" id="sav">
+  <div class="container">
+    <div class="section-header" data-reveal="up">
+      <div class="section-eyebrow">SERVICE APRÈS-VENTE</div>
+      <h2 class="section-title">SAV & Garantie <span class="text-accent">TECHVISION</span></h2>
+      <p class="section-subtitle">Un support technique complet pour votre tranquillité d'esprit long après votre achat.</p>
+    </div>
+
+    <div class="sav-grid" style="margin-top:48px;">
+      <div class="sav-card" data-reveal="up" data-delay="0">
+        <div class="sav-card-icon" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9);"><i class="fas fa-tools" style="color:#2E7D32;"></i></div>
+        <h3>Réparation à Domicile</h3>
+        <p>Nos techniciens se déplacent chez vous. Diagnostic, pièces et main d'œuvre couverts par la garantie 2 ans.</p>
+        <a href="https://wa.me/212660240276?text=Bonjour%2C%20j%27ai%20besoin%20d%27une%20intervention%20SAV%20à%20domicile" target="_blank" class="btn btn-cta" style="margin-top:16px;font-size:.85rem;padding:10px 20px;"><i class="fas fa-tools"></i> Demander une intervention</a>
+      </div>
+
+      <div class="sav-card" data-reveal="up" data-delay="100">
+        <div class="sav-card-icon" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB);"><i class="fas fa-phone-alt" style="color:#1565C0;"></i></div>
+        <h3>Support Téléphonique 24/24</h3>
+        <p>Notre ligne SAV est disponible 24h/24. Dépannage à distance pour les problèmes simples, intervention planifiée pour le reste.</p>
+        <a href="tel:+212660240276" class="btn btn-outline-primary" style="margin-top:16px;font-size:.85rem;padding:10px 20px;"><i class="fas fa-phone"></i> Appeler le SAV</a>
+      </div>
+
+      <div class="sav-card" data-reveal="up" data-delay="200">
+        <div class="sav-card-icon" style="background:linear-gradient(135deg,#FFF3E0,#FFE0B2);"><i class="fas fa-exchange-alt" style="color:#E65100;"></i></div>
+        <h3>Remplacement Garanti</h3>
+        <p>Si votre produit ne peut pas être réparé dans les 7 jours ouvrables, TECHVISION le remplace par un neuf équivalent.</p>
+        <a href="https://wa.me/212660240276?text=Bonjour%2C%20je%20veux%20des%20informations%20sur%20la%20garantie%20TECHVISION" target="_blank" class="btn btn-outline-primary" style="margin-top:16px;font-size:.85rem;padding:10px 20px;"><i class="fas fa-info-circle"></i> En savoir plus</a>
+      </div>
+    </div>
+
+    <!-- SAV Guarantee Strip -->
+    <div style="margin-top:48px;background:linear-gradient(135deg,var(--primary),#1A45A8);border-radius:20px;padding:36px 40px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;" data-reveal="up">
+      <div style="color:#fff;">
+        <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:8px;">Garantie 2 ans incluse sur tous nos produits</h3>
+        <p style="font-size:.9rem;opacity:.8;margin:0;">Pièces, main d'œuvre et déplacement couverts. Aucun frais cachés. Un technicien chez vous dans les 24h à Casablanca, 48h ailleurs au Maroc.</p>
+      </div>
+      <a href="https://wa.me/212660240276?text=Bonjour%20TECHVISION%20SAV" target="_blank" class="btn btn-whatsapp btn-lg" style="white-space:nowrap;flex-shrink:0;"><i class="fab fa-whatsapp"></i> Contacter SAV</a>
+    </div>
+  </div>
+</section>
+
+<!-- TAKSIT SECTION -->
+<section class="taksit-section" id="taksit">
+  <div class="container">
+    <div class="taksit-header" data-reveal="up">
+      <div class="section-eyebrow" style="color:var(--gold);">FACILITÉ DE PAIEMENT</div>
+      <h2 class="section-title">Payez en <span style="color:var(--gold);">Plusieurs Fois</span></h2>
+      <p class="section-subtitle">Le Taksit TECHVISION — sans banque, sans justificatif de revenus, sans complications.</p>
+    </div>
+
+    <div class="taksit-grid">
+      <div class="taksit-card" data-reveal="up" data-delay="0">
+        <div class="taksit-badge">Rapide</div>
+        <div class="taksit-payments">3 <span>fois</span></div>
+        <div class="taksit-label">Pour les achats jusqu'à 3 000 DH</div>
+        <ul class="taksit-features">
+          <li><i class="fas fa-check-circle"></i> 30% à la commande</li>
+          <li><i class="fas fa-check-circle"></i> 35% à la livraison</li>
+          <li><i class="fas fa-check-circle"></i> 35% après 30 jours</li>
+          <li><i class="fas fa-check-circle"></i> Sans frais supplémentaires</li>
+        </ul>
+        <a href="https://wa.me/212663603675?text=Bonjour%2C%20je%20veux%20commander%20en%203%20fois" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-top:20px;"><i class="fab fa-whatsapp"></i> Je veux payer en 3x</a>
+      </div>
+
+      <div class="taksit-card" style="box-shadow:0 12px 40px rgba(201,168,76,.25);transform:scale(1.03);" data-reveal="up" data-delay="100">
+        <div class="taksit-badge" style="background:linear-gradient(135deg,var(--primary),var(--primary-light));">Populaire</div>
+        <div class="taksit-payments">6 <span>fois</span></div>
+        <div class="taksit-label">Pour les achats de 3 000 – 8 000 DH</div>
+        <ul class="taksit-features">
+          <li><i class="fas fa-check-circle"></i> 20% à la commande</li>
+          <li><i class="fas fa-check-circle"></i> Livraison après acompte</li>
+          <li><i class="fas fa-check-circle"></i> 5 mensualités de 16%</li>
+          <li><i class="fas fa-check-circle"></i> Sans justificatif de revenus</li>
+        </ul>
+        <a href="https://wa.me/212663603675?text=Bonjour%2C%20je%20veux%20commander%20en%206%20fois" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-top:20px;"><i class="fab fa-whatsapp"></i> Je veux payer en 6x</a>
+      </div>
+
+      <div class="taksit-card" data-reveal="up" data-delay="200">
+        <div class="taksit-badge" style="background:linear-gradient(135deg,#333,#555);">Flexible</div>
+        <div class="taksit-payments">12 <span>fois</span></div>
+        <div class="taksit-label">Pour les achats au-dessus de 8 000 DH</div>
+        <ul class="taksit-features">
+          <li><i class="fas fa-check-circle"></i> 15% à la commande</li>
+          <li><i class="fas fa-check-circle"></i> Livraison programmée</li>
+          <li><i class="fas fa-check-circle"></i> 11 mensualités flexibles</li>
+          <li><i class="fas fa-check-circle"></i> Adapté aux grossistes</li>
+        </ul>
+        <a href="https://wa.me/212663603675?text=Bonjour%2C%20je%20veux%20payer%20en%2012%20mensualités" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;margin-top:20px;"><i class="fab fa-whatsapp"></i> Je veux payer en 12x</a>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;background:#fff;border-radius:16px;padding:28px 32px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 4px 20px rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);" data-reveal="up">
+      <i class="fas fa-info-circle" style="color:var(--gold);font-size:1.4rem;flex-shrink:0;"></i>
+      <p style="margin:0;font-size:.88rem;color:var(--text-muted);line-height:1.7;"><strong style="color:var(--text);">Comment ça marche ?</strong> Envoyez-nous un message WhatsApp avec le produit que vous voulez et votre budget mensuel. Nous calculons votre plan de paiement personnalisé et organisons la livraison après l'acompte initial. Simple, rapide, sans paperasse.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY STRIP -->
+<section class="delivery-section">
+  <div class="container">
+    <div class="delivery-grid">
+      <div class="delivery-item" data-reveal="up" data-delay="0">
+        <i class="fas fa-truck-fast"></i>
+        <h3>Livraison Rapide</h3>
+        <p>J+1 Casablanca<br>J+2/J+3 tout le Maroc</p>
+      </div>
+      <div class="delivery-item" data-reveal="up" data-delay="100">
+        <i class="fas fa-box-open"></i>
+        <h3>Emballage Soigné</h3>
+        <p>Produit testé, emballé et protégé avant chaque envoi</p>
+      </div>
+      <div class="delivery-item" data-reveal="up" data-delay="200">
+        <i class="fas fa-undo-alt"></i>
+        <h3>Retour Facile</h3>
+        <p>7 jours pour changer d'avis. Échange ou remboursement.</p>
+      </div>
+      <div class="delivery-item" data-reveal="up" data-delay="300">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Achat Sécurisé</h3>
+        <p>Garantie 2 ans incluse sur tous les produits TECHVISION</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ RAPIDE -->
+<section style="padding:80px 0;background:var(--light);">
+  <div class="container">
+    <div class="section-header" data-reveal="up">
+      <div class="section-eyebrow">FAQ</div>
+      <h2 class="section-title">Questions <span class="text-accent">Fréquentes</span></h2>
+    </div>
+    <div style="max-width:800px;margin:48px auto 0;display:flex;flex-direction:column;gap:16px;">
+      <details style="background:#fff;border-radius:14px;border:1px solid var(--border);padding:20px 24px;" data-reveal="up" data-delay="0">
+        <summary style="font-weight:700;cursor:pointer;font-size:.95rem;color:var(--text);list-style:none;display:flex;align-items:center;justify-content:space-between;">Combien de temps prend la livraison ? <i class="fas fa-chevron-down" style="color:var(--accent);font-size:.8rem;"></i></summary>
+        <p style="margin:12px 0 0;font-size:.88rem;color:var(--text-muted);line-height:1.75;">Pour Casablanca et les grandes villes, livraison en 24h. Pour les autres régions du Maroc, comptez 2 à 3 jours ouvrables. Vous recevez un suivi par WhatsApp dès l'envoi de votre colis.</p>
+      </details>
+      <details style="background:#fff;border-radius:14px;border:1px solid var(--border);padding:20px 24px;" data-reveal="up" data-delay="50">
+        <summary style="font-weight:700;cursor:pointer;font-size:.95rem;color:var(--text);list-style:none;display:flex;align-items:center;justify-content:space-between;">Comment fonctionne la garantie 2 ans ? <i class="fas fa-chevron-down" style="color:var(--accent);font-size:.8rem;"></i></summary>
+        <p style="margin:12px 0 0;font-size:.88rem;color:var(--text-muted);line-height:1.75;">Toutes pièces et main d'œuvre couvertes pendant 2 ans. Si un problème survient, appelez le SAV (0660 240 276) ou envoyez un WhatsApp. Un technicien intervient dans les 24h à domicile (grandes villes) ou sous 48h ailleurs. Si la réparation prend plus de 7 jours, le produit est remplacé.</p>
+      </details>
+      <details style="background:#fff;border-radius:14px;border:1px solid var(--border);padding:20px 24px;" data-reveal="up" data-delay="100">
+        <summary style="font-weight:700;cursor:pointer;font-size:.95rem;color:var(--text);list-style:none;display:flex;align-items:center;justify-content:space-between;">Peut-on payer en espèces à la livraison ? <i class="fas fa-chevron-down" style="color:var(--accent);font-size:.8rem;"></i></summary>
+        <p style="margin:12px 0 0;font-size:.88rem;color:var(--text-muted);line-height:1.75;">Oui, le paiement à la livraison (cash on delivery) est disponible pour les commandes jusqu'à 2 000 DH. Pour les montants supérieurs, un acompte de 30% est demandé à la commande, le reste payable à la livraison. Le paiement en taksit est également disponible.</p>
+      </details>
+      <details style="background:#fff;border-radius:14px;border:1px solid var(--border);padding:20px 24px;" data-reveal="up" data-delay="150">
+        <summary style="font-weight:700;cursor:pointer;font-size:.95rem;color:var(--text);list-style:none;display:flex;align-items:center;justify-content:space-between;">Est-ce que TECHVISION livre dans toutes les régions du Maroc ? <i class="fas fa-chevron-down" style="color:var(--accent);font-size:.8rem;"></i></summary>
+        <p style="margin:12px 0 0;font-size:.88rem;color:var(--text-muted);line-height:1.75;">Oui, nous livrons partout au Maroc : Casablanca, Rabat, Marrakech, Fès, Tanger, Agadir, Oujda, Meknès, Salé et toutes les villes et villages. Les zones rurales peuvent nécessiter 3 à 5 jours selon la région.</p>
+      </details>
+      <details style="background:#fff;border-radius:14px;border:1px solid var(--border);padding:20px 24px;" data-reveal="up" data-delay="200">
+        <summary style="font-weight:700;cursor:pointer;font-size:.95rem;color:var(--text);list-style:none;display:flex;align-items:center;justify-content:space-between;">Y a-t-il un minimum de commande pour les grossistes ? <i class="fas fa-chevron-down" style="color:var(--accent);font-size:.8rem;"></i></summary>
+        <p style="margin:12px 0 0;font-size:.88sm;color:var(--text-muted);line-height:1.75;">Pour la vente en gros, le minimum de commande est de 5 unités par référence. Des tarifs préférentiels sont appliqués à partir de 10 unités. Visitez notre page <a href="grossiste.html" style="color:var(--accent);font-weight:700;">Grossiste</a> pour plus de détails.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="footer-logo-link">
+          <img src="../image/logo/logo.webp" alt="TECHVISION Logo" class="footer-logo-img" />
+        </a></span><p class="footer-desc">L'électroménager premium au meilleur prix au Maroc.</p><div class="footer-contacts"><div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/212663603675">+212 663 603 675</a></div><div class="footer-contact-item"><i class="fas fa-headset"></i><a href="tel:+212660240276">SAV: +212 660 240 276</a></div></div><div class="footer-socials"><a href="https://www.instagram.com/tech_vision.ma/" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a><a href="https://wa.me/212663603675" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a></div></div><div><div class="footer-heading">NOS PRODUITS</div><ul class="footer-links"><li><a href="tv.html">Téléviseurs QLED 4K</a></li><li><a href="four.html">Fours HeatPro</a></li><li><a href="clim.html">Climatiseurs AirSmart</a></li><li><a href="refrigerateur.html">Réfrigérateurs FreshTech</a></li></ul></div><div><div class="footer-heading">BLOG</div><ul class="footer-links"><li><a href="blog-tv.html">Guide TV 4K</a></li><li><a href="blog-four.html">Choisir son four</a></li><li><a href="blog-clim.html">Guide climatiseur</a></li><li><a href="blog-refrigerateur.html">Guide réfrigérateur</a></li></ul></div><div><div class="footer-heading">CONTACT</div><ul class="footer-links"><li><a href="contact.html">Nous Contacter</a></li><li><a href="grossiste.html">Vente en Gros</a></li><li><a href="#sav">SAV & Garantie</a></li><li><a href="#taksit">Paiement Taksit</a></li></ul></div></div></div><div class="footer-bottom"><div class="container">© 2024 TECHVISION Maroc. Tous droits réservés.</div></div></footer>
+
+<div class="whatsapp-float" id="waFloat">
+  <div class="wa-chat-panel" id="waChatPanel" aria-hidden="true">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar"><i class="fab fa-whatsapp"></i></div>
+      <div class="wa-chat-info">
+        <strong>TECHVISION Maroc</strong>
+        <span><span class="wa-online-dot"></span> En ligne</span>
+      </div>
+      <button class="wa-chat-close" id="waClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-bubble">
+        <p>👋 Je souhaite avoir plus d'informations</p>
+        <time>Maintenant</time>
+      </div>
+    </div>
+    <a href="https://wa.me/212663603675?text=%F0%9F%91%8B%20Je%20souhaite%20avoir%20plus%20d%27informations" target="_blank" class="wa-chat-send">
+      <i class="fab fa-whatsapp"></i>
+      <span>Envoyer ce message</span>
+    </a>
+  </div>
+  <button class="wa-main-btn" id="waMainBtn" aria-label="WhatsApp TECHVISION">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-notification">1</span>
+  </button>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const f = e.target;
+  const name = f.name.value;
+  const phone = f.phone.value;
+  const product = f.product.value;
+  const type = f.type.value;
+  const message = f.message.value;
+  const typeLabels = {commander:'Commander un produit',devis:'Demande de devis',info:"Demande d'info",taksit:'Paiement Taksit',sav:'SAV / Garantie',gros:'Achat en gros'};
+  const text = `Bonjour TECHVISION !\n\nNom: ${name}\nTéléphone: ${phone}\nProduit: ${product}\nDemande: ${typeLabels[type]||type}\n\nMessage: ${message || '(aucun message)'}\n\nMerci !`;
+  window.open('https://wa.me/212663603675?text=' + encodeURIComponent(text), '_blank');
+}
+</script>
+<button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+<script>const _stb=document.getElementById('scrollTopBtn');window.addEventListener('scroll',()=>{_stb.classList.toggle('visible',window.scrollY>400)});</script>
+<script>
+  (function () {
+    var mainBtn = document.getElementById('waMainBtn');
+    var panel   = document.getElementById('waChatPanel');
+    var closeBtn = document.getElementById('waClose');
+    var float   = document.getElementById('waFloat');
+    if (!mainBtn || !panel) return;
+    mainBtn.addEventListener('click', function () {
+      var isOpen = panel.classList.toggle('open');
+      panel.setAttribute('aria-hidden', !isOpen);
+    });
+    if (closeBtn) closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      panel.classList.remove('open');
+      panel.setAttribute('aria-hidden', 'true');
+    });
+    document.addEventListener('click', function (e) {
+      if (float && !float.contains(e.target)) {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+      }
+    });
+  })();
+</script>
+</body>
+</html>

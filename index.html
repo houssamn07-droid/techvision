@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="image/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="image/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="image/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/favicon/favicon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="image/favicon/favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="image/favicon/favicon-512x512.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TECHVISION Maroc — Électroménager Premium | TV, Four, Clim, Réfrigérateur</title>
+  <meta name="description" content="TECHVISION : L'électroménager premium au meilleur prix au Maroc. Télévisions QLED 4K, fours électriques, climatiseurs Inverter, réfrigérateurs. Garantie 2 ans, SAV 24/24, livraison partout au Maroc." />
+  <meta name="keywords" content="techvision maroc, electromenager maroc, four electrique, tv qled 4k, climatiseur inverter, refrigerateur, four techvision, tv maroc" />
+  <meta property="og:title" content="TECHVISION Maroc — Électroménager Premium" />
+  <meta property="og:description" content="L'électroménager de qualité supérieure au meilleur prix au Maroc. TV 4K, Fours, Climatiseurs, Réfrigérateurs." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://techvision.ma/" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Page-specific refinements */
+    .hero-features-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+    .hero-features-list li { display: flex; align-items: center; gap: 7px; font-size: .82rem; font-weight: 500; color: rgba(255,255,255,.85); }
+    .hero-features-list li i { color: var(--gold); font-size: .75rem; }
+
+    .section-header-wrap { margin-bottom: 48px; }
+
+    .luxury-banner {
+      background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--primary-light), var(--primary));
+      background-size: 300% 100%;
+      animation: gradientShift 8s ease infinite;
+      padding: 18px 0;
+      overflow: hidden;
+    }
+    .luxury-ticker {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      animation: tickerScroll 30s linear infinite;
+      white-space: nowrap;
+      width: max-content;
+    }
+    .luxury-ticker span {
+      color: rgba(255,255,255,.85);
+      font-size: .82rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .luxury-ticker span i { color: var(--gold); }
+    @keyframes tickerScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .why-section { background: var(--light); padding: 80px 0; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
+    .why-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      border: 1px solid var(--border);
+      transition: var(--transition-slow);
+    }
+    .why-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(13,43,107,.15);
+    }
+    .why-icon {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+    }
+    .why-icon.blue { background: #EEF3FF; color: var(--primary); }
+    .why-icon.orange { background: var(--cta-light); color: var(--cta); }
+    .why-icon.green { background: #EEFFF5; color: var(--whatsapp); }
+    .why-icon.gold { background: var(--gold-light); color: #8B6914; }
+    .why-icon.purple { background: #F5F0FF; color: #7B5EA7; }
+    .why-icon.cyan { background: #E6F9FF; color: var(--accent-dark); }
+    .why-card h4 { font-size: 1rem; margin-bottom: 8px; }
+    .why-card p { font-size: .83rem; color: var(--text-muted); line-height: 1.65; }
+
+    @media (max-width: 900px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; max-width: 400px; margin: 48px auto 0; } }
+
+    /* === MOBILE FIXES === */
+    @media (max-width: 768px) {
+      /* Hero ticker */
+      .luxury-banner { padding: 14px 0; }
+      .luxury-ticker span { font-size: .75rem; }
+      /* Why section */
+      .why-section { padding: 48px 0 !important; }
+      .why-grid { margin-top: 32px; }
+      .why-card { padding: 24px 18px; }
+      /* Section header */
+      .section-header-wrap { margin-bottom: 32px; }
+    }
+    @media (max-width: 480px) {
+      .luxury-ticker { gap: 24px; }
+      .luxury-ticker span { font-size: .7rem; gap: 8px; }
+    }
+
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TECHVISION",
+    "url": "https://techvision.ma",
+    "logo": "https://techvision.ma/images/logo.png",
+    "contactPoint": [
+      { "@type": "ContactPoint", "telephone": "+212663603675", "contactType": "customer service", "availableLanguage": ["French", "Arabic"] },
+      { "@type": "ContactPoint", "telephone": "+212660240276", "contactType": "technical support", "availableLanguage": ["French", "Arabic"] }
+    ],
+    "sameAs": ["https://www.instagram.com/tech_vision.ma/"]
+  }
+  </script>
+</head>
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+<nav class="navbar" id="navbar">
+  <div class="container-lg">
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo">
+      <img src="image/logo/logo.webp" alt="TECHVISION Logo" />
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="nav-menu">
+      <!-- TV -->
+      <li class="nav-item has-mega">
+        <a href="pages/tv.html" class="nav-link">TV <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-tv"></i></div>
+                <div>
+                  <div class="mega-cat-title">Téléviseurs QLED 4K</div>
+                  <div class="mega-cat-desc">Design ultra-fin, image cristalline,<br>son immersif Dolby Atmos</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> QLED 4K · 60Hz HDR</li>
+                <li><i class="fas fa-check-circle"></i> Double Verre Acoustique</li>
+                <li><i class="fas fa-check-circle"></i> Dolby Atmos · Dolby Vision</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="pages/tv.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="image/tv/lifestyle/hf_20260506_185846_3cda74e5-ab5c-4370-a955-bb98612d6482.webp" alt="TV TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Frameless</div>
+                    <a href="pages/tv-frameless-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="pages/tv-frameless-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="pages/tv-frameless-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="pages/tv-frameless-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="pages/tv-frameless-65.html" class="mega-nav-link">TV 65&quot;</a>
+                    <a href="pages/tv-frameless-75.html" class="mega-nav-link">TV 75&quot;</a>
+                  </div>
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Double Glass</div>
+                    <a href="pages/tv-double-glass-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="pages/tv-double-glass-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="pages/tv-double-glass-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="pages/tv-double-glass-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="pages/tv-double-glass-65.html" class="mega-nav-link">TV 65&quot;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Fours -->
+      <li class="nav-item has-mega">
+        <a href="pages/four.html" class="nav-link">Fours <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-fire"></i></div>
+                <div>
+                  <div class="mega-cat-title">Fours Électriques</div>
+                  <div class="mega-cat-desc">Cuisson précise, design premium,<br>performance professionnelle</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Multi-fonctions 8 modes</li>
+                <li><i class="fas fa-check-circle"></i> Résistance inox longue durée</li>
+                <li><i class="fas fa-check-circle"></i> Thermostat précis ±5°C</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="pages/four.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="image/four/lifestyle/hf_20260506_194417_9fc32bd4-d673-4772-b05e-dc1843d011a0.webp" alt="Four TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="pages/four.html" class="mega-nav-link">Four 45 L</a>
+                    <a href="pages/four.html" class="mega-nav-link">Four 55 L</a>
+                    <a href="pages/four.html" class="mega-nav-link">Four 75 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Climatiseurs -->
+      <li class="nav-item has-mega">
+        <a href="pages/clim.html" class="nav-link">Climatiseurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-snowflake"></i></div>
+                <div>
+                  <div class="mega-cat-title">Climatiseurs Inverter</div>
+                  <div class="mega-cat-desc">Confort thermique optimal,<br>économie d'énergie classe A+++</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie Inverter DC</li>
+                <li><i class="fas fa-check-circle"></i> Classe énergie A+++</li>
+                <li><i class="fas fa-check-circle"></i> Mode Chaud/Froid réversible</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="pages/clim.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="Climatiseur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par puissance</div>
+                    <a href="pages/clim.html" class="mega-nav-link">9 000 BTU</a>
+                    <a href="pages/clim.html" class="mega-nav-link">12 000 BTU</a>
+                    <a href="pages/clim.html" class="mega-nav-link">18 000 BTU</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Réfrigérateurs -->
+      <li class="nav-item has-mega">
+        <a href="pages/refrigerateur.html" class="nav-link">Réfrigérateurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-temperature-low"></i></div>
+                <div>
+                  <div class="mega-cat-title">Réfrigérateurs</div>
+                  <div class="mega-cat-desc">Conservation optimale, design élégant,<br>technologie No Frost intelligente</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie No Frost</li>
+                <li><i class="fas fa-check-circle"></i> Dégivrage automatique</li>
+                <li><i class="fas fa-check-circle"></i> Éclairage LED intérieur</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="pages/refrigerateur.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="image/refrigerateur/lifestyle/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.webp" alt="Réfrigérateur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="pages/refrigerateur.html" class="mega-nav-link">108 L</a>
+                    <a href="pages/refrigerateur.html" class="mega-nav-link">120 L</a>
+                    <a href="pages/refrigerateur.html" class="mega-nav-link">138 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="pages/grossiste.html" class="nav-link">Grossiste</a></li>
+      <li><a href="pages/blog.html" class="nav-link">Blog</a></li>
+      <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="ar">ع</button>
+      </div>
+      <a href="https://wa.me/212663603675" target="_blank" class="nav-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="nav-wa-text">Commander</span>
+      </a>
+      <div class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mega-backdrop" id="megaBackdrop"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="pages/tv.html"><i class="fas fa-tv"></i> <span>Téléviseurs QLED 4K</span></a>
+  <a href="pages/four.html"><i class="fas fa-fire"></i> <span>Fours Électriques</span></a>
+  <a href="pages/clim.html"><i class="fas fa-snowflake"></i> <span>Climatiseurs Inverter</span></a>
+  <a href="pages/refrigerateur.html"><i class="fas fa-temperature-low"></i> <span>Réfrigérateurs</span></a>
+  <a href="pages/grossiste.html"><i class="fas fa-boxes"></i> <span>Grossiste</span></a>
+  <a href="pages/blog.html"><i class="fas fa-newspaper"></i> <span>Blog &amp; Conseils</span></a>
+  <a href="pages/contact.html"><i class="fas fa-headset"></i> <span data-fr="SAV 24/24 &amp; Contact" data-ar="اتصل بنا">SAV 24/24 &amp; Contact</span></a>
+  <a href="https://wa.me/212663603675" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp"></i> <span data-fr="Commander via WhatsApp" data-ar="اطلب عبر واتساب">Commander via WhatsApp</span></a>
+</div>
+
+
+<!-- =====================================================
+     HERO BANNER
+===================================================== -->
+<section class="hero hero-banner-mode" aria-label="TECHVISION — Smart Living">
+  <div class="hero-banner-wrap">
+
+    <!-- Cinematic slider — position:absolute, behind all content -->
+    <div class="hero-slider-bg">
+      <div class="hsb-slide active"><img src="image/tv/hero_worldcup/fina%20word%20cup.webp" alt="" loading="eager" /></div>
+      <div class="hsb-slide"><img src="image/tv/lifestyle/foot.webp" alt="" loading="lazy" /></div>
+      <div class="hsb-slide"><img src="image/tv/hero_worldcup/final%20pink.webp" alt="" loading="lazy" /></div>
+    </div>
+
+    <!-- Sizer: invisible, preserves the exact original hero height -->
+    <img class="hero-sizer" src="image/tv/hero_worldcup/fina%20word%20cup.webp" alt="TECHVISION — Smart Living, Pure Elegance" />
+
+    <!-- Luxury nav arrows -->
+    <button class="hero-arrow hero-prev" aria-label="Slide précédent">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="hero-arrow hero-next" aria-label="Slide suivant">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <div class="hero-banner-actions">
+      <div class="container">
+        <div class="hero-anim-badge">
+          <i class="fas fa-star"></i>
+          <span data-fr="Électroménager Premium — Garantie 2 Ans" data-ar="أجهزة منزلية متميزة — ضمان سنتان">Électroménager Premium — Garantie 2 Ans</span>
+        </div>
+        <h2 class="hero-anim-title" data-fr='La qualité qui <span>fait la différence</span>' data-ar='الجودة التي <span>تصنع الفرق</span>'>
+          La qualité qui <span>fait la différence</span>
+        </h2>
+        <p class="hero-anim-sub" data-fr="TV 4K · Fours · Climatiseurs · Réfrigérateurs" data-ar="تلفاز 4K · أفران · مكيفات · ثلاجات">TV 4K &nbsp;·&nbsp; Fours &nbsp;·&nbsp; Climatiseurs &nbsp;·&nbsp; Réfrigérateurs</p>
+        <div class="hero-banner-btns">
+          <a href="#categories" class="btn btn-cta btn-lg">
+            <i class="fas fa-th-large"></i>
+            <span data-fr="Découvrir nos produits" data-ar="اكتشف منتجاتنا">Découvrir nos produits</span>
+          </a>
+          <a href="https://wa.me/212663603675?text=%F0%9F%91%8B%20Je%20souhaite%20avoir%20plus%20d%27informations" target="_blank" class="btn btn-whatsapp btn-lg">
+            <i class="fab fa-whatsapp"></i>
+            <span data-fr="Commander via WhatsApp" data-ar="اطلب عبر واتساب">Commander via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hs-track"><div class="hs-dot"></div></div>
+  </div>
+</section>
+
+<!-- =====================================================
+     BRAND STRIP
+===================================================== -->
+<div class="brand-strip">
+  <div class="container-lg">
+    <div class="brand-strip-inner">
+      <div class="brand-strip-item" data-reveal="up">
+        <div class="strip-icon"><i class="fas fa-medal"></i></div>
+        <div class="strip-text">
+          <strong data-fr="Qualité Premium" data-ar="جودة عالية">Qualité Premium</strong>
+          <span data-fr="Matériaux certifiés CE" data-ar="مواد معتمدة CE">Matériaux certifiés CE</span>
+        </div>
+      </div>
+      <div class="brand-strip-item" data-reveal="up" data-delay="80">
+        <div class="strip-icon"><i class="fas fa-truck-fast"></i></div>
+        <div class="strip-text">
+          <strong data-fr="Livraison Rapide" data-ar="توصيل سريع">Livraison Rapide</strong>
+          <span data-fr="Partout au Maroc" data-ar="في كل أنحاء المغرب">Partout au Maroc</span>
+        </div>
+      </div>
+      <div class="brand-strip-item" data-reveal="up" data-delay="160">
+        <div class="strip-icon"><i class="fas fa-headset"></i></div>
+        <div class="strip-text">
+          <strong data-fr="SAV 24/24" data-ar="خدمة العملاء 24/7">SAV 24/24</strong>
+          <span data-fr="Support technique dédié" data-ar="دعم تقني متخصص">Support technique dédié</span>
+        </div>
+      </div>
+      <div class="brand-strip-item" data-reveal="up" data-delay="240">
+        <div class="strip-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="strip-text">
+          <strong data-fr="Garantie 2 Ans" data-ar="ضمان سنتان">Garantie 2 Ans</strong>
+          <span data-fr="Sur tous nos produits" data-ar="على جميع المنتجات">Sur tous nos produits</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+<section class="categories" id="categories">
+  <div class="container">
+    <div class="section-header-wrap text-center">
+      <span class="section-label" data-fr="Notre Gamme" data-ar="مجموعتنا">Notre Gamme</span>
+      <h2 class="section-title" data-fr="L'électroménager <span>qui fait la différence</span>" data-ar="الأجهزة المنزلية <span>التي تصنع الفرق</span>">
+        L'électroménager <span>qui fait la différence</span>
+      </h2>
+      <p class="section-desc" style="margin: 0 auto;" data-fr="4 gammes de produits pensés pour le confort de votre maison, avec la qualité que vous méritez au prix qui vous respecte." data-ar="4 مجموعات من المنتجات مصممة لراحة منزلك بالجودة التي تستحقها.">
+        4 gammes de produits pensés pour le confort de votre maison, avec la qualité que vous méritez au prix qui vous respecte.
+      </p>
+    </div>
+
+    <div class="categories-grid">
+      <!-- Four -->
+      <a href="pages/four.html" class="cat-card four" data-reveal="up">
+        <div class="cat-card-bg">
+          <img src="image/four/lifestyle/hf_20260506_193507_f5f0780e-4008-424b-a116-f87d9cb9160c.webp" alt="Four électrique lifestyle"  loading="lazy">
+        </div>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <div class="cat-icon"><i class="fas fa-fire"></i></div>
+          <div class="cat-name" data-fr="Fours Électriques" data-ar="أفران كهربائية">Fours Électriques</div>
+          <div class="cat-sub" data-fr="HeatPro Series — 45L à 75L" data-ar="HeatPro Series — 45 إلى 75 لتر">HeatPro Series — 45L à 75L</div>
+          <span class="cat-arrow">
+            <span data-fr="Voir la gamme" data-ar="اكتشف المجموعة">Voir la gamme</span>
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- TV -->
+      <a href="pages/tv.html" class="cat-card tv" data-reveal="up" data-delay="80">
+        <div class="cat-card-bg">
+          <img src="image/tv/lifestyle/hf_20260506_191020_917e0f0f-53f4-4fc5-9f88-ef750bce547c.webp" alt="Téléviseur 4K lifestyle"  loading="lazy">
+        </div>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <div class="cat-icon"><i class="fas fa-tv"></i></div>
+          <div class="cat-name" data-fr="Téléviseurs 4K" data-ar="تلفاز 4K">Téléviseurs 4K</div>
+          <div class="cat-sub" data-fr="Vision Series — 32&quot; à 75&quot;" data-ar="Vision Series — 32 إلى 75 بوصة">Vision Series — 32" à 75"</div>
+          <span class="cat-arrow">
+            <span data-fr="Voir la gamme" data-ar="اكتشف المجموعة">Voir la gamme</span>
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- Clim -->
+      <a href="pages/clim.html" class="cat-card clim" data-reveal="up" data-delay="160">
+        <div class="cat-card-bg">
+          <img src="image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="Climatiseur lifestyle"  loading="lazy">
+        </div>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <div class="cat-icon"><i class="fas fa-snowflake"></i></div>
+          <div class="cat-name" data-fr="Climatiseurs" data-ar="مكيفات هواء">Climatiseurs</div>
+          <div class="cat-sub" data-fr="AirSmart Series — Inverter A++" data-ar="AirSmart Series — Inverter A++">AirSmart Series — Inverter A++</div>
+          <span class="cat-arrow">
+            <span data-fr="Voir la gamme" data-ar="اكتشف المجموعة">Voir la gamme</span>
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- Frigo -->
+      <a href="pages/refrigerateur.html" class="cat-card frigo" data-reveal="up" data-delay="240">
+        <div class="cat-card-bg">
+          <img src="image/refrigerateur/lifestyle/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.webp" alt="Réfrigérateur lifestyle"  loading="lazy">
+        </div>
+        <div class="cat-card-overlay"></div>
+        <div class="cat-card-content">
+          <div class="cat-icon"><i class="fas fa-cube"></i></div>
+          <div class="cat-name" data-fr="Réfrigérateurs" data-ar="ثلاجات">Réfrigérateurs</div>
+          <div class="cat-sub" data-fr="FreshTech Series — 108L à 138L" data-ar="FreshTech Series — 108 إلى 138 لتر">FreshTech Series — 108L à 138L</div>
+          <span class="cat-arrow">
+            <span data-fr="Voir la gamme" data-ar="اكتشف المجموعة">Voir la gamme</span>
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     BRAND POSITIONING
+===================================================== -->
+<section class="brand-pos">
+  <div class="container">
+    <div class="brand-pos-grid">
+      <div class="brand-pos-text" data-reveal="left">
+        <span class="section-label">Notre Philosophie</span>
+        <h2>
+          La qualité d'une <em>grande marque</em>,<br/>
+          le prix qui vous <em>respecte</em>
+        </h2>
+        <p data-fr="Chez TECHVISION, nous croyons que le luxe technologique ne doit pas être réservé à quelques-uns. Nos ingénieurs conçoivent des produits avec les mêmes standards de qualité que les grandes marques mondiales — mais sans les marges de distribution exorbitantes. Résultat : vous profitez de l'excellence au prix juste." data-ar="نؤمن في TECHVISION أن الرفاهية التقنية يجب أن تكون في متناول الجميع. نصنع منتجات بمعايير جودة عالمية بسعر عادل.">
+          Chez TECHVISION, nous croyons que le luxe technologique ne doit pas être réservé à quelques-uns. Nos ingénieurs conçoivent des produits avec les mêmes standards de qualité que les grandes marques mondiales — mais sans les marges exorbitantes. Résultat : vous profitez de l'excellence au prix juste.
+        </p>
+        <a href="pages/contact.html" class="btn btn-outline-white">
+          <i class="fas fa-phone"></i>
+          <span data-fr="Nous contacter" data-ar="تواصل معنا">Nous contacter</span>
+        </a>
+      </div>
+
+      <div class="brand-pillars" data-reveal="right">
+        <div class="pillar-card">
+          <div class="pillar-icon">🏆</div>
+          <h4 data-fr="Qualité Certifiée CE" data-ar="جودة معتمدة CE">Qualité Certifiée CE</h4>
+          <p data-fr="Tous nos produits respectent les normes européennes de sécurité et qualité." data-ar="جميع منتجاتنا تستوفي المعايير الأوروبية للسلامة والجودة.">Tous nos produits respectent les normes européennes de sécurité et qualité.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">💰</div>
+          <h4 data-fr="Prix Imbattable" data-ar="سعر لا يُنافس">Prix Imbattable</h4>
+          <p data-fr="Vente directe fabricant → consommateur. Pas d'intermédiaires, économies garanties." data-ar="بيع مباشر من المصنع للمستهلك. لا وسطاء، توفير مضمون.">Vente directe fabricant → consommateur. Pas d'intermédiaires, économies garanties.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">🛡️</div>
+          <h4 data-fr="Garantie 2 ans" data-ar="ضمان سنتان">Garantie 2 ans</h4>
+          <p data-fr="Couverture complète sur pièces et main d'œuvre. Tranquillité d'esprit assurée." data-ar="تغطية كاملة على القطع وأجر العمل. راحة البال مضمونة.">Couverture complète sur pièces et main d'œuvre. Tranquillité d'esprit assurée.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">⚡</div>
+          <h4 data-fr="SAV 24/24 réactif" data-ar="خدمة عملاء 24/7">SAV 24/24 réactif</h4>
+          <p data-fr="Une équipe technique dédiée disponible à toute heure pour vous assister." data-ar="فريق تقني متخصص متاح على مدار الساعة لمساعدتك.">Une équipe technique dédiée disponible à toute heure pour vous assister.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     ALL PRODUCTS BANNER
+===================================================== -->
+<section class="all-products-banner">
+  <div class="container">
+    <div class="all-products-banner-inner">
+      <div class="banner-left" data-reveal="left">
+        <h2 data-fr="4 Gammes.<br/>Une seule marque." data-ar="4 مجموعات.<br/>علامة واحدة.">4 Gammes.<br/>Une seule marque.</h2>
+        <p data-fr="Tout l'électroménager dont vous avez besoin." data-ar="كل الأجهزة المنزلية التي تحتاجها.">Tout l'électroménager dont vous avez besoin.</p>
+      </div>
+      <div class="banner-products-row">
+        <a href="pages/tv.html" class="banner-product-chip" data-reveal="up" data-delay="0">
+          <img src="image/tv/product/tv.webp" alt="TV QLED 4K"  loading="lazy">
+          <span class="chip-label">TV QLED 4K</span>
+          <span class="chip-sub">32" — 75"</span>
+        </a>
+        <a href="pages/four.html" class="banner-product-chip" data-reveal="up" data-delay="100">
+          <img src="image/four/product/four.webp" alt="Four HeatPro"  loading="lazy">
+          <span class="chip-label">Fours HeatPro</span>
+          <span class="chip-sub">45L — 75L</span>
+        </a>
+        <a href="pages/clim.html" class="banner-product-chip" data-reveal="up" data-delay="200">
+          <img src="image/clim/product/clim.webp" alt="Clim AirSmart"  loading="lazy">
+          <span class="chip-label">Clim AirSmart</span>
+          <span class="chip-sub">9000 — 18000 BTU</span>
+        </a>
+        <a href="pages/refrigerateur.html" class="banner-product-chip" data-reveal="up" data-delay="300">
+          <img src="image/refrigerateur/product/refrigerateur.webp" alt="Réfrigérateur FreshTech"  loading="lazy">
+          <span class="chip-label">Réfrigérateurs</span>
+          <span class="chip-sub">108L — 138L</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     TRUST BAR
+===================================================== -->
+<div class="trust-bar">
+  <div class="trust-item"><i class="fas fa-shield-alt" style="color:var(--primary);"></i><span>Garantie 2 Ans</span></div>
+  <div class="trust-item"><i class="fas fa-truck" style="color:var(--primary-light);"></i><span>Livraison Partout au Maroc</span></div>
+  <div class="trust-item"><i class="fas fa-headset" style="color:#FF5A1F;"></i><span>SAV 24h/24</span></div>
+  <div class="trust-item"><i class="fas fa-credit-card" style="color:var(--accent);"></i><span>Paiement en 3x/6x/12x</span></div>
+  <div class="trust-item"><i class="fab fa-whatsapp" style="color:var(--whatsapp);"></i><span>Commande via WhatsApp</span></div>
+  <div class="trust-item"><i class="fas fa-award" style="color:var(--gold);"></i><span>Qualité Certifiée</span></div>
+</div>
+
+<!-- =====================================================
+     FEATURED PRODUCTS
+===================================================== -->
+<section class="featured" id="featured">
+  <div class="container">
+    <div class="featured-header">
+      <div>
+        <span class="section-label" data-fr="Nos Best-Sellers" data-ar="الأكثر مبيعاً">Nos Best-Sellers</span>
+        <h2 class="section-title" data-fr="Produits <span>phares</span>" data-ar="المنتجات <span>المميزة</span>">Produits <span>phares</span></h2>
+      </div>
+      <a href="#categories" class="btn btn-outline" data-fr="Voir tout" data-ar="عرض الكل">Voir tout</a>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- TV Card -->
+      <div class="product-card" data-reveal="up">
+        <div class="product-card-media tv-bg">
+          <img src="image/tv/lifestyle/hf_20260506_191020_917e0f0f-53f4-4fc5-9f88-ef750bce547c.webp" alt="TECHVISION QLED 4K Frameless Series"  loading="lazy">
+          <div class="product-card-badges">
+            <span class="badge badge-new">QLED 4K</span>
+            <span class="badge badge-gold">Best-seller</span>
+          </div>
+          <div class="product-card-wishlist"><i class="far fa-heart"></i></div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Téléviseur</div>
+          <div class="product-name">65" QLED 4K – Frameless Series</div>
+          <div class="stock-badge">Stock Limité — 3 restants</div>
+          <div class="product-specs">
+            <span class="product-spec-tag">60Hz</span>
+            <span class="product-spec-tag">Android 15</span>
+            <span class="product-spec-tag">Dolby Audio</span>
+            <span class="product-spec-tag">Voice Control</span>
+          </div>
+          <div class="product-card-footer">
+            <div class="product-price-contact">
+              <span data-fr="Prix sur demande" data-ar="السعر عند الطلب">Prix sur demande</span>
+              <strong data-fr="📞 Demander le prix" data-ar="📞 اسأل عن السعر">📞 Demander le prix</strong>
+            </div>
+            <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%2065%22%20QLED%204K%20Frameless" target="_blank" class="product-wa-btn">
+              <i class="fab fa-whatsapp"></i>
+              <span data-fr="WhatsApp" data-ar="واتساب">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oven Card -->
+      <div class="product-card" data-reveal="up" data-delay="100">
+        <div class="product-card-media four-bg">
+          <img src="image/four/lifestyle/hf_20260506_204644_fe76a6ac-63cd-4255-925b-b8870528b556.webp" alt="TECHVISION HeatPro 75L Inox Rotisserie"  loading="lazy">
+          <div class="product-card-badges">
+            <span class="badge badge-promo">Inox Pro</span>
+            <span class="badge-urgent">OFFRE SPÉCIALE</span>
+          </div>
+          <div class="product-card-wishlist"><i class="far fa-heart"></i></div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Four Électrique</div>
+          <div class="product-name">HeatPro 65L – Inox + Rotisserie</div>
+          <div class="stock-badge">Stock Limité — 5 restants</div>
+          <div class="product-specs">
+            <span class="product-spec-tag">300°C</span>
+            <span class="product-spec-tag">1600W</span>
+            <span class="product-spec-tag">Turbo Fan</span>
+            <span class="product-spec-tag">Rotisserie</span>
+          </div>
+          <div class="product-card-footer">
+            <div class="product-price-contact">
+              <span data-fr="Prix sur demande" data-ar="السعر عند الطلب">Prix sur demande</span>
+              <strong data-fr="📞 Demander le prix" data-ar="📞 اسأل عن السعر">📞 Demander le prix</strong>
+            </div>
+            <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20four%2065L%20Inox" target="_blank" class="product-wa-btn">
+              <i class="fab fa-whatsapp"></i>
+              <span data-fr="WhatsApp" data-ar="واتساب">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clim Card -->
+      <div class="product-card" data-reveal="up" data-delay="200">
+        <div class="product-card-media clim-bg">
+          <img src="image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="TECHVISION AirSmart 12000 BTU Inverter"  loading="lazy">
+          <div class="product-card-badges">
+            <span class="badge badge-accent">A++</span>
+            <span class="badge badge-new">Inverter</span>
+          </div>
+          <div class="product-card-wishlist"><i class="far fa-heart"></i></div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Climatiseur</div>
+          <div class="product-name">AirSmart 12000 BTU – Inverter Pro</div>
+          <div class="stock-badge">Stock Limité — 4 restants</div>
+          <div class="product-specs">
+            <span class="product-spec-tag">Chaud/Froid</span>
+            <span class="product-spec-tag">A++</span>
+            <span class="product-spec-tag">Ultra Silent</span>
+            <span class="product-spec-tag">Auto Clean</span>
+          </div>
+          <div class="product-card-footer">
+            <div class="product-price-contact">
+              <span data-fr="Prix sur demande" data-ar="السعر عند الطلب">Prix sur demande</span>
+              <strong data-fr="📞 Demander le prix" data-ar="📞 اسأل عن السعر">📞 Demander le prix</strong>
+            </div>
+            <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20clim%2012000%20BTU" target="_blank" class="product-wa-btn">
+              <i class="fab fa-whatsapp"></i>
+              <span data-fr="WhatsApp" data-ar="واتساب">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     WHY TECHVISION
+===================================================== -->
+<section class="why-section">
+  <div class="container">
+    <div class="text-center" data-reveal="up">
+      <span class="section-label" data-fr="Pourquoi TECHVISION ?" data-ar="لماذا TECHVISION؟">Pourquoi TECHVISION ?</span>
+      <h2 class="section-title" data-fr="L'expérience <span>au-delà</span> du prix" data-ar="التجربة <span>التي تتجاوز</span> السعر">
+        L'expérience <span>au-delà</span> du prix
+      </h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card" data-reveal="up">
+        <div class="why-icon blue"><i class="fas fa-award"></i></div>
+        <h4 data-fr="Certifié CE & Conforme" data-ar="معتمد CE ومطابق للمعايير">Certifié CE & Conforme</h4>
+        <p data-fr="Tous nos appareils respectent les directives européennes de sécurité et les normes de qualité internationales." data-ar="جميع أجهزتنا تلتزم بالمعايير الأوروبية للسلامة والجودة الدولية.">Tous nos appareils respectent les directives européennes de sécurité et les normes de qualité internationales.</p>
+      </div>
+      <div class="why-card" data-reveal="up" data-delay="80">
+        <div class="why-icon orange"><i class="fas fa-tags"></i></div>
+        <h4 data-fr="Le Meilleur Rapport Qualité/Prix" data-ar="أفضل نسبة جودة/سعر">Le Meilleur Rapport Qualité/Prix</h4>
+        <p data-fr="La qualité d'une grande marque internationale, le prix qui respecte votre budget. Parce que l'excellence ne devrait pas coûter une fortune." data-ar="جودة ماركة دولية كبرى، بسعر يناسب ميزانيتك.">La qualité d'une grande marque internationale, le prix qui respecte votre budget.</p>
+      </div>
+      <div class="why-card" data-reveal="up" data-delay="160">
+        <div class="why-icon green"><i class="fas fa-headset"></i></div>
+        <h4 data-fr="SAV 24/24 au Maroc" data-ar="خدمة عملاء 24/24 بالمغرب">SAV 24/24 au Maroc</h4>
+        <p data-fr="Une équipe dédiée disponible jour et nuit. Appelez le 0660240276 ou écrivez sur WhatsApp pour une assistance immédiate." data-ar="فريق متخصص متاح ليلاً ونهاراً. اتصل على 0660240276 أو راسلنا عبر واتساب.">Une équipe dédiée disponible jour et nuit. Appelez le 0660240276 pour une assistance immédiate.</p>
+      </div>
+      <div class="why-card" data-reveal="up" data-delay="80">
+        <div class="why-icon gold"><i class="fas fa-truck-fast"></i></div>
+        <h4 data-fr="Livraison Partout au Maroc" data-ar="توصيل في كل المغرب">Livraison Partout au Maroc</h4>
+        <p data-fr="Nous livrons dans toutes les régions du Maroc. Commandez via WhatsApp et recevez chez vous dans les meilleurs délais." data-ar="نوصّل في جميع مناطق المغرب. اطلب عبر واتساب واستلم في أقرب وقت.">Nous livrons dans toutes les régions du Maroc. Commandez via WhatsApp et recevez chez vous rapidement.</p>
+      </div>
+      <div class="why-card" data-reveal="up" data-delay="160">
+        <div class="why-icon purple"><i class="fas fa-calendar-check"></i></div>
+        <h4 data-fr="Paiement Facilité / Taksit" data-ar="تقسيط مريح">Paiement Facilité / Taksit</h4>
+        <p data-fr="Profitez de nos options de paiement flexibles : comptant, virement, ou en plusieurs versements. Renseignez-vous via WhatsApp." data-ar="استفد من خيارات الدفع المرنة: نقداً، تحويلاً أو على أقساط. استفسر عبر واتساب.">Profitez de nos options de paiement flexibles : comptant ou en plusieurs versements selon vos besoins.</p>
+      </div>
+      <div class="why-card" data-reveal="up" data-delay="240">
+        <div class="why-icon cyan"><i class="fas fa-boxes-stacked"></i></div>
+        <h4 data-fr="Vente Gros & Détail" data-ar="بيع جملة وتجزئة">Vente Gros & Détail</h4>
+        <p data-fr="Particuliers, revendeurs ou grossistes — nous avons les tarifs adaptés à votre situation. Conditions préférentielles pour les gros volumes." data-ar="أفراد، موزعون أو تجار جملة — لدينا الأسعار المناسبة لكل حالة.">Particuliers, revendeurs ou grossistes — des tarifs adaptés à votre situation avec des conditions préférentielles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card" data-reveal="up">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-number" data-count="10000" data-suffix="+">0</div>
+        <div class="stat-label" data-fr="Clients satisfaits" data-ar="عميل راضٍ">Clients satisfaits</div>
+      </div>
+      <div class="stat-card" data-reveal="up" data-delay="80">
+        <div class="stat-icon"><i class="fas fa-box-open"></i></div>
+        <div class="stat-number" data-count="4" data-suffix="">0</div>
+        <div class="stat-label" data-fr="Gammes de produits" data-ar="مجموعات منتجات">Gammes de produits</div>
+      </div>
+      <div class="stat-card" data-reveal="up" data-delay="160">
+        <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="stat-number" data-count="50" data-suffix="+">0</div>
+        <div class="stat-label" data-fr="Villes au Maroc" data-ar="مدينة بالمغرب">Villes au Maroc</div>
+      </div>
+      <div class="stat-card" data-reveal="up" data-delay="240">
+        <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="stat-number" data-count="2" data-suffix=" ans">0</div>
+        <div class="stat-label" data-fr="Garantie sur tous les produits" data-ar="ضمان على جميع المنتجات">Garantie sur tous les produits</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     HOW TO BUY
+===================================================== -->
+<section class="how-to-buy" id="acheter">
+  <div class="container">
+    <div class="text-center" data-reveal="up">
+      <span class="section-label" data-fr="Comment Commander ?" data-ar="كيف تطلب؟">Comment Commander ?</span>
+      <h2 class="section-title" data-fr="Choisissez votre <span>formule d'achat</span>" data-ar="اختر <span>طريقة شرائك</span>">
+        Choisissez votre <span>formule d'achat</span>
+      </h2>
+    </div>
+
+    <div class="buy-grid">
+      <!-- Retail -->
+      <div class="buy-card retail" data-reveal="up">
+        <div class="buy-icon"><i class="fas fa-user"></i></div>
+        <h3 data-fr="Achat au Détail" data-ar="شراء بالتجزئة">Achat au Détail</h3>
+        <p data-fr="Pour les particuliers. Achetez directement l'unité dont vous avez besoin." data-ar="للأفراد. اشتر الوحدة التي تحتاجها مباشرةً.">Pour les particuliers. Achetez directement l'unité dont vous avez besoin.</p>
+        <div class="buy-features">
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Livraison à domicile" data-ar="توصيل للمنزل">Livraison à domicile</span></div>
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Garantie 2 ans incluse" data-ar="ضمان سنتين مشمول">Garantie 2 ans incluse</span></div>
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="SAV 24/24 dédié" data-ar="خدمة عملاء 24/24 متخصصة">SAV 24/24 dédié</span></div>
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Paiement flexible" data-ar="دفع مرن">Paiement flexible</span></div>
+        </div>
+        <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20souhaite%20acheter%20un%20produit%20au%20détail" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;">
+          <i class="fab fa-whatsapp"></i>
+          <span data-fr="Commander via WhatsApp" data-ar="اطلب عبر واتساب">Commander via WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Wholesale -->
+      <div class="buy-card wholesale" data-reveal="up" data-delay="100">
+        <div class="buy-popular" data-fr="POPULAIRE" data-ar="الأكثر طلباً">POPULAIRE</div>
+        <div class="buy-icon"><i class="fas fa-boxes-stacked"></i></div>
+        <h3 data-fr="Vente en Gros" data-ar="بيع بالجملة">Vente en Gros</h3>
+        <p data-fr="Pour les revendeurs et distributeurs. Tarifs préférentiels sur les grandes quantités." data-ar="للموزعين. أسعار تفضيلية للكميات الكبيرة.">Pour les revendeurs et distributeurs. Tarifs préférentiels sur les grandes quantités.</p>
+        <div class="buy-features">
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Prix revendeur exclusif" data-ar="سعر موزع حصري">Prix revendeur exclusif</span></div>
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Conditions de paiement flexibles" data-ar="شروط دفع مرنة">Conditions de paiement flexibles</span></div>
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Support commercial dédié" data-ar="دعم تجاري متخصص">Support commercial dédié</span></div>
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Livraison prioritaire" data-ar="توصيل ذو أولوية">Livraison prioritaire</span></div>
+        </div>
+        <a href="pages/grossiste.html" class="btn" style="width:100%;justify-content:center;background:var(--gold);color:#fff;border-radius:var(--radius-full);">
+          <i class="fas fa-handshake"></i>
+          <span data-fr="Devenir Revendeur" data-ar="كن موزعاً">Devenir Revendeur</span>
+        </a>
+      </div>
+
+      <!-- Credit -->
+      <div class="buy-card credit" data-reveal="up" data-delay="200">
+        <div class="buy-icon"><i class="fas fa-calendar-check"></i></div>
+        <h3 data-fr="Paiement en Taksit" data-ar="الدفع بالتقسيط">Paiement en Taksit</h3>
+        <p data-fr="Profitez maintenant, payez sur plusieurs mois. Solution adaptée pour tous les budgets." data-ar="استمتع الآن وادفع على عدة أشهر. حل مناسب لجميع الميزانيات.">Profitez maintenant, payez sur plusieurs mois. Solution adaptée pour tous les budgets.</p>
+        <div class="buy-features">
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Sans frais cachés" data-ar="بدون رسوم خفية">Sans frais cachés</span></div>
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Dossier simple" data-ar="ملف بسيط">Dossier simple</span></div>
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Réponse rapide" data-ar="رد سريع">Réponse rapide</span></div>
+          <div class="buy-feature"><i class="fas fa-check-circle"></i> <span data-fr="Disponible sur tous les produits" data-ar="متاح على جميع المنتجات">Disponible sur tous les produits</span></div>
+        </div>
+        <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20des%20informations%20sur%20le%20paiement%20en%20taksit" target="_blank" class="btn btn-cta" style="width:100%;justify-content:center;">
+          <i class="fab fa-whatsapp"></i>
+          <span data-fr="Renseignement Taksit" data-ar="استفسار عن التقسيط">Renseignement Taksit</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     REVIEWS
+===================================================== -->
+<section class="reviews-section" id="avis">
+  <div class="container">
+    <div class="reviews-header">
+      <div data-reveal="left">
+        <span class="section-label" data-fr="Témoignages Clients" data-ar="شهادات العملاء">Témoignages Clients</span>
+        <h2 class="section-title" data-fr="Ce que disent nos <span>clients</span>" data-ar="ما يقوله <span>عملاؤنا</span>">
+          Ce que disent nos <span>clients</span>
+        </h2>
+      </div>
+      <div class="reviews-rating" data-reveal="right">
+        <div class="rating-number">4.9</div>
+        <div class="rating-details">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="rating-count" data-fr="Basé sur 200+ avis" data-ar="بناءً على 200+ تقييم">Basé sur 200+ avis</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card" data-reveal="up">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="review-avatar" style="background: linear-gradient(135deg, #1B3D8F, #2850B8);">K</div>
+            <div><div class="review-name">Karim B.</div><div class="review-location">Casablanca</div></div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+        <span class="review-product">TV 65" QLED 4K</span>
+        <p class="review-text" data-fr="Image incroyable, les couleurs sont d'une vivacité exceptionnelle. L'Android 15 est fluide et l'interface intuitive. Vraiment une belle surprise pour ce prix. Je recommande TECHVISION sans hésiter !" data-ar="صورة رائعة، الألوان زاهية باستثنائية. Android 15 سلس وواجهة بديهية. مفاجأة جميلة بهذا السعر!">Image incroyable, les couleurs sont d'une vivacité exceptionnelle. L'Android 15 est fluide et l'interface intuitive. Vraiment une belle surprise pour ce prix.</p>
+        <div class="review-verified"><i class="fas fa-check-circle"></i> <span data-fr="Achat vérifié" data-ar="شراء موثق">Achat vérifié</span></div>
+      </div>
+
+      <div class="review-card" data-reveal="up" data-delay="80">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="review-avatar" style="background: linear-gradient(135deg, #C9A84C, #E8C060);">S</div>
+            <div><div class="review-name">Salma R.</div><div class="review-location">Marrakech</div></div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+        <span class="review-product">Four 75L Inox Rotisserie</span>
+        <p class="review-text" data-fr="Le four chauffe uniformément grâce au Turbo Fan. J'ai préparé plusieurs recettes complexes et le résultat était parfait. Design élégant en inox. La livraison était rapide aussi !" data-ar="الفرن يسخن بالتساوي بفضل Turbo Fan. جربت وصفات معقدة والنتيجة مثالية. تصميم أنيق وتوصيل سريع!">Le four chauffe uniformément grâce au Turbo Fan. J'ai préparé plusieurs recettes complexes et le résultat était parfait. Design élégant en inox.</p>
+        <div class="review-verified"><i class="fas fa-check-circle"></i> <span data-fr="Achat vérifié" data-ar="شراء موثق">Achat vérifié</span></div>
+      </div>
+
+      <div class="review-card" data-reveal="up" data-delay="160">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="review-avatar" style="background: linear-gradient(135deg, #25D366, #1AA050);">Y</div>
+            <div><div class="review-name">Youssef M.</div><div class="review-location">Rabat</div></div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+        <span class="review-product">Climatiseur 12000 BTU</span>
+        <p class="review-text" data-fr="Ultra silencieux, on l'entend à peine ! La pièce se refroidit en moins de 5 minutes. Facture d'électricité réduite grâce à l'Inverter A++. Service client excellent. Bravo TECHVISION !" data-ar="صامت جداً، تكاد لا تسمعه! الغرفة تبرد في أقل من 5 دقائق. فاتورة كهرباء منخفضة بفضل Inverter A++.">Ultra silencieux, on l'entend à peine ! La pièce se refroidit en moins de 5 minutes. Facture d'électricité réduite grâce à l'Inverter A++. Bravo !</p>
+        <div class="review-verified"><i class="fas fa-check-circle"></i> <span data-fr="Achat vérifié" data-ar="شراء موثق">Achat vérifié</span></div>
+      </div>
+
+      <div class="review-card" data-reveal="up" data-delay="80">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="review-avatar" style="background: linear-gradient(135deg, #7C3AED, #9D56F5);">F</div>
+            <div><div class="review-name">Fatima Z.</div><div class="review-location">Fès</div></div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+        <span class="review-product">Réfrigérateur 138L No Frost</span>
+        <p class="review-text" data-fr="Parfait pour notre grande famille ! La technologie No Frost est vraiment pratique, plus de givre. La livraison a été rapide et les livreurs très professionnels. Je suis ravie de mon achat TECHVISION !" data-ar="مثالي لعائلتنا الكبيرة! تقنية No Frost رائعة، لا جليد بعد الآن. التوصيل كان سريعاً والموصّلون محترفون. سعيدة جداً بشرائي من TECHVISION!">Parfait pour notre grande famille ! La technologie No Frost est vraiment pratique, plus de givre. La livraison a été rapide et les livreurs très professionnels.</p>
+        <div class="review-verified"><i class="fas fa-check-circle"></i> <span data-fr="Achat vérifié" data-ar="شراء موثق">Achat vérifié</span></div>
+      </div>
+
+      <div class="review-card" data-reveal="up" data-delay="160">
+        <div class="review-header">
+          <div class="review-author">
+            <div class="review-avatar" style="background: linear-gradient(135deg, #FF5A1F, #FF8C5A);">A</div>
+            <div><div class="review-name">Ahmed K.</div><div class="review-location">Agadir</div></div>
+          </div>
+          <div class="review-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+        <span class="review-product">TV Double Glass 55" + Soundbar</span>
+        <p class="review-text" data-fr="Le double verre donne un effet premium incroyable, le salon a changé complètement ! Le son du soundbar intégré est fort et clair. Mon fils est un fan de gaming et les 60Hz font toute la différence. Bravo TECHVISION !" data-ar="زجاجة مزدوجة تعطي مظهراً فاخراً رائعاً، غرفة المعيشة تغيرت كلياً! صوت الـ soundbar قوي وصافٍ. ابني مولع بالألعاب و60Hz تصنع كل الفرق.">Le double verre donne un effet premium incroyable, le salon a changé complètement ! Le son du soundbar intégré est fort et clair. Les 60Hz pour le gaming, c'est parfait !</p>
+        <div class="review-verified"><i class="fas fa-check-circle"></i> <span data-fr="Achat vérifié" data-ar="شراء موثق">Achat vérifié</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     BLOG PREVIEW
+===================================================== -->
+<section class="blog-preview" id="blog">
+  <div class="container">
+    <div class="text-center" data-reveal="up">
+      <span class="section-label" data-fr="Blog & Conseils" data-ar="مدونة ونصائح">Blog & Conseils</span>
+      <h2 class="section-title" data-fr="Guides d'achat & <span>conseils experts</span>" data-ar="أدلة الشراء و<span>نصائح الخبراء</span>">
+        Guides d'achat & <span>conseils experts</span>
+      </h2>
+    </div>
+
+    <div class="blog-grid">
+
+      <a href="pages/blog-tv.html" class="blog-card" data-reveal="up">
+        <div class="blog-card-img">
+          <img src="image/tv/lifestyle/hf_20260506_185839_5d36fdcd-6312-49de-9507-d15506467cc5.webp" alt="TV QLED 4K TECHVISION"  loading="lazy">
+          <span class="blog-card-cat">TV & Vidéo</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><i class="fas fa-calendar"></i> 15 Avril 2024 <i class="fas fa-clock" style="margin-left:8px"></i> 5 min</div>
+          <div class="blog-card-title">Comment choisir sa TV 4K QLED en 2024 ? Guide complet pour le Maroc</div>
+          <div class="blog-card-excerpt">QLED, OLED, 4K, 8K, 60Hz... Les termes techniques peuvent être déroutants. Notre guide vous explique tout pour faire le bon choix selon votre budget et votre pièce.</div>
+          <span class="blog-read-more"><span data-fr="Lire l'article" data-ar="اقرأ المقال">Lire l'article</span> <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a href="pages/blog-four.html" class="blog-card" data-reveal="up" data-delay="80">
+        <div class="blog-card-img">
+          <img src="image/four/lifestyle/hf_20260506_194417_9fc32bd4-d673-4772-b05e-dc1843d011a0.webp" alt="Four Électrique TECHVISION"  loading="lazy">
+          <span class="blog-card-cat">Cuisine & Four</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><i class="fas fa-calendar"></i> 10 Avril 2024 <i class="fas fa-clock" style="margin-left:8px"></i> 6 min</div>
+          <div class="blog-card-title">Four électrique : quelle capacité choisir ? 45L, 55L, 65L ou 75L</div>
+          <div class="blog-card-excerpt">La capacité de votre four électrique est cruciale. Trop petit, vos plats débordent. Trop grand, vous gaspillez l'énergie. Voici comment choisir selon la taille de votre famille.</div>
+          <span class="blog-read-more"><span data-fr="Lire l'article" data-ar="اقرأ المقال">Lire l'article</span> <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a href="pages/blog-clim.html" class="blog-card" data-reveal="up" data-delay="160">
+        <div class="blog-card-img">
+          <img src="image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="Climatiseur Inverter TECHVISION"  loading="lazy">
+          <span class="blog-card-cat">Climatisation</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta"><i class="fas fa-calendar"></i> 5 Avril 2024 <i class="fas fa-clock" style="margin-left:8px"></i> 7 min</div>
+          <div class="blog-card-title">Climatiseur Inverter vs Non-Inverter : lequel choisir pour économiser au Maroc ?</div>
+          <div class="blog-card-excerpt">La technologie Inverter peut réduire votre facture d'électricité jusqu'à 40%. Mais est-ce vraiment rentable au Maroc ? On analyse les chiffres pour vous.</div>
+          <span class="blog-read-more"><span data-fr="Lire l'article" data-ar="اقرأ المقال">Lire l'article</span> <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-48">
+      <a href="pages/blog.html" class="btn btn-outline btn-lg">
+        <i class="fas fa-newspaper"></i>
+        <span data-fr="Voir tous les articles" data-ar="عرض جميع المقالات">Voir tous les articles</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     INSTAGRAM / SOCIAL
+===================================================== -->
+<section class="social-section" data-reveal="up">
+  <div class="container">
+    <span class="section-label" style="justify-content:center;">Suivez-nous</span>
+    <h2 class="section-title" style="margin-bottom:8px;">
+      Nos dernières créations<br/>sur <span>Instagram</span>
+    </h2>
+    <p style="color:var(--text-muted);margin-bottom:24px;">
+      <span data-fr="Promotions, nouveautés et inspirations — suivez @tech_vision.ma pour ne rien manquer." data-ar="عروض، منتجات جديدة وأفكار إلهامية — تابع @tech_vision.ma لا تفوّت شيئاً.">Promotions, nouveautés et inspirations — suivez @tech_vision.ma pour ne rien manquer.</span>
+    </p>
+    <a href="https://www.instagram.com/tech_vision.ma/" target="_blank" class="instagram-link">
+      <i class="fab fa-instagram"></i>
+      <span>@tech_vision.ma</span>
+      <i class="fas fa-arrow-right" style="font-size:.9rem;opacity:.7;"></i>
+    </a>
+  </div>
+</section>
+
+<!-- =====================================================
+     LIVE PROOF STRIP
+===================================================== -->
+<div class="live-proof-strip">
+  <div class="live-proof-ticker">
+    <div class="live-proof-item"><div class="live-dot-sm"></div> Karim de Casablanca vient de commander une TV 65" QLED 4K</div>
+    <div class="live-proof-item"><i class="fas fa-star"></i> Salma de Marrakech : "Four HeatPro 75L — livraison rapide, qualité top"</div>
+    <div class="live-proof-item"><div class="live-dot-sm"></div> Youssef de Rabat vient de commander un Clim 12000 BTU Inverter</div>
+    <div class="live-proof-item"><i class="fas fa-star"></i> Fatima de Fès : "Réfrigérateur 138L No Frost — parfait pour la famille"</div>
+    <div class="live-proof-item"><div class="live-dot-sm"></div> Ahmed d'Agadir vient de commander un Four 65L Inox</div>
+    <div class="live-proof-item"><i class="fas fa-star"></i> Omar de Tanger : "SAV rapide, professionnel. Je recommande TECHVISION"</div>
+    <!-- duplicate for loop -->
+    <div class="live-proof-item"><div class="live-dot-sm"></div> Karim de Casablanca vient de commander une TV 65" QLED 4K</div>
+    <div class="live-proof-item"><i class="fas fa-star"></i> Salma de Marrakech : "Four HeatPro 75L — livraison rapide, qualité top"</div>
+    <div class="live-proof-item"><div class="live-dot-sm"></div> Youssef de Rabat vient de commander un Clim 12000 BTU Inverter</div>
+    <div class="live-proof-item"><i class="fas fa-star"></i> Fatima de Fès : "Réfrigérateur 138L No Frost — parfait pour la famille"</div>
+    <div class="live-proof-item"><div class="live-dot-sm"></div> Ahmed d'Agadir vient de commander un Four 65L Inox</div>
+    <div class="live-proof-item"><i class="fas fa-star"></i> Omar de Tanger : "SAV rapide, professionnel. Je recommande TECHVISION"</div>
+  </div>
+</div>
+
+<!-- =====================================================
+     WHATSAPP CTA SECTION
+===================================================== -->
+<section class="wa-cta-section">
+  <div class="container">
+    <div class="wa-cta-inner">
+      <div class="wa-cta-text" data-reveal="left">
+        <div class="wa-cta-badge"><i class="fab fa-whatsapp"></i> Disponible maintenant</div>
+        <h2 data-fr="Un produit vous intéresse ?<br/>Écrivez-nous sur WhatsApp." data-ar="هل يستهويك منتج ما؟<br/>راسلنا على واتساب.">Un produit vous intéresse ?<br/>Écrivez-nous sur WhatsApp.</h2>
+        <p data-fr="Notre équipe répond en moins de 5 minutes. Demandez un prix, posez vos questions, ou passez commande directement depuis votre téléphone." data-ar="فريقنا يرد في أقل من 5 دقائق. اطلب سعراً، اسأل عن أي سؤال، أو اطلب مباشرة من هاتفك.">Notre équipe répond en moins de 5 minutes. Demandez un prix, posez vos questions, ou passez commande directement depuis votre téléphone.</p>
+      </div>
+      <div class="wa-cta-actions" data-reveal="right">
+        <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%20!%20Je%20suis%20intéressé%20par%20vos%20produits." target="_blank" class="btn-wa-cta">
+          <i class="fab fa-whatsapp"></i>
+          <span data-fr="Commander sur WhatsApp" data-ar="اطلب عبر واتساب">Commander sur WhatsApp</span>
+        </a>
+        <div class="wa-cta-chips">
+          <a href="tel:+212663603675" class="wa-chip"><i class="fas fa-phone"></i> +212 663 603 675</a>
+          <a href="tel:+212660240276" class="wa-chip"><i class="fas fa-headset"></i> SAV: +212 660 240 276</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand col -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo-link">
+          <img src="image/logo/logo.webp" alt="TECHVISION Logo" class="footer-logo-img" />
+        </a>
+        <p class="footer-desc" data-fr="L'électroménager de qualité supérieure au meilleur prix au Maroc. TV QLED 4K, Fours HeatPro, Climatiseurs AirSmart et Réfrigérateurs FreshTech. Garantie 2 ans sur tous nos produits." data-ar="الأجهزة المنزلية عالية الجودة بأفضل سعر في المغرب. ضمان سنتين على جميع منتجاتنا.">
+          L'électroménager de qualité supérieure au meilleur prix au Maroc. TV QLED 4K, Fours HeatPro, Climatiseurs AirSmart et Réfrigérateurs FreshTech. Garantie 2 ans.
+        </p>
+        <div class="footer-contacts">
+          <div class="footer-contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/212663603675">+212 663 603 675</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+212663603675">+212 663 603 675</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-headset"></i>
+            <a href="tel:+212660240276">SAV: +212 660 240 276</a>
+          </div>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/tech_vision.ma/" target="_blank" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/212663603675" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <div class="footer-heading" data-fr="NOS PRODUITS" data-ar="منتجاتنا">NOS PRODUITS</div>
+        <ul class="footer-links">
+          <li><a href="pages/tv.html" data-fr="Téléviseurs QLED 4K" data-ar="تلفاز QLED 4K">Téléviseurs QLED 4K</a></li>
+          <li><a href="pages/four.html" data-fr="Fours HeatPro Series" data-ar="أفران HeatPro Series">Fours HeatPro Series</a></li>
+          <li><a href="pages/clim.html" data-fr="Climatiseurs AirSmart" data-ar="مكيفات AirSmart">Climatiseurs AirSmart</a></li>
+          <li><a href="pages/refrigerateur.html" data-fr="Réfrigérateurs FreshTech" data-ar="ثلاجات FreshTech">Réfrigérateurs FreshTech</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <div class="footer-heading" data-fr="SERVICES" data-ar="خدماتنا">SERVICES</div>
+        <ul class="footer-links">
+          <li><a href="pages/grossiste.html" data-fr="Vente en Gros" data-ar="بيع بالجملة">Vente en Gros</a></li>
+          <li><a href="pages/contact.html#taksit" data-fr="Paiement Taksit" data-ar="الدفع بالتقسيط">Paiement Taksit</a></li>
+          <li><a href="pages/contact.html#sav" data-fr="SAV & Garantie" data-ar="خدمة ما بعد البيع">SAV & Garantie</a></li>
+          <li><a href="pages/contact.html" data-fr="Livraison Maroc" data-ar="التوصيل بالمغرب">Livraison Maroc</a></li>
+        </ul>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <div class="footer-heading" data-fr="INFORMATIONS" data-ar="معلومات">INFORMATIONS</div>
+        <ul class="footer-links">
+          <li><a href="pages/blog.html" data-fr="Blog & Conseils" data-ar="المدونة والنصائح">Blog & Conseils</a></li>
+          <li><a href="pages/contact.html" data-fr="Nous Contacter" data-ar="تواصل معنا">Nous Contacter</a></li>
+          <li><a href="#avis" data-fr="Avis Clients" data-ar="آراء العملاء">Avis Clients</a></li>
+          <li><a href="pages/contact.html" data-fr="Politique de Garantie" data-ar="سياسة الضمان">Politique de Garantie</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <span data-fr="© 2024 TECHVISION Maroc. Tous droits réservés." data-ar="© 2024 TECHVISION المغرب. جميع الحقوق محفوظة.">© 2024 TECHVISION Maroc. Tous droits réservés.</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#" data-fr="Mentions légales" data-ar="الإشعارات القانونية">Mentions légales</a>
+        <a href="#" data-fr="Politique de confidentialité" data-ar="سياسة الخصوصية">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+<div class="whatsapp-float" id="waFloat">
+  <div class="wa-chat-panel" id="waChatPanel" aria-hidden="true">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar"><i class="fab fa-whatsapp"></i></div>
+      <div class="wa-chat-info">
+        <strong>TECHVISION Maroc</strong>
+        <span><span class="wa-online-dot"></span> En ligne</span>
+      </div>
+      <button class="wa-chat-close" id="waClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-bubble">
+        <p>👋 Je souhaite avoir plus d'informations</p>
+        <time>Maintenant</time>
+      </div>
+    </div>
+    <a href="https://wa.me/212663603675?text=%F0%9F%91%8B%20Je%20souhaite%20avoir%20plus%20d%27informations" target="_blank" class="wa-chat-send">
+      <i class="fab fa-whatsapp"></i>
+      <span>Envoyer ce message</span>
+    </a>
+  </div>
+  <button class="wa-main-btn" id="waMainBtn" aria-label="WhatsApp TECHVISION">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-notification">1</span>
+  </button>
+</div>
+
+<!-- Scroll to top -->
+<button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="js/main.js"></script>
+<script>
+  // Scroll to top button
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // ===== CINEMATIC HERO SLIDER =====
+  (function () {
+    const slides = document.querySelectorAll('.hsb-slide');
+    if (!slides.length) return;
+
+    const DURATION = 5500;
+    let cur = 0, timer;
+
+    function goTo(n) {
+      // Slide sortante : monte au z-index 3 et s'efface lentement
+      const leaving = slides[cur];
+      leaving.classList.add('leaving');
+      leaving.classList.remove('active');
+      setTimeout(() => leaving.classList.remove('leaving'), 1600);
+
+      // Slide entrante
+      cur = (n + slides.length) % slides.length;
+      const incoming = slides[cur];
+
+      // Reset Ken Burns pour que l'animation redémarre proprement
+      const img = incoming.querySelector('img');
+      if (img) { img.style.animation = 'none'; void img.offsetWidth; img.style.animation = ''; }
+
+      incoming.classList.add('active');
+    }
+    function play()  { timer = setInterval(() => goTo(cur + 1), DURATION); }
+    function pause() { clearInterval(timer); }
+
+    // Prev / Next arrows
+    const prevBtn = document.querySelector('.hero-prev');
+    const nextBtn = document.querySelector('.hero-next');
+    if (prevBtn) prevBtn.addEventListener('click', () => { pause(); goTo(cur - 1); play(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { pause(); goTo(cur + 1); play(); });
+
+    // Touch swipe support
+    let touchX = 0;
+    const wrap = document.querySelector('.hero-banner-wrap');
+    if (wrap) {
+      wrap.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      wrap.addEventListener('touchend',   e => {
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 48) { pause(); goTo(cur + (dx < 0 ? 1 : -1)); play(); }
+      }, { passive: true });
+      // Pause on desktop hover
+      wrap.addEventListener('mouseenter', pause);
+      wrap.addEventListener('mouseleave', play);
+    }
+
+    play();
+  })();
+</script>
+<script>
+  (function () {
+    const mainBtn = document.getElementById('waMainBtn');
+    const panel   = document.getElementById('waChatPanel');
+    const closeBtn = document.getElementById('waClose');
+    const float   = document.getElementById('waFloat');
+    if (!mainBtn || !panel) return;
+
+    mainBtn.addEventListener('click', function () {
+      const isOpen = panel.classList.toggle('open');
+      panel.setAttribute('aria-hidden', !isOpen);
+    });
+
+    closeBtn && closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      panel.classList.remove('open');
+      panel.setAttribute('aria-hidden', 'true');
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!float.contains(e.target)) {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+      }
+    });
+  })();
+</script>
+</body>
+</html>

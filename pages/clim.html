@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../image/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../image/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../image/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../image/favicon/favicon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../image/favicon/favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../image/favicon/favicon-512x512.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climatiseurs Inverter TECHVISION — AirSmart Series | 9000, 12000, 18000 BTU Maroc</title>
+  <meta name="description" content="TECHVISION AirSmart Series : climatiseurs Inverter A++ ultra-silencieux. 9000, 12000 et 18000 BTU. Chaud/froid, auto-nettoyage, kit installation inclus. Garantie 2 ans, SAV 24/24." />
+  <meta name="keywords" content="climatiseur inverter maroc, clim techvision, climatiseur 12000 btu maroc, clim A++ maroc, climatiseur split inverter, airsmart" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .clim-hero { background: linear-gradient(135deg, #001828 0%, #002B4A 45%, #003A6B 70%, #001828 100%); }
+    .clim-card { background:#fff; border: 2px solid var(--border); border-radius: var(--radius-lg); overflow:hidden; transition: var(--transition-slow); }
+    .clim-card:hover { border-color: var(--accent); box-shadow: 0 12px 48px rgba(0,180,255,.15); transform: translateY(-6px); }
+    .clim-card.best { border-color: var(--primary-light); }
+    .clim-card-top { background: linear-gradient(135deg,#E6F9FF,#EEF8FF); height: 220px; display:flex;align-items:center;justify-content:center;padding:20px;position:relative; }
+    .clim-card-top img { max-height:180px;object-fit:contain;transition:transform .4s ease; }
+    .clim-card:hover .clim-card-top img { transform:scale(1.05); }
+    .btu-badge { position:absolute;top:12px;left:12px;background:var(--primary);color:#fff;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:20px; }
+    .btu-badge.popular { background:var(--gold); }
+    .clim-body { padding:20px; }
+    .clim-name { font-size:1.05rem;font-weight:700;margin-bottom:5px; }
+    .clim-sub { font-size:.78rem;color:var(--text-muted);margin-bottom:14px; }
+    .spec-bar { display:flex;flex-direction:column;gap:8px;margin-bottom:16px; }
+    .spec-bar-item { display:flex;align-items:center;gap:10px;font-size:.82rem; }
+    .spec-bar-icon { width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.78rem;flex-shrink:0; }
+    .spec-bar-icon.blue { background:#E6F9FF;color:var(--accent-dark); }
+    .spec-bar-icon.green { background:#EEFFF5;color:var(--whatsapp); }
+    .spec-bar-icon.gold { background:var(--gold-light);color:#8B6914; }
+    .spec-bar-icon.orange { background:var(--cta-light);color:var(--cta); }
+    .clim-footer { padding:14px 20px;background:var(--light);border-top:1px solid var(--border); }
+    .surface-badge { display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--text-muted);margin-bottom:12px; }
+    .surface-badge i { color:var(--primary-light); }
+    .energy-bar { display:flex;gap:3px;margin-bottom:14px; }
+    .energy-bar span { flex:1;height:8px;border-radius:4px;background:var(--light-grey); }
+    .energy-bar span.active { background:linear-gradient(90deg,#25D366,#1AA050); }
+    .energy-label { font-size:.72rem;color:var(--text-muted);margin-bottom:12px;display:flex;align-items:center;gap:5px; }
+    .energy-label strong { color:var(--whatsapp); }
+    /* ── Lifestyle Gallery ── */
+    .clim-ls-section { background:#001828; padding:72px 0; overflow:hidden; position:relative; }
+    .clim-ls-label { text-align:center; font-size:.72rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:28px; }
+    .clim-ls-track { overflow:hidden; cursor:grab; -webkit-mask-image:linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%); mask-image:linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%); }
+    .clim-ls-inner { display:flex; gap:18px; width:max-content; animation:lsScroll 44s linear infinite; }
+    .clim-ls-track:hover .clim-ls-inner { animation-play-state:paused; }
+    .clim-ls-inner img { height:280px; width:auto; flex-shrink:0; object-fit:cover; border-radius:16px; transition:transform .6s cubic-bezier(.22,1,.36,1), filter .5s ease, box-shadow .5s ease; filter:brightness(.92) saturate(1.1); box-shadow:0 8px 32px rgba(0,0,0,.4); }
+    .clim-ls-inner img:hover { transform:scale(1.04) translateY(-4px); filter:brightness(1.05) saturate(1.2); box-shadow:0 20px 52px rgba(0,50,80,.5); }
+
+    /* Advantages strip (inline grid) */
+    .clim-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    @media (max-width: 768px) { .clim-strip-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+    @media (max-width: 400px) { .clim-strip-grid { grid-template-columns: 1fr !important; } }
+
+    /* === MOBILE FIXES === */
+    @media (max-width: 900px) {
+      /* Clim cards grid: ensure 2 cols on tablet */
+      .models-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 768px) {
+      .clim-hero { padding: 40px 0 56px !important; }
+      .clim-card-top { height: 180px !important; }
+      .clim-card-top img { max-height: 150px !important; }
+      .clim-ls-inner img { height: 180px; }
+      .clim-ls-section { padding: 40px 0 !important; }
+      /* Clim footer energy bar stays visible */
+      .energy-bar { margin-bottom: 10px; }
+    }
+    @media (max-width: 560px) {
+      .models-grid { grid-template-columns: 1fr !important; max-width: 400px; margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container-lg">
+    <a href="../index.html" class="nav-logo">
+      <img src="../image/logo/logo.webp" alt="TECHVISION Logo" />
+    </a>
+                <ul class="nav-menu">
+      <!-- TV -->
+      <li class="nav-item has-mega">
+        <a href="tv.html" class="nav-link">TV <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-tv"></i></div>
+                <div>
+                  <div class="mega-cat-title">Téléviseurs QLED 4K</div>
+                  <div class="mega-cat-desc">Design ultra-fin, image cristalline,<br>son immersif Dolby Atmos</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> QLED 4K · 60Hz HDR</li>
+                <li><i class="fas fa-check-circle"></i> Double Verre Acoustique</li>
+                <li><i class="fas fa-check-circle"></i> Dolby Atmos · Dolby Vision</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="tv.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/tv/lifestyle/hf_20260506_185846_3cda74e5-ab5c-4370-a955-bb98612d6482.webp" alt="TV TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Frameless</div>
+                    <a href="tv-frameless-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="tv-frameless-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="tv-frameless-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="tv-frameless-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="tv-frameless-65.html" class="mega-nav-link">TV 65&quot;</a>
+                    <a href="tv-frameless-75.html" class="mega-nav-link">TV 75&quot;</a>
+                  </div>
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Double Glass</div>
+                    <a href="tv-double-glass-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="tv-double-glass-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="tv-double-glass-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="tv-double-glass-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="tv-double-glass-65.html" class="mega-nav-link">TV 65&quot;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Fours -->
+      <li class="nav-item has-mega">
+        <a href="four.html" class="nav-link">Fours <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-fire"></i></div>
+                <div>
+                  <div class="mega-cat-title">Fours Électriques</div>
+                  <div class="mega-cat-desc">Cuisson précise, design premium,<br>performance professionnelle</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Multi-fonctions 8 modes</li>
+                <li><i class="fas fa-check-circle"></i> Résistance inox longue durée</li>
+                <li><i class="fas fa-check-circle"></i> Thermostat précis ±5°C</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="four.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/four/lifestyle/hf_20260506_194417_9fc32bd4-d673-4772-b05e-dc1843d011a0.webp" alt="Four TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="four.html" class="mega-nav-link">Four 45 L</a>
+                    <a href="four.html" class="mega-nav-link">Four 55 L</a>
+                    <a href="four.html" class="mega-nav-link">Four 75 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Climatiseurs -->
+      <li class="nav-item has-mega">
+        <a href="clim.html" class="nav-link">Climatiseurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-snowflake"></i></div>
+                <div>
+                  <div class="mega-cat-title">Climatiseurs Inverter</div>
+                  <div class="mega-cat-desc">Confort thermique optimal,<br>économie d'énergie classe A+++</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie Inverter DC</li>
+                <li><i class="fas fa-check-circle"></i> Classe énergie A+++</li>
+                <li><i class="fas fa-check-circle"></i> Mode Chaud/Froid réversible</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="clim.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="Climatiseur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par puissance</div>
+                    <a href="clim.html" class="mega-nav-link">9 000 BTU</a>
+                    <a href="clim.html" class="mega-nav-link">12 000 BTU</a>
+                    <a href="clim.html" class="mega-nav-link">18 000 BTU</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Réfrigérateurs -->
+      <li class="nav-item has-mega">
+        <a href="refrigerateur.html" class="nav-link">Réfrigérateurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-temperature-low"></i></div>
+                <div>
+                  <div class="mega-cat-title">Réfrigérateurs</div>
+                  <div class="mega-cat-desc">Conservation optimale, design élégant,<br>technologie No Frost intelligente</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie No Frost</li>
+                <li><i class="fas fa-check-circle"></i> Dégivrage automatique</li>
+                <li><i class="fas fa-check-circle"></i> Éclairage LED intérieur</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="refrigerateur.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/refrigerateur/lifestyle/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.webp" alt="Réfrigérateur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="refrigerateur.html" class="mega-nav-link">108 L</a>
+                    <a href="refrigerateur.html" class="mega-nav-link">120 L</a>
+                    <a href="refrigerateur.html" class="mega-nav-link">138 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="grossiste.html" class="nav-link">Grossiste</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle"><button class="lang-btn active" data-lang="fr">FR</button><button class="lang-btn" data-lang="ar">ع</button></div>
+      <a href="https://wa.me/212663603675" target="_blank" class="nav-whatsapp"><i class="fab fa-whatsapp"></i><span class="nav-wa-text">Commander</span></a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mega-backdrop" id="megaBackdrop"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="tv.html"><i class="fas fa-tv"></i> Téléviseurs QLED 4K</a>
+  <a href="four.html"><i class="fas fa-fire"></i> Fours Électriques</a>
+  <a href="clim.html"><i class="fas fa-snowflake"></i> Climatiseurs Inverter</a>
+  <a href="refrigerateur.html"><i class="fas fa-temperature-low"></i> Réfrigérateurs</a>
+  <a href="grossiste.html"><i class="fas fa-boxes"></i> Grossiste</a>
+  <a href="blog.html"><i class="fas fa-newspaper"></i> Blog &amp; Conseils</a>
+  <a href="contact.html"><i class="fas fa-headset"></i> SAV &amp; Contact</a>
+  <a href="https://wa.me/212663603675" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp"></i> Commander via WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero clim-hero" style="margin-top:76px;overflow:hidden;position:relative;background:#001828;">
+
+  <!-- Cinematic background image -->
+  <img
+    src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp"
+    alt="" aria-hidden="true"
+    style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;display:block;"
+   loading="lazy">
+  <!-- Premium dark overlay -->
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;background:linear-gradient(105deg,rgba(0,18,28,.97) 0%,rgba(0,26,46,.90) 38%,rgba(0,26,46,.60) 65%,rgba(0,26,46,.28) 100%);pointer-events:none;"></div>
+
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="breadcrumb"><a href="../index.html">Accueil</a><i class="fas fa-chevron-right"></i><span>Climatiseurs</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(0,180,255,.15);border:1px solid rgba(0,180,255,.3);color:#7DD3FF;padding:5px 14px;border-radius:50px;font-size:.75rem;font-weight:600;margin-bottom:14px;"><i class="fas fa-snowflake"></i> AirSmart Series — Inverter A++</div>
+        <h1 style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:16px;color:#fff;">Climatiseurs <span style="color:#7DD3FF;">AirSmart</span> Inverter</h1>
+        <p style="color:rgba(255,255,255,.78);font-size:1.05rem;margin-bottom:28px;line-height:1.7;">Technologie Inverter A++ pour un refroidissement rapide et silencieux. Chaud et froid toute l'année. Kit installation inclus. Économisez jusqu'à 40% sur votre facture d'électricité.</p>
+        <div class="btn-group">
+          <a href="#models" class="btn btn-accent" style="background:var(--accent);color:#fff;"><i class="fas fa-snowflake"></i> Voir les modèles</a>
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20des%20info%20sur%20vos%20climatiseurs" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Prix & Disponibilité</a>
+        </div>
+      </div>
+      <div>
+        <div class="hero-carousel">
+          <div class="hero-carousel-main">
+            <img id="climMainImg" src="../image/clim/product/12000-btu/hf_20260506_183421_a4238f93-7e58-469e-986a-9549de821921.webp" alt="TECHVISION AirSmart Inverter"  loading="lazy">
+            <button class="hc-btn hc-prev" onclick="climCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="hc-btn hc-next" onclick="climCarousel(1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="hc-counter"><span id="climIdx">1</span> / 7</div>
+          </div>
+          <div class="hero-carousel-thumbs">
+            <img src="../image/clim/product/12000-btu/hf_20260506_183421_a4238f93-7e58-469e-986a-9549de821921.webp" class="hc-thumb active" onclick="climGo(0)" alt=""  loading="lazy">
+            <img src="../image/clim/product/12000-btu/hf_20260506_183429_57cbc85a-6ec8-4627-a974-0ca68fa2cb47.webp" class="hc-thumb" onclick="climGo(1)" alt=""  loading="lazy">
+            <img src="../image/clim/product/12000-btu/hf_20260506_183436_9d717c50-4448-4874-a12a-61eab7e730ea.webp" class="hc-thumb" onclick="climGo(2)" alt=""  loading="lazy">
+            <img src="../image/clim/product/12000-btu/hf_20260506_183443_8496cbbc-e029-49da-a25f-0fdc00e0529f.webp" class="hc-thumb" onclick="climGo(3)" alt=""  loading="lazy">
+            <img src="../image/clim/product/12000-btu/hf_20260506_183453_44da9576-f312-4bb6-ba39-fa9572a1c5dd.webp" class="hc-thumb" onclick="climGo(4)" alt=""  loading="lazy">
+            <img src="../image/clim/product/12000-btu/hf_20260506_183504_6e1132d9-31f4-45b8-adb5-61c224b7ec3e.webp" class="hc-thumb" onclick="climGo(5)" alt=""  loading="lazy">
+            <img src="../image/clim/product/12000-btu/hf_20260506_183513_d78a8878-08eb-477a-98a6-a3f48142d888.webp" class="hc-thumb" onclick="climGo(6)" alt=""  loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADVANTAGES STRIP -->
+<div style="background:linear-gradient(90deg,var(--accent-dark),var(--primary-light));padding:0;">
+  <div class="container clim-strip-grid">
+    <div style="display:flex;align-items:center;gap:12px;padding:20px 24px;border-right:1px solid rgba(255,255,255,.2);color:#fff;"><i class="fas fa-bolt" style="font-size:1.2rem;opacity:.9;"></i><div><strong style="display:block;font-size:.88rem;">Économie A++</strong><span style="font-size:.72rem;opacity:.8;">-40% sur la facture</span></div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:20px 24px;border-right:1px solid rgba(255,255,255,.2);color:#fff;"><i class="fas fa-volume-mute" style="font-size:1.2rem;opacity:.9;"></i><div><strong style="display:block;font-size:.88rem;">Ultra Silencieux</strong><span style="font-size:.72rem;opacity:.8;">Nuits paisibles</span></div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:20px 24px;border-right:1px solid rgba(255,255,255,.2);color:#fff;"><i class="fas fa-temperature-arrow-down" style="font-size:1.2rem;opacity:.9;"></i><div><strong style="display:block;font-size:.88rem;">Refroidissement Rapide</strong><span style="font-size:.72rem;opacity:.8;">En moins de 5 min</span></div></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:20px 24px;color:#fff;"><i class="fas fa-tools" style="font-size:1.2rem;opacity:.9;"></i><div><strong style="display:block;font-size:.88rem;">Kit Installation Inclus</strong><span style="font-size:.72rem;opacity:.8;">Prêt à installer</span></div></div>
+  </div>
+</div>
+
+<!-- MODELS -->
+<section style="background:var(--light);padding:80px 0;" id="models">
+  <div class="container">
+    <div data-reveal="up" style="margin-bottom:48px;">
+      <span class="section-label">Nos Modèles</span>
+      <h2 class="section-title">Choisissez votre <span>puissance AirSmart</span></h2>
+      <p class="section-desc">3 puissances disponibles pour s'adapter à la superficie de votre pièce.</p>
+    </div>
+    <div class="models-grid">
+
+      <!-- 9000 BTU -->
+      <div class="clim-card" data-reveal="up">
+        <div class="clim-card-top">
+          <img src="../image/clim/product/9000-btu/hf_20260506_183421_a4238f93-7e58-469e-986a-9549de821921.webp" alt="TECHVISION AirSmart 9000 BTU"  loading="lazy">
+          <div class="btu-badge">9 000 BTU</div>
+        </div>
+        <div class="clim-body">
+          <div class="clim-name">AirSmart 9000 BTU – Inverter</div>
+          <div class="stock-badge" style="margin-bottom:6px;">Stock Limité — 6 restants</div>
+          <div class="clim-sub">Réf. TV-AC9K-INV • Idéal pièce 12-18 m²</div>
+          <div class="energy-label"><strong>Classe A++</strong> — économie maximale</div>
+          <div class="energy-bar"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span></span><span></span></div>
+          <div class="spec-bar">
+            <div class="spec-bar-item"><div class="spec-bar-icon blue"><i class="fas fa-snowflake"></i></div><span>Froid & Chaud (Chaud/Froid)</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon green"><i class="fas fa-bolt"></i></div><span>Classe énergétique A++</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon gold"><i class="fas fa-volume-mute"></i></div><span>Ultra Silent Mode</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon orange"><i class="fas fa-broom"></i></div><span>Auto Cleaning</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon blue"><i class="fas fa-moon"></i></div><span>Sleep Mode</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon green"><i class="fas fa-tools"></i></div><span>Kit installation inclus</span></div>
+          </div>
+          <div class="surface-badge"><i class="fas fa-ruler-combined"></i> Surface recommandée : <strong>12 - 18 m²</strong></div>
+        </div>
+        <div class="clim-footer">
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20clim%209000%20BTU" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;"><i class="fab fa-whatsapp"></i> Demander le prix</a>
+        </div>
+      </div>
+
+      <!-- 12000 BTU -->
+      <div class="clim-card best" data-reveal="up" data-delay="100">
+        <div class="clim-card-top">
+          <img src="../image/clim/product/12000-btu/hf_20260506_183429_57cbc85a-6ec8-4627-a974-0ca68fa2cb47.webp" alt="TECHVISION AirSmart 12000 BTU"  loading="lazy">
+          <div class="btu-badge popular">⭐ 12 000 BTU</div>
+        </div>
+        <div class="clim-body">
+          <div class="clim-name">AirSmart 12000 BTU – Inverter Pro</div>
+          <div class="stock-badge" style="margin-bottom:6px;">Stock Limité — 4 restants</div>
+          <div class="clim-sub">Réf. TV-AC12K-INV • Le plus vendu — 18-28 m²</div>
+          <div class="energy-label"><strong>Classe A++</strong> — le meilleur rapport puissance/économie</div>
+          <div class="energy-bar"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span></span></div>
+          <div class="spec-bar">
+            <div class="spec-bar-item"><div class="spec-bar-icon blue"><i class="fas fa-snowflake"></i></div><span>Froid & Chaud (Chaud/Froid)</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon green"><i class="fas fa-bolt"></i></div><span>Classe énergétique A++</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon gold"><i class="fas fa-volume-mute"></i></div><span>Ultra Silent Mode</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon orange"><i class="fas fa-broom"></i></div><span>Auto Cleaning + Déshumidification</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon blue"><i class="fas fa-moon"></i></div><span>Sleep Mode + Timer</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon green"><i class="fas fa-tools"></i></div><span>Kit installation inclus</span></div>
+          </div>
+          <div class="surface-badge"><i class="fas fa-ruler-combined"></i> Surface recommandée : <strong>18 - 28 m²</strong></div>
+        </div>
+        <div class="clim-footer">
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20clim%2012000%20BTU" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fab fa-whatsapp"></i> Demander le prix</a>
+        </div>
+      </div>
+
+      <!-- 18000 BTU -->
+      <div class="clim-card" data-reveal="up" data-delay="200">
+        <div class="clim-card-top">
+          <img src="../image/clim/product/18000-btu/hf_20260506_183443_8496cbbc-e029-49da-a25f-0fdc00e0529f.webp" alt="TECHVISION AirSmart 18000 BTU"  loading="lazy">
+          <div class="btu-badge">18 000 BTU</div>
+        </div>
+        <div class="clim-body">
+          <div class="clim-name">AirSmart 18000 BTU – Inverter XL</div>
+          <div class="clim-sub">Réf. TV-AC18K-INV • Grandes surfaces 28-45 m²</div>
+          <div class="energy-label"><strong>Classe A++</strong> — puissance maximale efficace</div>
+          <div class="energy-bar"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span></div>
+          <div class="spec-bar">
+            <div class="spec-bar-item"><div class="spec-bar-icon blue"><i class="fas fa-snowflake"></i></div><span>Froid & Chaud (Chaud/Froid)</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon green"><i class="fas fa-bolt"></i></div><span>Classe énergétique A++</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon gold"><i class="fas fa-volume-mute"></i></div><span>Ultra Silent Mode</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon orange"><i class="fas fa-broom"></i></div><span>Auto Cleaning + Déshumidification</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon blue"><i class="fas fa-tachometer-alt"></i></div><span>Turbo Cool pour refroidissement express</span></div>
+            <div class="spec-bar-item"><div class="spec-bar-icon green"><i class="fas fa-tools"></i></div><span>Kit installation inclus</span></div>
+          </div>
+          <div class="surface-badge"><i class="fas fa-ruler-combined"></i> Surface recommandée : <strong>28 - 45 m²</strong></div>
+        </div>
+        <div class="clim-footer">
+          <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20du%20clim%2018000%20BTU" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;"><i class="fab fa-whatsapp"></i> Demander le prix</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section style="background:#fff;padding:80px 0;">
+  <div class="container">
+    <div class="text-center" data-reveal="up" style="margin-bottom:40px;">
+      <span class="section-label">Comparatif</span>
+      <h2 class="section-title"><span>9000</span> vs <span>12000</span> vs <span>18000 BTU</span></h2>
+      <p class="section-desc" style="margin:0 auto;">Choisissez la puissance adaptée à la superficie de votre pièce.</p>
+    </div>
+    <div style="overflow-x:auto;" data-reveal="up">
+      <table class="comparison-table">
+        <thead>
+          <tr><th>Caractéristique</th><th>9000 BTU</th><th class="highlight">12000 BTU ⭐</th><th>18000 BTU</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Puissance</td><td>9 000 BTU</td><td class="highlight">12 000 BTU</td><td>18 000 BTU</td></tr>
+          <tr><td>Surface recommandée</td><td>12 - 18 m²</td><td class="highlight">18 - 28 m²</td><td>28 - 45 m²</td></tr>
+          <tr><td>Technologie</td><td>Inverter</td><td class="highlight">Inverter Pro</td><td>Inverter XL</td></tr>
+          <tr><td>Classe énergétique</td><td>A++</td><td class="highlight">A++</td><td>A++</td></tr>
+          <tr><td>Chaud & Froid</td><td class="check"><i class="fas fa-check"></i></td><td class="check highlight"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Ultra Silent</td><td class="check"><i class="fas fa-check"></i></td><td class="check highlight"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Auto Cleaning</td><td class="check"><i class="fas fa-check"></i></td><td class="check highlight"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Déshumidification</td><td class="cross"><i class="fas fa-minus"></i></td><td class="check highlight"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Turbo Cool</td><td class="cross"><i class="fas fa-minus"></i></td><td class="cross"><i class="fas fa-minus"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Sleep Mode</td><td class="check"><i class="fas fa-check"></i></td><td class="check highlight"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Kit installation</td><td class="check"><i class="fas fa-check"></i></td><td class="check highlight"><i class="fas fa-check"></i></td><td class="check"><i class="fas fa-check"></i></td></tr>
+          <tr><td>Garantie</td><td>2 ans</td><td class="highlight">2 ans</td><td>2 ans</td></tr>
+          <tr><td>Couleur</td><td>Blanc</td><td class="highlight">Blanc</td><td>Blanc</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <p style="color:var(--text-muted);margin-bottom:16px;font-size:.9rem;"><i class="fas fa-info-circle" style="color:var(--accent-dark);"></i> <strong>Règle simple :</strong> 500 BTU par m². Pour une pièce de 20 m², choisissez le 12000 BTU.</p>
+      <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20aidez-moi%20à%20choisir%20la%20bonne%20puissance%20pour%20ma%20pièce" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Aide au choix — WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE GALLERY — dual-row infinite scroll -->
+<section class="clim-ls-section">
+
+  <!-- Header -->
+  <div class="container" style="margin-bottom:48px;text-align:center;" data-reveal="up">
+    <div class="clim-ls-label">AirSmart Series — L'expérience confort</div>
+    <h2 style="color:#fff;font-size:clamp(1.9rem,3.5vw,2.9rem);font-weight:800;letter-spacing:-.025em;margin-bottom:14px;line-height:1.15;">
+      Un été frais. <span style="background:linear-gradient(90deg,#00B4FF,#7DD3FF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Un hiver doux.</span>
+    </h2>
+    <p style="color:rgba(255,255,255,.55);font-size:.97rem;max-width:480px;margin:0 auto;line-height:1.75;">
+      Technologie Inverter A++ pour un confort total toute l'année. Silencieux, efficace, élégant.
+    </p>
+  </div>
+
+  <!-- Row 1 — scroll gauche, 44s -->
+  <div class="clim-ls-track" style="margin-bottom:20px;">
+    <div class="clim-ls-inner">
+      <img src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="TECHVISION AirSmart lifestyle"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183421_a4238f93-7e58-469e-986a-9549de821921.webp" alt="TECHVISION AirSmart 12000 BTU"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183429_57cbc85a-6ec8-4627-a974-0ca68fa2cb47.webp" alt="TECHVISION AirSmart Inverter"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183436_9d717c50-4448-4874-a12a-61eab7e730ea.webp" alt="TECHVISION AirSmart vue côté"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183443_8496cbbc-e029-49da-a25f-0fdc00e0529f.webp" alt="TECHVISION AirSmart design"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183453_44da9576-f312-4bb6-ba39-fa9572a1c5dd.webp" alt="TECHVISION AirSmart angle"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183504_6e1132d9-31f4-45b8-adb5-61c224b7ec3e.webp" alt="TECHVISION clim premium"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183513_d78a8878-08eb-477a-98a6-a3f48142d888.webp" alt="TECHVISION AirSmart série"  loading="lazy">
+      <!-- duplicate pour boucle sans couture -->
+      <img src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="" aria-hidden="true"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183421_a4238f93-7e58-469e-986a-9549de821921.webp" alt="" aria-hidden="true"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183429_57cbc85a-6ec8-4627-a974-0ca68fa2cb47.webp" alt="" aria-hidden="true"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183436_9d717c50-4448-4874-a12a-61eab7e730ea.webp" alt="" aria-hidden="true"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183443_8496cbbc-e029-49da-a25f-0fdc00e0529f.webp" alt="" aria-hidden="true"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183453_44da9576-f312-4bb6-ba39-fa9572a1c5dd.webp" alt="" aria-hidden="true"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183504_6e1132d9-31f4-45b8-adb5-61c224b7ec3e.webp" alt="" aria-hidden="true"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183513_d78a8878-08eb-477a-98a6-a3f48142d888.webp" alt="" aria-hidden="true"  loading="lazy">
+    </div>
+  </div>
+
+  <!-- Row 2 — scroll droite (reverse), 56s, hauteur réduite -->
+  <div class="clim-ls-track">
+    <div class="clim-ls-inner" style="animation-direction:reverse;animation-duration:56s;">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183443_8496cbbc-e029-49da-a25f-0fdc00e0529f.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183453_44da9576-f312-4bb6-ba39-fa9572a1c5dd.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183504_6e1132d9-31f4-45b8-adb5-61c224b7ec3e.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183513_d78a8878-08eb-477a-98a6-a3f48142d888.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183421_a4238f93-7e58-469e-986a-9549de821921.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183429_57cbc85a-6ec8-4627-a974-0ca68fa2cb47.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183436_9d717c50-4448-4874-a12a-61eab7e730ea.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <!-- duplicate -->
+      <img src="../image/clim/product/12000-btu/hf_20260506_183443_8496cbbc-e029-49da-a25f-0fdc00e0529f.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183453_44da9576-f312-4bb6-ba39-fa9572a1c5dd.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183504_6e1132d9-31f4-45b8-adb5-61c224b7ec3e.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183513_d78a8878-08eb-477a-98a6-a3f48142d888.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183421_a4238f93-7e58-469e-986a-9549de821921.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183429_57cbc85a-6ec8-4627-a974-0ca68fa2cb47.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+      <img src="../image/clim/product/12000-btu/hf_20260506_183436_9d717c50-4448-4874-a12a-61eab7e730ea.webp" alt="" aria-hidden="true" style="height:220px;"  loading="lazy">
+    </div>
+  </div>
+
+  <!-- CTA bas de section -->
+  <div style="text-align:center;margin-top:48px;" data-reveal="up">
+    <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20commander%20un%20climatiseur" target="_blank" class="btn btn-whatsapp btn-lg" style="font-size:1rem;padding:14px 36px;">
+      <i class="fab fa-whatsapp"></i> Demander le prix
+    </a>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section style="background:linear-gradient(135deg,#001828,#002B4A,#003A6B);padding:80px 0;text-align:center;color:#fff;">
+  <div class="container" data-reveal="up">
+    <h2 style="margin-bottom:14px;">Prêt à profiter d'un <span style="color:#7DD3FF;">confort absolu ?</span></h2>
+    <p style="color:rgba(255,255,255,.75);margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto;">Contactez-nous pour le prix, la disponibilité et l'organisation de l'installation dans votre ville.</p>
+    <div class="btn-group" style="justify-content:center;">
+      <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20commander%20un%20climatiseur" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Commander sur WhatsApp</a>
+      <a href="tel:+212663603675" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> +212 663 603 675</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUITS SIMILAIRES -->
+<section class="similar-products">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px;" data-reveal="up">
+      <span class="section-label">Découvrez aussi</span>
+      <h2 class="section-title">Produits <span>Complémentaires</span></h2>
+      <p class="section-desc">Complétez votre équipement avec nos autres gammes premium.</p>
+    </div>
+    <div class="similar-grid">
+      <a href="tv.html" class="sim-card" data-reveal="up">
+        <div class="sim-card-bg">
+          <img src="../image/tv/lifestyle/hf_20260506_191506_bf4e32b2-9bb7-4c9d-9e1f-218a6d1c155f.webp" alt="TV QLED 4K TECHVISION"  loading="lazy">
+        </div>
+        <div class="sim-card-body">
+          <span class="sim-card-label">Téléviseurs</span>
+          <h3 class="sim-card-name">Vision Series QLED 4K</h3>
+          <span class="sim-card-cta">Explorer <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="four.html" class="sim-card" data-reveal="up" data-delay="80">
+        <div class="sim-card-bg">
+          <img src="../image/four/lifestyle/hf_20260506_204644_fe76a6ac-63cd-4255-925b-b8870528b556.webp" alt="Fours Électriques TECHVISION"  loading="lazy">
+        </div>
+        <div class="sim-card-body">
+          <span class="sim-card-label">Fours Électriques</span>
+          <h3 class="sim-card-name">HeatPro Series</h3>
+          <span class="sim-card-cta">Explorer <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="refrigerateur.html" class="sim-card" data-reveal="up" data-delay="160">
+        <div class="sim-card-bg">
+          <img src="../image/refrigerateur/lifestyle/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.webp" alt="Réfrigérateurs TECHVISION"  loading="lazy">
+        </div>
+        <div class="sim-card-body">
+          <span class="sim-card-label">Réfrigérateurs</span>
+          <h3 class="sim-card-name">FreshTech No Frost A++</h3>
+          <span class="sim-card-cta">Explorer <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ORDER FORM -->
+<section class="order-section" id="commander">
+  <div class="container">
+    <div class="order-trust-strip">
+      <div class="order-trust-item"><i class="fas fa-truck"></i> Livraison 24h à domicile</div>
+      <div class="order-trust-item"><i class="fas fa-box-open"></i> Gratuite partout au Maroc</div>
+      <div class="order-trust-item"><i class="fas fa-shield-alt"></i> Garantie 2 ans</div>
+      <div class="order-trust-item"><i class="fas fa-headset"></i> SAV 24/24</div>
+    </div>
+    <div class="order-card">
+      <div class="order-card-header">
+        <div class="order-eyebrow"><i class="fas fa-star"></i> Commande Officielle</div>
+        <h2 class="order-headline">TECHVISION vous livre en <span>24h</span><br>jusqu'à votre porte — <span>Gratuitement</span></h2>
+        <p class="order-subline">Remplissez le formulaire · Notre équipe vous rappelle dans les 2h</p>
+      </div>
+      <div id="orderFormWrap">
+        <div class="order-form-body">
+          <div class="order-product-label"><i class="fas fa-snowflake"></i> Climatiseur AirSmart Inverter</div>
+          <form id="orderForm" onsubmit="submitOrder(event)">
+            <input type="hidden" name="prix" id="orderPrix" value="" />
+            <div class="order-form-row">
+              <div class="order-field order-full">
+                <label>Article *</label>
+                <input type="text" id="orderArticle" name="article" placeholder="Ex: Climatiseur AirSmart Inverter..." required />
+              </div>
+            </div>
+            <div class="order-form-row">
+              <div class="order-field order-full">
+                <label>Nom &amp; Prénom *</label>
+                <input type="text" name="nom_prenom" placeholder="Votre nom et prénom complets" required autocomplete="name" />
+              </div>
+            </div>
+            <div class="order-form-row">
+              <div class="order-field">
+                <label>Téléphone *</label>
+                <input type="tel" name="telephone" placeholder="06 XX XX XX XX" required autocomplete="tel" />
+              </div>
+              <div class="order-field">
+                <label>WhatsApp</label>
+                <input type="tel" name="whatsapp" placeholder="06 XX XX XX XX" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="order-form-row">
+              <div class="order-field">
+                <label>Ville *</label>
+                <input type="text" name="ville" placeholder="Casablanca, Rabat..." required />
+              </div>
+              <div class="order-field">
+                <label>Quantité</label>
+                <select name="quantite" id="orderQte">
+                  <option value="1">1 unité</option>
+                  <option value="2">2 unités</option>
+                  <option value="3">3 unités</option>
+                  <option value="4">4 unités</option>
+                  <option value="5">5+ unités</option>
+                </select>
+              </div>
+            </div>
+            <div class="order-form-row">
+              <div class="order-field order-full">
+                <label>Adresse complète *</label>
+                <textarea name="adresse" placeholder="N° rue, quartier, ville — pour la livraison à votre porte" required></textarea>
+              </div>
+            </div>
+            <div class="order-error-msg" id="orderError">Une erreur s'est produite. Réessayez ou appelez le +212 663 603 675.</div>
+            <button type="submit" class="order-submit" id="orderSubmitBtn">
+              <i class="fas fa-shopping-bag"></i> Commander maintenant
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="order-success" id="orderSuccess" style="display:none;">
+        <div class="order-success-icon"><i class="fas fa-check"></i></div>
+        <h3>Commande confirmée !</h3>
+        <p>✅ Merci ! Votre commande a été reçue. Notre équipe vous contactera rapidement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function() {
+  var BASE_PRICE = '';
+
+  function getPrice() {
+    var unitPrice = parseFloat(BASE_PRICE) || 0;
+    if (!unitPrice) return '';
+    var qte = parseInt(document.getElementById('orderQte') ? document.getElementById('orderQte').value : 1) || 1;
+    return (unitPrice * qte) + ' DH';
+  }
+
+  window.submitOrder = function(e) {
+    e.preventDefault();
+    // Validate required fields
+    var form   = document.getElementById('orderForm');
+    var inputs = form.querySelectorAll('[required]');
+    var valid  = true;
+    inputs.forEach(function(inp) {
+      inp.style.borderColor = '';
+      if (!inp.value.trim()) {
+        inp.style.borderColor = 'rgba(220,0,0,.6)';
+        valid = false;
+      }
+    });
+    if (!valid) return;
+
+    var btn   = document.getElementById('orderSubmitBtn');
+    var errEl = document.getElementById('orderError');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+    errEl.style.display = 'none';
+
+    // Set prix before reading FormData
+    var prixEl = document.getElementById('orderPrix');
+    if (prixEl) prixEl.value = getPrice();
+
+    var data = {};
+    new FormData(form).forEach(function(v, k) { data[k] = v; });
+    data.date = new Date().toLocaleString('fr-MA', {timeZone: 'Africa/Casablanca'});
+    data.url  = window.location.href;
+
+    fetch('https://script.google.com/macros/s/AKfycbycmgPI82VpziU9BcFnEMAJrzf5hYlUlWQ9deoh6vUmR-mPq7E5XcUhI4PvxUUd41Fx_A/exec', {
+      method:  'POST',
+      mode:    'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body:    JSON.stringify(data)
+    })
+    .then(function() {
+      document.getElementById('orderFormWrap').style.display = 'none';
+      document.getElementById('orderSuccess').style.display  = 'block';
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead', {content_name: data.article || 'Climatiseur AirSmart Inverter'});
+      if (typeof ttq !== 'undefined') ttq.track('SubmitForm', {content_id: data.article || 'Climatiseur AirSmart Inverter'});
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fas fa-shopping-bag"></i> Commander maintenant';
+      errEl.style.display = 'block';
+    });
+  };
+})();
+</script>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="../index.html" class="footer-logo-link">
+          <img src="../image/logo/logo.webp" alt="TECHVISION Logo" class="footer-logo-img" />
+        </a><p class="footer-desc">L'électroménager premium au meilleur prix au Maroc. SAV 24/24 · Garantie 2 ans.</p><div class="footer-contacts"><div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/212663603675">+212 663 603 675</a></div><div class="footer-contact-item"><i class="fas fa-headset"></i><a href="tel:+212660240276">SAV: +212 660 240 276</a></div></div><div class="footer-socials"><a href="https://www.instagram.com/tech_vision.ma/" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a><a href="https://wa.me/212663603675" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a></div></div>
+      <div><div class="footer-heading">NOS PRODUITS</div><ul class="footer-links"><li><a href="tv.html">Téléviseurs QLED 4K</a></li><li><a href="four.html">Fours HeatPro Series</a></li><li><a href="clim.html">Climatiseurs AirSmart</a></li><li><a href="refrigerateur.html">Réfrigérateurs FreshTech</a></li></ul></div>
+      <div><div class="footer-heading">SERVICES</div><ul class="footer-links"><li><a href="grossiste.html">Vente en Gros</a></li><li><a href="contact.html">SAV & Garantie</a></li><li><a href="blog-clim.html">Guide Climatiseur</a></li></ul></div>
+      <div><div class="footer-heading">CONTACT</div><ul class="footer-links"><li><a href="contact.html">Nous Contacter</a></li><li><a href="../index.html#avis">Avis Clients</a></li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container">© 2024 TECHVISION Maroc. Tous droits réservés.</div></div>
+</footer>
+
+<div class="whatsapp-float" id="waFloat">
+  <div class="wa-chat-panel" id="waChatPanel" aria-hidden="true">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar"><i class="fab fa-whatsapp"></i></div>
+      <div class="wa-chat-info">
+        <strong>TECHVISION Maroc</strong>
+        <span><span class="wa-online-dot"></span> En ligne</span>
+      </div>
+      <button class="wa-chat-close" id="waClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-bubble">
+        <p>👋 Je souhaite avoir plus d'informations</p>
+        <time>Maintenant</time>
+      </div>
+    </div>
+    <a href="https://wa.me/212663603675?text=%F0%9F%91%8B%20Je%20souhaite%20avoir%20plus%20d%27informations" target="_blank" class="wa-chat-send">
+      <i class="fab fa-whatsapp"></i>
+      <span>Envoyer ce message</span>
+    </a>
+  </div>
+  <button class="wa-main-btn" id="waMainBtn" aria-label="WhatsApp TECHVISION">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-notification">1</span>
+  </button>
+</div>
+
+<!-- STICKY CTA BAR -->
+<div class="product-sticky-bar" id="stickyBar">
+  <div class="product-sticky-bar-inner">
+    <div>
+      <div class="product-sticky-name">TECHVISION AirSmart — Climatiseurs Inverter</div>
+      <div class="product-sticky-sub">9000 · 12000 · 18000 BTU · A++ · Chaud/Froid · Garantie 2 ans</div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="https://wa.me/212663603675?text=Bonjour%20TECHVISION%2C%20je%20veux%20le%20prix%20d%27un%20climatiseur%20AirSmart" target="_blank" class="btn btn-primary" style="gap:8px;display:flex;align-items:center;"><i class="fab fa-whatsapp"></i> Commander via WhatsApp</a>
+      <a href="tel:+212663603675" class="btn btn-outline" style="gap:8px;display:flex;align-items:center;"><i class="fas fa-phone"></i> Appeler</a>
+    </div>
+  </div>
+</div>
+
+<button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+<script src="../js/main.js"></script>
+<script>
+  const _stb=document.getElementById('scrollTopBtn');
+  const _sticky=document.getElementById('stickyBar');
+  window.addEventListener('scroll',()=>{
+    _stb.classList.toggle('visible',window.scrollY>400);
+    _sticky.classList.toggle('show',window.scrollY>500);
+  });
+</script>
+<script>
+  (function(){
+    const imgs = [
+      '../image/clim/product/12000-btu/hf_20260506_183421_a4238f93-7e58-469e-986a-9549de821921.webp',
+      '../image/clim/product/12000-btu/hf_20260506_183429_57cbc85a-6ec8-4627-a974-0ca68fa2cb47.webp',
+      '../image/clim/product/12000-btu/hf_20260506_183436_9d717c50-4448-4874-a12a-61eab7e730ea.webp',
+      '../image/clim/product/12000-btu/hf_20260506_183443_8496cbbc-e029-49da-a25f-0fdc00e0529f.webp',
+      '../image/clim/product/12000-btu/hf_20260506_183453_44da9576-f312-4bb6-ba39-fa9572a1c5dd.webp',
+      '../image/clim/product/12000-btu/hf_20260506_183504_6e1132d9-31f4-45b8-adb5-61c224b7ec3e.webp',
+      '../image/clim/product/12000-btu/hf_20260506_183513_d78a8878-08eb-477a-98a6-a3f48142d888.webp'
+    ];
+    let cur = 0;
+    const mainImg = document.getElementById('climMainImg');
+    const idxEl = document.getElementById('climIdx');
+    const thumbs = document.querySelectorAll('.hc-thumb');
+    function update(){ mainImg.classList.add('fading'); setTimeout(()=>{ mainImg.src=imgs[cur]; mainImg.classList.remove('fading'); },200); idxEl.textContent=cur+1; thumbs.forEach((t,i)=>t.classList.toggle('active',i===cur)); }
+    window.climCarousel = function(d){ cur=(cur+d+imgs.length)%imgs.length; update(); };
+    window.climGo = function(i){ cur=i; update(); };
+    setInterval(()=>climCarousel(1), 3800);
+  })();
+</script>
+<script>
+  (function () {
+    var mainBtn = document.getElementById('waMainBtn');
+    var panel   = document.getElementById('waChatPanel');
+    var closeBtn = document.getElementById('waClose');
+    var float   = document.getElementById('waFloat');
+    if (!mainBtn || !panel) return;
+    mainBtn.addEventListener('click', function () {
+      var isOpen = panel.classList.toggle('open');
+      panel.setAttribute('aria-hidden', !isOpen);
+    });
+    if (closeBtn) closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      panel.classList.remove('open');
+      panel.setAttribute('aria-hidden', 'true');
+    });
+    document.addEventListener('click', function (e) {
+      if (float && !float.contains(e.target)) {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+      }
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../image/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../image/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../image/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../image/favicon/favicon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="../image/favicon/favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="../image/favicon/favicon-512x512.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grossiste & Revendeur — TECHVISION Maroc | Électroménager en Gros</title>
+  <meta name="description" content="Devenez revendeur TECHVISION Maroc. Tarifs grossiste exclusifs, livraison prioritaire, support commercial. Fours, TV 4K, Climatiseurs, Réfrigérateurs. Contact: 0674411990." />
+  <meta name="keywords" content="grossiste electromenager maroc, revendeur techvision, achat en gros tv four clim frigo maroc, tarif grossiste casablanca" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .gros-hero{position:relative;background:linear-gradient(135deg,#030B1F,#0D2B6B,#1A3A8A);padding:100px 0 80px;color:#fff;overflow:hidden;}
+    .gros-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none;}
+    .gros-hero-content{position:relative;z-index:2;}
+    .gros-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-size:.78rem;font-weight:700;padding:6px 16px;border-radius:50px;margin-bottom:20px;text-transform:uppercase;letter-spacing:.1em;}
+    .gros-hero h1{font-size:clamp(2rem,4.5vw,3.4rem);font-weight:800;line-height:1.15;margin-bottom:20px;}
+    .gros-hero h1 span{color:var(--gold);}
+    .gros-hero p{font-size:1.05rem;opacity:.8;max-width:600px;line-height:1.75;margin-bottom:32px;}
+    .gros-hero-stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:40px;padding-top:40px;border-top:1px solid rgba(255,255,255,.15);}
+    .gros-stat{text-align:left;}
+    .gros-stat-num{font-size:2.2rem;font-weight:800;color:var(--gold);line-height:1;}
+    .gros-stat-label{font-size:.8rem;opacity:.65;margin-top:4px;}
+    .hero-badge-float{position:absolute;right:80px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px;text-align:center;color:#fff;}
+    .hero-badge-float .badge-num{font-size:3.5rem;font-weight:800;color:var(--gold);line-height:1;}
+    .hero-badge-float p{font-size:.82rem;opacity:.75;margin:8px 0 0;}
+
+    .avantages-section{padding:80px 0;background:#fff;}
+    .avantage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px;}
+    .avantage-card{border-radius:20px;padding:36px 28px;border:2px solid var(--border);transition:all .3s;position:relative;overflow:hidden;}
+    .avantage-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),#E8BE5A);opacity:0;transition:.3s;}
+    .avantage-card:hover::before{opacity:1;}
+    .avantage-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(13,43,107,.12);border-color:rgba(201,168,76,.3);}
+    .avantage-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;background:linear-gradient(135deg,#F0F5FF,#E8EFFE);}
+    .avantage-card h3{font-size:1.05rem;font-weight:700;margin-bottom:10px;color:var(--text);}
+    .avantage-card p{font-size:.87rem;color:var(--text-muted);line-height:1.75;}
+
+    .pricing-section{padding:80px 0;background:linear-gradient(135deg,#F8FAFF,#EEF3FF);}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+    .pricing-card{background:#fff;border-radius:20px;padding:36px 28px;border:2px solid var(--border);text-align:center;position:relative;overflow:hidden;transition:all .3s;}
+    .pricing-card.featured{border-color:var(--gold);box-shadow:0 12px 48px rgba(201,168,76,.2);}
+    .pricing-card.featured::before{content:'⭐ Plus Populaire';position:absolute;top:16px;right:-28px;background:linear-gradient(135deg,var(--gold),#E8BE5A);color:#fff;font-size:.7rem;font-weight:700;padding:4px 40px;transform:rotate(35deg);letter-spacing:.05em;}
+    .pricing-tier{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:12px;}
+    .pricing-qty{font-size:2.8rem;font-weight:800;color:var(--primary);line-height:1;}
+    .pricing-qty span{font-size:1rem;font-weight:600;color:var(--text-muted);}
+    .pricing-discount{display:inline-block;background:linear-gradient(135deg,var(--cta),#E83E00);color:#fff;font-size:.78rem;font-weight:700;padding:4px 14px;border-radius:50px;margin:12px 0;}
+    .pricing-desc{font-size:.85rem;color:var(--text-muted);margin-bottom:24px;line-height:1.65;}
+    .pricing-features{list-style:none;margin:0 0 24px;padding:0;text-align:left;}
+    .pricing-features li{font-size:.85rem;color:var(--text-muted);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
+    .pricing-features li:last-child{border-bottom:none;}
+    .pricing-features li i{color:var(--gold);font-size:.8rem;flex-shrink:0;}
+
+    .catalogue-section{padding:80px 0;background:#fff;}
+    .catalogue-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;}
+    .cat-card{border-radius:16px;border:2px solid var(--border);overflow:hidden;transition:all .3s;text-decoration:none;}
+    .cat-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 32px rgba(13,43,107,.1);}
+    .cat-card-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
+    .cat-card-body{padding:20px;}
+    .cat-card-name{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:4px;}
+    .cat-card-models{font-size:.78rem;color:var(--text-muted);}
+    .cat-card-badge{display:inline-block;background:var(--light);color:var(--primary);font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:50px;margin-top:10px;}
+
+    .steps-section{padding:80px 0;background:linear-gradient(135deg,var(--primary),#1A45A8);}
+    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative;}
+    .steps-grid::before{content:'';position:absolute;top:40px;left:12.5%;right:12.5%;height:2px;background:rgba(255,255,255,.2);}
+    .step-item{text-align:center;color:#fff;padding:0 16px;position:relative;}
+    .step-num{width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.1);border:2px solid rgba(201,168,76,.5);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:800;color:var(--gold);margin:0 auto 20px;}
+    .step-item h3{font-size:.95rem;font-weight:700;margin-bottom:8px;}
+    .step-item p{font-size:.82rem;opacity:.7;line-height:1.65;}
+
+    .form-section{padding:80px 0;background:var(--light);}
+    .gros-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+    .gros-form-card{background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 30px rgba(13,43,107,.08);}
+    .gros-form-card h2{font-size:1.4rem;font-weight:800;margin-bottom:8px;}
+    .gros-form-card p{font-size:.9rem;color:var(--text-muted);margin-bottom:28px;}
+    .form-group{margin-bottom:20px;}
+    .form-group label{display:block;font-size:.78rem;font-weight:700;color:var(--text);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em;}
+    .form-group input,.form-group select,.form-group textarea{width:100%;border:2px solid var(--border);border-radius:10px;padding:12px 16px;font-family:inherit;font-size:.92rem;color:var(--text);transition:border-color .2s;outline:none;background:#fff;}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);}
+    .form-group textarea{height:110px;resize:vertical;}
+    .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .gros-submit{width:100%;padding:15px;font-size:1rem;font-weight:700;border:none;border-radius:12px;cursor:pointer;background:linear-gradient(135deg,var(--gold),#E8BE5A);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .3s;}
+    .gros-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.4);}
+
+    .testimonials-gros{padding:80px 0;background:#fff;}
+    .testi-gros-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+    .testi-gros-card{background:var(--light);border-radius:20px;padding:28px;border:1px solid var(--border);}
+    .testi-gros-stars{color:var(--gold);font-size:.85rem;margin-bottom:12px;}
+    .testi-gros-text{font-size:.87rem;color:var(--text-muted);line-height:1.75;margin-bottom:16px;font-style:italic;}
+    .testi-gros-author{display:flex;align-items:center;gap:12px;}
+    .testi-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:700;color:#fff;flex-shrink:0;}
+    .testi-name{font-size:.88rem;font-weight:700;color:var(--text);}
+    .testi-role{font-size:.75rem;color:var(--text-muted);}
+
+    @media(max-width:1100px){.hero-badge-float{display:none;}}
+    @media(max-width:900px){
+      .avantage-grid,.pricing-grid,.testi-gros-grid{grid-template-columns:1fr 1fr;}
+      .gros-form-grid{grid-template-columns:1fr;}
+      .steps-grid{grid-template-columns:1fr 1fr;gap:32px;}
+      .steps-grid::before{display:none;}
+      .catalogue-grid{grid-template-columns:1fr 1fr;}
+    }
+    @media(max-width:640px){
+      .avantage-grid,.pricing-grid,.testi-gros-grid,.catalogue-grid,.steps-grid{grid-template-columns:1fr;}
+      .gros-hero-stats{gap:24px;}
+      .form-row-2{grid-template-columns:1fr;}
+    }
+
+    /* === MOBILE FIXES === */
+    @media(max-width:768px){
+      .gros-hero{padding:76px 0 48px;}
+      .gros-hero h1{font-size:clamp(1.5rem,5.5vw,2.2rem);}
+      .gros-hero p{font-size:.92rem;}
+      .gros-hero-stats{flex-wrap:wrap;gap:20px;}
+      .gros-stat-num{font-size:1.8rem;}
+      .avantages-section,.pricing-section,.catalogue-section,.testimonials-gros,.form-section{padding:48px 0;}
+      .steps-section{padding:48px 0;}
+      .avantage-card{padding:24px 20px;}
+      .pricing-card{padding:24px 20px;}
+      .pricing-qty{font-size:2rem;}
+      .gros-form-card{padding:24px;}
+      /* Catalogue grid stays 2-col until 640px */
+    }
+    @media(max-width:480px){
+      .gros-hero-stats{gap:16px;}
+      .avantage-grid,.pricing-grid{grid-template-columns:1fr;}
+      .catalogue-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+      .pricing-card.featured::before{display:none;}
+    }
+    @media(max-width:360px){
+      .catalogue-grid{grid-template-columns:1fr;}
+    }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Grossiste & Revendeur TECHVISION Maroc","description":"Devenez revendeur TECHVISION. Tarifs grossiste exclusifs sur fours, TV, climatiseurs et réfrigérateurs.","url":"https://techvision.ma/pages/grossiste.html"}</script>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container-lg">
+    <a href="../index.html" class="nav-logo">
+      <img src="../image/logo/logo.webp" alt="TECHVISION Logo" />
+    </a>
+                <ul class="nav-menu">
+      <!-- TV -->
+      <li class="nav-item has-mega">
+        <a href="tv.html" class="nav-link">TV <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-tv"></i></div>
+                <div>
+                  <div class="mega-cat-title">Téléviseurs QLED 4K</div>
+                  <div class="mega-cat-desc">Design ultra-fin, image cristalline,<br>son immersif Dolby Atmos</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> QLED 4K · 60Hz HDR</li>
+                <li><i class="fas fa-check-circle"></i> Double Verre Acoustique</li>
+                <li><i class="fas fa-check-circle"></i> Dolby Atmos · Dolby Vision</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="tv.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/tv/lifestyle/hf_20260506_185846_3cda74e5-ab5c-4370-a955-bb98612d6482.webp" alt="TV TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Frameless</div>
+                    <a href="tv-frameless-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="tv-frameless-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="tv-frameless-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="tv-frameless-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="tv-frameless-65.html" class="mega-nav-link">TV 65&quot;</a>
+                    <a href="tv-frameless-75.html" class="mega-nav-link">TV 75&quot;</a>
+                  </div>
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Série Double Glass</div>
+                    <a href="tv-double-glass-32.html" class="mega-nav-link">TV 32&quot;</a>
+                    <a href="tv-double-glass-43.html" class="mega-nav-link">TV 43&quot;</a>
+                    <a href="tv-double-glass-50.html" class="mega-nav-link">TV 50&quot;</a>
+                    <a href="tv-double-glass-55.html" class="mega-nav-link">TV 55&quot;</a>
+                    <a href="tv-double-glass-65.html" class="mega-nav-link">TV 65&quot;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Fours -->
+      <li class="nav-item has-mega">
+        <a href="four.html" class="nav-link">Fours <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-fire"></i></div>
+                <div>
+                  <div class="mega-cat-title">Fours Électriques</div>
+                  <div class="mega-cat-desc">Cuisson précise, design premium,<br>performance professionnelle</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Multi-fonctions 8 modes</li>
+                <li><i class="fas fa-check-circle"></i> Résistance inox longue durée</li>
+                <li><i class="fas fa-check-circle"></i> Thermostat précis ±5°C</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="four.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/four/lifestyle/hf_20260506_194417_9fc32bd4-d673-4772-b05e-dc1843d011a0.webp" alt="Four TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="four.html" class="mega-nav-link">Four 45 L</a>
+                    <a href="four.html" class="mega-nav-link">Four 55 L</a>
+                    <a href="four.html" class="mega-nav-link">Four 75 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Climatiseurs -->
+      <li class="nav-item has-mega">
+        <a href="clim.html" class="nav-link">Climatiseurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-snowflake"></i></div>
+                <div>
+                  <div class="mega-cat-title">Climatiseurs Inverter</div>
+                  <div class="mega-cat-desc">Confort thermique optimal,<br>économie d'énergie classe A+++</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie Inverter DC</li>
+                <li><i class="fas fa-check-circle"></i> Classe énergie A+++</li>
+                <li><i class="fas fa-check-circle"></i> Mode Chaud/Froid réversible</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="clim.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.webp" alt="Climatiseur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par puissance</div>
+                    <a href="clim.html" class="mega-nav-link">9 000 BTU</a>
+                    <a href="clim.html" class="mega-nav-link">12 000 BTU</a>
+                    <a href="clim.html" class="mega-nav-link">18 000 BTU</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Réfrigérateurs -->
+      <li class="nav-item has-mega">
+        <a href="refrigerateur.html" class="nav-link">Réfrigérateurs <i class="fas fa-chevron-down mega-chevron"></i></a>
+        <div class="mega-menu">
+          <div class="mega-inner">
+            <div class="mega-left">
+              <div class="mega-cat-header">
+                <div class="mega-cat-icon"><i class="fas fa-temperature-low"></i></div>
+                <div>
+                  <div class="mega-cat-title">Réfrigérateurs</div>
+                  <div class="mega-cat-desc">Conservation optimale, design élégant,<br>technologie No Frost intelligente</div>
+                </div>
+              </div>
+              <ul class="mega-advantages">
+                <li><i class="fas fa-check-circle"></i> Technologie No Frost</li>
+                <li><i class="fas fa-check-circle"></i> Dégivrage automatique</li>
+                <li><i class="fas fa-check-circle"></i> Éclairage LED intérieur</li>
+                <li><i class="fas fa-check-circle"></i> Garantie 2 ans TECHVISION</li>
+              </ul>
+              <a href="refrigerateur.html" class="mega-explore-btn">Explorer la gamme <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="mega-right">
+              <div class="mega-showcase">
+                <img class="mega-showcase-img" src="../image/refrigerateur/lifestyle/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.webp" alt="Réfrigérateur TECHVISION" />
+                <div class="mega-nav-cols">
+                  <div class="mega-nav-col">
+                    <div class="mega-col-label">Par capacité</div>
+                    <a href="refrigerateur.html" class="mega-nav-link">108 L</a>
+                    <a href="refrigerateur.html" class="mega-nav-link">120 L</a>
+                    <a href="refrigerateur.html" class="mega-nav-link">138 L</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="grossiste.html" class="nav-link">Grossiste</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-toggle"><button class="lang-btn active" data-lang="fr">FR</button><button class="lang-btn" data-lang="ar">ع</button></div>
+      <a href="https://wa.me/212674411990?text=Bonjour%2C%20je%20suis%20intéressé%20par%20la%20vente%20en%20gros%20TECHVISION" target="_blank" class="nav-whatsapp"><i class="fab fa-whatsapp"></i><span class="nav-wa-text" data-fr="Grossiste" data-ar="بالجملة">Grossiste</span></a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+<div class="mega-backdrop" id="megaBackdrop"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="tv.html"><i class="fas fa-tv"></i> Téléviseurs QLED 4K</a>
+  <a href="four.html"><i class="fas fa-fire"></i> Fours Électriques</a>
+  <a href="clim.html"><i class="fas fa-snowflake"></i> Climatiseurs Inverter</a>
+  <a href="refrigerateur.html"><i class="fas fa-temperature-low"></i> Réfrigérateurs</a>
+  <a href="grossiste.html"><i class="fas fa-boxes"></i> Grossiste</a>
+  <a href="blog.html"><i class="fas fa-newspaper"></i> Blog &amp; Conseils</a>
+  <a href="contact.html"><i class="fas fa-headset"></i> SAV &amp; Contact</a>
+  <a href="https://wa.me/212663603675" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp"></i> Commander via WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section class="gros-hero">
+  <div class="container">
+    <div class="gros-hero-content">
+      <div class="gros-hero-eyebrow">
+        <i class="fas fa-store"></i> Programme Revendeurs TECHVISION
+      </div>
+      <h1 data-fr="Vendez des Produits <span>Premium</span><br>à des Prix <span>Imbattables</span>" data-ar="بيع منتجات <span>متميزة</span><br>بأسعار <span>لا تُضاهى</span>">Vendez des Produits <span>Premium</span><br>à des Prix <span>Imbattables</span></h1>
+      <p data-fr="Rejoignez le réseau de revendeurs TECHVISION et proposez à vos clients une gamme complète d'électroménager haut de gamme — TV QLED, Fours, Climatiseurs Inverter, Réfrigérateurs No Frost — avec des marges commerciales attractives et un support dédié." data-ar="انضم إلى شبكة موزعي تيكفيجن وقدّم لعملائك مجموعة كاملة من الأجهزة المنزلية الفاخرة بهوامش ربح جذابة ودعم مخصص.">Rejoignez le réseau de revendeurs TECHVISION et proposez à vos clients une gamme complète d'électroménager haut de gamme — TV QLED, Fours, Climatiseurs Inverter, Réfrigérateurs No Frost — avec des marges commerciales attractives et un support dédié.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="#devenir-revendeur" class="btn" style="background:linear-gradient(135deg,var(--gold),#E8BE5A);color:#fff;border:none;padding:15px 32px;font-size:1rem;font-weight:700;border-radius:12px;">
+          <i class="fas fa-handshake"></i> Devenir Revendeur
+        </a>
+        <a href="https://wa.me/212674411990?text=Bonjour%20TECHVISION%2C%20je%20veux%20des%20informations%20sur%20la%20vente%20en%20gros" target="_blank" class="btn btn-whatsapp btn-lg">
+          <i class="fab fa-whatsapp"></i> Contacter maintenant
+        </a>
+      </div>
+
+      <div class="gros-hero-stats">
+        <div class="gros-stat">
+          <div class="gros-stat-num">15%</div>
+          <div class="gros-stat-label">Remise dès 5 unités</div>
+        </div>
+        <div class="gros-stat">
+          <div class="gros-stat-num">25%</div>
+          <div class="gros-stat-label">Remise dès 20 unités</div>
+        </div>
+        <div class="gros-stat">
+          <div class="gros-stat-num">J+1</div>
+          <div class="gros-stat-label">Livraison prioritaire</div>
+        </div>
+        <div class="gros-stat">
+          <div class="gros-stat-num">2 ans</div>
+          <div class="gros-stat-label">Garantie incluse</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-badge-float" data-reveal="right">
+      <div class="badge-num">+200</div>
+      <p>Revendeurs actifs<br>partout au Maroc</p>
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;opacity:.75;"><i class="fas fa-check-circle" style="color:var(--gold);"></i> Tarifs exclusifs</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;opacity:.75;"><i class="fas fa-check-circle" style="color:var(--gold);"></i> Livraison prioritaire</div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;opacity:.75;"><i class="fas fa-check-circle" style="color:var(--gold);"></i> Matériel marketing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVANTAGES -->
+<section class="avantages-section" id="avantages">
+  <div class="container">
+    <div class="section-header" data-reveal="up">
+      <div class="section-eyebrow">POURQUOI TECHVISION ?</div>
+      <h2 class="section-title">Les Avantages de Notre <span class="text-accent">Programme Revendeur</span></h2>
+      <p class="section-subtitle">Des conditions commerciales exclusives pensées pour maximiser vos marges et fidéliser vos clients.</p>
+    </div>
+    <div class="avantage-grid">
+      <div class="avantage-card" data-reveal="up" data-delay="0">
+        <div class="avantage-icon"><i class="fas fa-tag" style="color:var(--gold);"></i></div>
+        <h3>Prix Grossiste Exclusifs</h3>
+        <p>Bénéficiez de tarifs réservés aux revendeurs, non disponibles au grand public. Remises progressives allant de 15% à 30% selon les volumes. Catalogue tarif transmis sous 24h après inscription.</p>
+      </div>
+      <div class="avantage-card" data-reveal="up" data-delay="80">
+        <div class="avantage-icon"><i class="fas fa-rocket" style="color:var(--cta);"></i></div>
+        <h3>Livraison B2B Prioritaire</h3>
+        <p>Les commandes grossistes sont traitées en priorité. Livraison J+1 à Casablanca, J+2 pour les autres villes du Maroc. Suivi de commande en temps réel par WhatsApp dédié.</p>
+      </div>
+      <div class="avantage-card" data-reveal="up" data-delay="160">
+        <div class="avantage-icon"><i class="fas fa-headset" style="color:var(--accent);"></i></div>
+        <h3>Support Commercial Dédié</h3>
+        <p>Un commercial TECHVISION vous est affecté personnellement. Disponible 6j/7 pour répondre à vos questions, prendre vos commandes et vous conseiller sur les meilleures ventes.</p>
+      </div>
+      <div class="avantage-card" data-reveal="up" data-delay="240">
+        <div class="avantage-icon"><i class="fas fa-bullhorn" style="color:#9C27B0;"></i></div>
+        <h3>Matériel Marketing Offert</h3>
+        <p>Fiches produits imprimées, affiches, bannières digitales, photos haute résolution et vidéos produits fournis gratuitement pour vous aider à vendre mieux et plus vite.</p>
+      </div>
+      <div class="avantage-card" data-reveal="up" data-delay="320">
+        <div class="avantage-icon"><i class="fas fa-shield-alt" style="color:#25D366;"></i></div>
+        <h3>Garantie SAV Incluse</h3>
+        <p>Tous les produits TECHVISION vendus via notre réseau bénéficient de la garantie 2 ans complète pour vos clients. Le SAV est géré par nos techniciens — vous n'avez pas à vous en occuper.</p>
+      </div>
+      <div class="avantage-card" data-reveal="up" data-delay="400">
+        <div class="avantage-icon"><i class="fas fa-chart-line" style="color:var(--gold);"></i></div>
+        <h3>Marges Attractives</h3>
+        <p>Nos produits se positionnent sur le segment premium à prix accessible, ce qui vous permet de proposer une valeur perçue élevée tout en maintenant des marges confortables de 20 à 35%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING TIERS -->
+<section class="pricing-section" id="tarifs">
+  <div class="container">
+    <div class="section-header" data-reveal="up">
+      <div class="section-eyebrow" style="color:var(--gold);">PALIERS TARIFAIRES</div>
+      <h2 class="section-title">Plus vous commandez, <span style="color:var(--gold);">plus vous économisez</span></h2>
+      <p class="section-subtitle">Paliers de remise progressifs sur toute la gamme TECHVISION. Contactez-nous pour le catalogue prix complet.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card" data-reveal="up" data-delay="0">
+        <div class="pricing-tier">Palier Entrée</div>
+        <div class="pricing-qty">5 <span>à 9 unités</span></div>
+        <div class="pricing-discount">–15% sur le prix public</div>
+        <div class="pricing-desc">Idéal pour tester la gamme, petit commerce, ventes en ligne.</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check-circle"></i> Remise 15% sur catalogue</li>
+          <li><i class="fas fa-check-circle"></i> Livraison standard incluse</li>
+          <li><i class="fas fa-check-circle"></i> Garantie 2 ans produits</li>
+          <li><i class="fas fa-check-circle"></i> Photos produits HD fournies</li>
+          <li><i class="fas fa-check-circle"></i> Support WhatsApp partagé</li>
+        </ul>
+        <a href="https://wa.me/212674411990?text=Bonjour%20TECHVISION%2C%20je%20veux%20commander%205%20à%209%20unités%20en%20gros" target="_blank" class="btn btn-outline-primary" style="width:100%;justify-content:center;"><i class="fab fa-whatsapp"></i> Obtenir les prix</a>
+      </div>
+
+      <div class="pricing-card featured" data-reveal="up" data-delay="100">
+        <div class="pricing-tier">Palier Pro</div>
+        <div class="pricing-qty">10 <span>à 19 unités</span></div>
+        <div class="pricing-discount">–20% sur le prix public</div>
+        <div class="pricing-desc">Pour les revendeurs actifs et les magasins d'électroménager.</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check-circle"></i> Remise 20% sur catalogue</li>
+          <li><i class="fas fa-check-circle"></i> Livraison prioritaire J+1</li>
+          <li><i class="fas fa-check-circle"></i> Garantie 2 ans produits</li>
+          <li><i class="fas fa-check-circle"></i> Kit marketing complet</li>
+          <li><i class="fas fa-check-circle"></i> Commercial dédié</li>
+          <li><i class="fas fa-check-circle"></i> Paiement différé 30 jours</li>
+        </ul>
+        <a href="https://wa.me/212674411990?text=Bonjour%20TECHVISION%2C%20je%20veux%20commander%2010%20à%2019%20unités%20en%20gros" target="_blank" class="btn btn-whatsapp" style="width:100%;justify-content:center;"><i class="fab fa-whatsapp"></i> Obtenir les prix</a>
+      </div>
+
+      <div class="pricing-card" data-reveal="up" data-delay="200">
+        <div class="pricing-tier">Palier Distributeur</div>
+        <div class="pricing-qty">20+ <span>unités</span></div>
+        <div class="pricing-discount">–25% à –30% sur le prix public</div>
+        <div class="pricing-desc">Pour les distributeurs régionaux et les grandes surfaces.</div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check-circle"></i> Remise jusqu'à 30%</li>
+          <li><i class="fas fa-check-circle"></i> Livraison express prioritaire</li>
+          <li><i class="fas fa-check-circle"></i> Garantie 2 ans + SAV géré</li>
+          <li><i class="fas fa-check-circle"></i> Exclusivité régionale possible</li>
+          <li><i class="fas fa-check-circle"></i> Commercial + Account Manager</li>
+          <li><i class="fas fa-check-circle"></i> Crédit fournisseur 60 jours</li>
+        </ul>
+        <a href="https://wa.me/212674411990?text=Bonjour%20TECHVISION%2C%20je%20veux%20devenir%20distributeur%20régional%2020%2B%20unités" target="_blank" class="btn" style="width:100%;justify-content:center;background:linear-gradient(135deg,var(--gold),#E8BE5A);color:#fff;border:none;"><i class="fab fa-whatsapp"></i> Obtenir les prix</a>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;text-align:center;font-size:.85rem;color:var(--text-muted);">
+      <i class="fas fa-info-circle" style="color:var(--gold);"></i> Les remises s'appliquent sur l'ensemble du catalogue TECHVISION. Contactez-nous pour le tarif grossiste complet avec prix par référence.
+    </div>
+  </div>
+</section>
+
+<!-- CATALOGUE -->
+<section class="catalogue-section">
+  <div class="container">
+    <div class="section-header" data-reveal="up">
+      <div class="section-eyebrow">CATALOGUE GROSSISTE</div>
+      <h2 class="section-title">Toute la Gamme <span class="text-accent">TECHVISION</span></h2>
+      <p class="section-subtitle">4 catégories, 18 références. Produits disponibles en stock permanent.</p>
+    </div>
+    <div class="catalogue-grid">
+      <a href="tv.html" class="cat-card" data-reveal="up" data-delay="0">
+        <div class="cat-card-img" style="background:linear-gradient(135deg,#0D1F4A,#1A3A8A);">
+          <span style="font-size:2.4rem;">📺</span>
+        </div>
+        <div class="cat-card-body">
+          <div class="cat-card-name">Téléviseurs Vision Series</div>
+          <div class="cat-card-models">6 modèles Frameless · 3 Double Glass</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+            <span class="cat-card-badge">QLED 4K</span>
+            <span class="cat-card-badge">Android 15</span>
+            <span class="cat-card-badge">60Hz</span>
+          </div>
+          <div style="margin-top:14px;font-size:.82rem;color:var(--accent);font-weight:600;">32" · 43" · 50" · 55" · 65" · 75" <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></div>
+        </div>
+      </a>
+
+      <a href="four.html" class="cat-card" data-reveal="up" data-delay="80">
+        <div class="cat-card-img" style="background:linear-gradient(135deg,#3B0A00,#8B2200);">
+          <span style="font-size:2.4rem;">🔥</span>
+        </div>
+        <div class="cat-card-body">
+          <div class="cat-card-name">Fours HeatPro Series</div>
+          <div class="cat-card-models">6 modèles : 45L à 75L, 3 finitions</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+            <span class="cat-card-badge">300°C</span>
+            <span class="cat-card-badge">Turbo Fan</span>
+            <span class="cat-card-badge">Inox</span>
+          </div>
+          <div style="margin-top:14px;font-size:.82rem;color:var(--cta);font-weight:600;">45L · 55L · 65L · 75L <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></div>
+        </div>
+      </a>
+
+      <a href="clim.html" class="cat-card" data-reveal="up" data-delay="160">
+        <div class="cat-card-img" style="background:linear-gradient(135deg,#001828,#003A6B);">
+          <span style="font-size:2.4rem;">❄️</span>
+        </div>
+        <div class="cat-card-body">
+          <div class="cat-card-name">Climatiseurs AirSmart</div>
+          <div class="cat-card-models">3 puissances · Inverter A++</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+            <span class="cat-card-badge">Inverter</span>
+            <span class="cat-card-badge">A++</span>
+            <span class="cat-card-badge">Ultra Silent</span>
+          </div>
+          <div style="margin-top:14px;font-size:.82rem;color:var(--accent);font-weight:600;">9000 · 12000 · 18000 BTU <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></div>
+        </div>
+      </a>
+
+      <a href="refrigerateur.html" class="cat-card" data-reveal="up" data-delay="240">
+        <div class="cat-card-img" style="background:linear-gradient(135deg,#0A1A0A,#1A3A2A);">
+          <span style="font-size:2.4rem;">🧊</span>
+        </div>
+        <div class="cat-card-body">
+          <div class="cat-card-name">Réfrigérateurs FreshTech</div>
+          <div class="cat-card-models">3 capacités · No Frost · A++</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+            <span class="cat-card-badge">No Frost</span>
+            <span class="cat-card-badge">A++</span>
+            <span class="cat-card-badge">Smart iTech</span>
+          </div>
+          <div style="margin-top:14px;font-size:.82rem;color:#1AA050;font-weight:600;">108L · 120L · 138L <i class="fas fa-arrow-right" style="font-size:.7rem;"></i></div>
+        </div>
+      </a>
+    </div>
+
+    <div style="margin-top:40px;text-align:center;" data-reveal="up">
+      <a href="https://wa.me/212674411990?text=Bonjour%20TECHVISION%2C%20je%20veux%20recevoir%20le%20catalogue%20grossiste%20complet%20avec%20les%20prix" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Recevoir le catalogue complet par WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENT DEVENIR REVENDEUR -->
+<section class="steps-section" id="devenir-revendeur">
+  <div class="container">
+    <div class="section-header" style="text-align:center;color:#fff;" data-reveal="up">
+      <div class="section-eyebrow" style="color:var(--gold);background:rgba(201,168,76,.15);display:inline-block;padding:4px 16px;border-radius:50px;border:1px solid rgba(201,168,76,.3);">PROCESSUS D'INSCRIPTION</div>
+      <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;margin-top:12px;">Devenir Revendeur en <span style="color:var(--gold);">4 Étapes Simples</span></h2>
+      <p style="opacity:.75;max-width:560px;margin:12px auto 0;font-size:.95rem;">Rejoindre le réseau TECHVISION ne prend que 24h. Aucune paperasse complexe.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item" data-reveal="up" data-delay="0">
+        <div class="step-num">1</div>
+        <h3>Contactez-nous</h3>
+        <p>Envoyez-nous un message WhatsApp en indiquant votre localisation, votre type de commerce et les produits qui vous intéressent.</p>
+      </div>
+      <div class="step-item" data-reveal="up" data-delay="100">
+        <div class="step-num">2</div>
+        <h3>Recevez le Catalogue</h3>
+        <p>Nous vous envoyons sous 24h le catalogue tarifaire grossiste complet avec les prix par référence et les paliers de remise.</p>
+      </div>
+      <div class="step-item" data-reveal="up" data-delay="200">
+        <div class="step-num">3</div>
+        <h3>Passez Votre Commande</h3>
+        <p>Choisissez vos produits, confirmez les quantités et versez l'acompte. Nous préparons votre commande immédiatement.</p>
+      </div>
+      <div class="step-item" data-reveal="up" data-delay="300">
+        <div class="step-num">4</div>
+        <h3>Livraison & Vente</h3>
+        <p>Réception prioritaire de votre commande. Vous vendez avec nos supports marketing. Nous gérons le SAV de vos clients.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;" data-reveal="up">
+      <a href="https://wa.me/212674411990?text=Bonjour%20TECHVISION%2C%20je%20veux%20devenir%20revendeur%20officiel" target="_blank" class="btn" style="background:linear-gradient(135deg,var(--gold),#E8BE5A);color:#fff;border:none;padding:16px 40px;font-size:1rem;font-weight:700;border-radius:12px;">
+        <i class="fas fa-handshake"></i> Commencer maintenant — c'est gratuit
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FORM REVENDEUR -->
+<section class="form-section" id="formulaire">
+  <div class="container">
+    <div class="gros-form-grid">
+      <div class="gros-form-card" data-reveal="left">
+        <h2 data-fr="Demande d'information Grossiste" data-ar="طلب معلومات الجملة">Demande d'information Grossiste</h2>
+        <p data-fr="Remplissez ce formulaire et un commercial TECHVISION vous contactera dans les 2 heures." data-ar="املأ هذا النموذج وسيتصل بك مندوب تيكفيجن خلال ساعتين.">Remplissez ce formulaire et un commercial TECHVISION vous contactera dans les 2 heures.</p>
+        <form onsubmit="handleGrosSubmit(event)">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Nom & Prénom</label>
+              <input type="text" name="name" placeholder="Mohammed Rachid" required />
+            </div>
+            <div class="form-group">
+              <label>Téléphone</label>
+              <input type="tel" name="phone" placeholder="06XX XX XX XX" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Nom du Commerce / Entreprise</label>
+            <input type="text" name="business" placeholder="Électro Rachid - Casablanca" />
+          </div>
+          <div class="form-group">
+            <label>Ville</label>
+            <input type="text" name="city" placeholder="Casablanca, Rabat, Marrakech..." required />
+          </div>
+          <div class="form-group">
+            <label>Produits qui vous intéressent</label>
+            <select name="products">
+              <option value="">-- Sélectionnez --</option>
+              <option value="TV">Téléviseurs QLED (Vision Series)</option>
+              <option value="Four">Fours (HeatPro Series)</option>
+              <option value="Clim">Climatiseurs (AirSmart Series)</option>
+              <option value="Frigo">Réfrigérateurs (FreshTech Series)</option>
+              <option value="Tout">Toute la gamme TECHVISION</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Volume mensuel estimé</label>
+            <select name="volume">
+              <option value="">-- Volume estimé --</option>
+              <option value="5-9">5 à 9 unités/mois</option>
+              <option value="10-19">10 à 19 unités/mois</option>
+              <option value="20-49">20 à 49 unités/mois</option>
+              <option value="50+">50+ unités/mois (Distributeur)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message (optionnel)</label>
+            <textarea name="message" placeholder="Décrivez votre activité actuelle ou posez vos questions..."></textarea>
+          </div>
+          <button type="submit" class="gros-submit">
+            <i class="fab fa-whatsapp" style="font-size:1.2rem;"></i>
+            Envoyer ma demande par WhatsApp
+          </button>
+        </form>
+      </div>
+
+      <div data-reveal="right">
+        <div style="background:linear-gradient(135deg,var(--primary),#1A45A8);border-radius:20px;padding:36px;color:#fff;margin-bottom:24px;">
+          <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:16px;"><i class="fas fa-phone-alt" style="color:var(--gold);margin-right:8px;"></i> Contact Direct Grossiste</h3>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <a href="https://wa.me/212674411990?text=Bonjour%2C%20je%20suis%20intéressé%20par%20la%20revente%20TECHVISION" target="_blank" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.08);border-radius:12px;padding:16px;text-decoration:none;">
+              <div style="width:44px;height:44px;background:#25D366;border-radius:12px;display:flex;align-items:center;justify-content:center;"><i class="fab fa-whatsapp" style="color:#fff;font-size:1.2rem;"></i></div>
+              <div><div style="font-size:.75rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.05em;">WhatsApp</div><div style="font-size:1.05rem;font-weight:700;color:#fff;">0663 603 675</div></div>
+            </a>
+            <a href="tel:+212674411990" style="display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.08);border-radius:12px;padding:16px;text-decoration:none;">
+              <div style="width:44px;height:44px;background:var(--gold);border-radius:12px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-phone" style="color:#fff;font-size:1rem;"></i></div>
+              <div><div style="font-size:.75rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.05em;">Appel Direct</div><div style="font-size:1.05rem;font-weight:700;color:#fff;">+212 674 411 990</div></div>
+            </a>
+          </div>
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:.82rem;opacity:.7;">
+            <i class="fas fa-clock" style="margin-right:6px;color:var(--gold);"></i> Disponible Lun–Sam 9h–20h · Réponse WhatsApp 24/7
+          </div>
+        </div>
+
+        <div style="background:#fff;border-radius:20px;padding:28px;box-shadow:0 4px 20px rgba(13,43,107,.07);">
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:16px;color:var(--text);">Ce que vous recevrez après inscription :</h3>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;">
+            <li style="display:flex;align-items:start;gap:12px;font-size:.87rem;color:var(--text-muted);">
+              <div style="width:28px;height:28px;background:linear-gradient(135deg,var(--gold),#E8BE5A);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-file-pdf" style="color:#fff;font-size:.7rem;"></i></div>
+              <span>Catalogue tarifaire complet PDF (mis à jour mensuel)</span>
+            </li>
+            <li style="display:flex;align-items:start;gap:12px;font-size:.87rem;color:var(--text-muted);">
+              <div style="width:28px;height:28px;background:linear-gradient(135deg,#25D366,#128C7E);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fab fa-whatsapp" style="color:#fff;font-size:.7rem;"></i></div>
+              <span>Groupe WhatsApp revendeurs pour les promotions flash</span>
+            </li>
+            <li style="display:flex;align-items:start;gap:12px;font-size:.87rem;color:var(--text-muted);">
+              <div style="width:28px;height:28px;background:linear-gradient(135deg,#E91E63,#F06292);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-image" style="color:#fff;font-size:.7rem;"></i></div>
+              <span>Pack photos HD + vidéos produits pour vos réseaux sociaux</span>
+            </li>
+            <li style="display:flex;align-items:start;gap:12px;font-size:.87rem;color:var(--text-muted);">
+              <div style="width:28px;height:28px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-user-tie" style="color:#fff;font-size:.7rem;"></i></div>
+              <span>Commercial dédié disponible 6j/7 pour vos commandes</span>
+            </li>
+            <li style="display:flex;align-items:start;gap:12px;font-size:.87rem;color:var(--text-muted);">
+              <div style="width:28px;height:28px;background:linear-gradient(135deg,#FF5A1F,#E83E00);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-shield-alt" style="color:#fff;font-size:.7rem;"></i></div>
+              <span>SAV géré intégralement par TECHVISION pour vos clients</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES REVENDEURS -->
+<section class="testimonials-gros">
+  <div class="container">
+    <div class="section-header" data-reveal="up">
+      <div class="section-eyebrow">ILS REVENDENT TECHVISION</div>
+      <h2 class="section-title">Ce que disent nos <span class="text-accent">Revendeurs</span></h2>
+    </div>
+    <div class="testi-gros-grid">
+      <div class="testi-gros-card" data-reveal="up" data-delay="0">
+        <div class="testi-gros-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-gros-text">"Depuis que j'ai intégré les téléviseurs TECHVISION dans mon magasin à Casablanca, les ventes ont décollé. Les clients adorent la qualité d'image QLED et le prix compétitif. Le SAV géré par TECHVISION m'enlève un grand poids."</p>
+        <div class="testi-gros-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,var(--primary),var(--accent));">A</div>
+          <div><div class="testi-name">Aziz B.</div><div class="testi-role">Magasin Électro, Casablanca</div></div>
+        </div>
+      </div>
+      <div class="testi-gros-card" data-reveal="up" data-delay="100">
+        <div class="testi-gros-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-gros-text">"Je revends les climatiseurs AirSmart depuis un an. La différence Inverter convainc facilement les clients sur la facture d'électricité. La marge est bonne et la livraison est toujours rapide. Je recommande à tous les installateurs."</p>
+        <div class="testi-gros-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#006994,#00B4FF);">H</div>
+          <div><div class="testi-name">Hassan M.</div><div class="testi-role">Installateur Clim, Marrakech</div></div>
+        </div>
+      </div>
+      <div class="testi-gros-card" data-reveal="up" data-delay="200">
+        <div class="testi-gros-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-gros-text">"J'ai commencé avec 5 fours, maintenant je commande 20 à 30 unités par mois. Le catalogue grossiste est clair, le commercial est réactif et les remises progressives motivent à augmenter les volumes. Un vrai partenaire commercial."</p>
+        <div class="testi-gros-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#c17d10,var(--gold));">F</div>
+          <div><div class="testi-name">Fatima O.</div><div class="testi-role">Commerce en ligne, Rabat</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section style="padding:80px 0;background:linear-gradient(135deg,#030B1F,#0D2B6B,#1A45A8);text-align:center;">
+  <div class="container">
+    <div data-reveal="up">
+      <div style="display:inline-block;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-size:.78rem;font-weight:700;padding:5px 18px;border-radius:50px;margin-bottom:20px;text-transform:uppercase;letter-spacing:.1em;">Rejoignez le réseau</div>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:#fff;margin-bottom:16px;">Prêt à vendre TECHVISION ?</h2>
+      <p style="color:rgba(255,255,255,.75);font-size:1rem;max-width:520px;margin:0 auto 36px;line-height:1.75;">Contactez-nous aujourd'hui. Votre catalogue grossiste arrive dans les 2 heures. Les premières commandes sont disponibles dès demain.</p>
+      <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+        <a href="https://wa.me/212674411990?text=Bonjour%20TECHVISION%2C%20je%20veux%20devenir%20revendeur%20officiel%20et%20recevoir%20le%20catalogue%20grossiste" target="_blank" class="btn btn-whatsapp btn-lg">
+          <i class="fab fa-whatsapp"></i> Devenir revendeur — WhatsApp
+        </a>
+        <a href="tel:+212674411990" class="btn btn-outline-light btn-lg">
+          <i class="fas fa-phone"></i> Appeler directement
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="../index.html" class="footer-logo-link">
+          <img src="../image/logo/logo.webp" alt="TECHVISION Logo" class="footer-logo-img" />
+        </a></span><p class="footer-desc">L'électroménager premium au meilleur prix au Maroc.</p><div class="footer-contacts"><div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/212674411990">+212 674 411 990</a></div><div class="footer-contact-item"><i class="fas fa-headset"></i><a href="tel:+212660240276">SAV: +212 660 240 276</a></div></div><div class="footer-socials"><a href="https://www.instagram.com/tech_vision.ma/" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a><a href="https://wa.me/212674411990" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a></div></div><div><div class="footer-heading">NOS PRODUITS</div><ul class="footer-links"><li><a href="tv.html">Téléviseurs QLED 4K</a></li><li><a href="four.html">Fours HeatPro</a></li><li><a href="clim.html">Climatiseurs AirSmart</a></li><li><a href="refrigerateur.html">Réfrigérateurs FreshTech</a></li></ul></div><div><div class="footer-heading">BLOG</div><ul class="footer-links"><li><a href="blog-tv.html">Guide TV 4K</a></li><li><a href="blog-four.html">Choisir son four</a></li><li><a href="blog-clim.html">Guide climatiseur</a></li><li><a href="blog-refrigerateur.html">Guide réfrigérateur</a></li></ul></div><div><div class="footer-heading">CONTACT</div><ul class="footer-links"><li><a href="contact.html">Nous Contacter</a></li><li><a href="grossiste.html">Vente en Gros</a></li><li><a href="contact.html#sav">SAV & Garantie</a></li><li><a href="contact.html#taksit">Paiement Taksit</a></li></ul></div></div></div><div class="footer-bottom"><div class="container">© 2024 TECHVISION Maroc. Tous droits réservés.</div></div></footer>
+
+<div class="whatsapp-float" id="waFloat">
+  <div class="wa-chat-panel" id="waChatPanel" aria-hidden="true">
+    <div class="wa-chat-header">
+      <div class="wa-chat-avatar"><i class="fab fa-whatsapp"></i></div>
+      <div class="wa-chat-info">
+        <strong>TECHVISION Maroc</strong>
+        <span><span class="wa-online-dot"></span> En ligne</span>
+      </div>
+      <button class="wa-chat-close" id="waClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wa-chat-body">
+      <div class="wa-chat-bubble">
+        <p>👋 Je souhaite avoir plus d'informations</p>
+        <time>Maintenant</time>
+      </div>
+    </div>
+    <a href="https://wa.me/212674411990?text=%F0%9F%91%8B%20Je%20souhaite%20avoir%20plus%20d%27informations" target="_blank" class="wa-chat-send">
+      <i class="fab fa-whatsapp"></i>
+      <span>Envoyer ce message</span>
+    </a>
+  </div>
+  <button class="wa-main-btn" id="waMainBtn" aria-label="WhatsApp TECHVISION">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-notification">1</span>
+  </button>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+function handleGrosSubmit(e) {
+  e.preventDefault();
+  const f = e.target;
+  const name = f.name.value;
+  const phone = f.phone.value;
+  const business = f.business.value;
+  const city = f.city.value;
+  const products = f.products.value;
+  const volume = f.volume.value;
+  const message = f.message.value;
+  const text = `Bonjour TECHVISION !\n\n📋 *Demande Revendeur/Grossiste*\n\nNom: ${name}\nTéléphone: ${phone}\nCommerce: ${business||'—'}\nVille: ${city}\nProduits: ${products||'—'}\nVolume estimé: ${volume||'—'}\n\nMessage: ${message||'(aucun message)'}\n\nMerci !`;
+  window.open('https://wa.me/212674411990?text=' + encodeURIComponent(text), '_blank');
+}
+</script>
+<button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+<script>const _stb=document.getElementById('scrollTopBtn');window.addEventListener('scroll',()=>{_stb.classList.toggle('visible',window.scrollY>400)});</script>
+<script>
+  (function () {
+    var mainBtn = document.getElementById('waMainBtn');
+    var panel   = document.getElementById('waChatPanel');
+    var closeBtn = document.getElementById('waClose');
+    var float   = document.getElementById('waFloat');
+    if (!mainBtn || !panel) return;
+    mainBtn.addEventListener('click', function () {
+      var isOpen = panel.classList.toggle('open');
+      panel.setAttribute('aria-hidden', !isOpen);
+    });
+    if (closeBtn) closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      panel.classList.remove('open');
+      panel.setAttribute('aria-hidden', 'true');
+    });
+    document.addEventListener('click', function (e) {
+      if (float && !float.contains(e.target)) {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
