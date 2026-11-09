@@ -51,7 +51,7 @@ body {
 
 body[lang="ar"] {
   direction: rtl;
-  font-family: 'Noto Sans Arabic', 'Poppins', sans-serif;
+  font-family: 'Noto Kufi Arabic', 'Poppins', sans-serif;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -2833,7 +2833,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .product-sticky-sub { font-size: .75rem; color: var(--text-muted); }
 
 /* ---- Page fade-in ---- */
-body { animation: pageFadeIn .4s ease both; }
+/* page fade-in retiré (perf LCP) */
 @keyframes pageFadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 /* ---- Improved review cards ---- */
@@ -3589,17 +3589,17 @@ body { animation: pageFadeIn .4s ease both; }
 .hero-slide:nth-child(1) {
   background:
     linear-gradient(to right, rgba(5,14,43,.96) 0%, rgba(5,14,43,.84) 40%, rgba(5,14,43,.32) 68%, rgba(5,14,43,.04) 100%),
-    url('../HERO%20PRODUCT/hf_20260507_103830_7017dd9f-f183-4dab-b160-c564b3c72858.png') center/cover no-repeat !important;
+    #050E2B !important;
 }
 .hero-slide:nth-child(2) {
   background:
     linear-gradient(to right, rgba(26,10,0,.96) 0%, rgba(74,24,0,.84) 40%, rgba(74,24,0,.32) 68%, rgba(26,10,0,.04) 100%),
-    url('../HERO%20PRODUCT/hf_20260507_104052_6f783e2e-ee63-472a-99ff-1f2d41fdb48c.png') center/cover no-repeat !important;
+    #1A0A00 !important;
 }
 .hero-slide:nth-child(3) {
   background:
     linear-gradient(to right, rgba(0,26,46,.96) 0%, rgba(0,43,74,.84) 40%, rgba(0,43,74,.32) 68%, rgba(0,26,46,.04) 100%),
-    url('../HERO%20PRODUCT/hf_20260507_104751_15f0f108-fb57-459b-987a-cff5ec210edb.png') center/cover no-repeat !important;
+    #001A2E !important;
 }
 
 /* ===== PRODUCT PAGE HERO CAROUSEL ===== */
@@ -3845,25 +3845,25 @@ body { background: #fff; }
 .series-hero {
   background:
     linear-gradient(to right, rgba(5,14,43,.92) 0%, rgba(5,14,43,.68) 52%, rgba(5,14,43,.28) 100%),
-    url('../image/tv/lifestyle/hf_20260506_191020_917e0f0f-53f4-4fc5-9f88-ef750bce547c.png') center/cover no-repeat !important;
+    #050E2B !important;
   min-height: 560px !important;
 }
 .four-hero {
   background:
     linear-gradient(to right, rgba(26,10,0,.92) 0%, rgba(74,24,0,.68) 52%, rgba(74,24,0,.28) 100%),
-    url('../image/four/lifestyle/3.png') center/cover no-repeat !important;
+    #140800 !important;
   min-height: 560px !important;
 }
 .clim-hero {
   background:
     linear-gradient(to right, rgba(0,26,46,.92) 0%, rgba(0,43,74,.68) 52%, rgba(0,43,74,.28) 100%),
-    url('../image/clim/lifestyle/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.png') center/cover no-repeat !important;
+    #001828 !important;
   min-height: 560px !important;
 }
 .frigo-hero {
   background:
     linear-gradient(to right, rgba(10,26,10,.92) 0%, rgba(26,58,42,.68) 52%, rgba(13,43,26,.28) 100%),
-    url('../image/refrigerateur/lifestyle/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.png') center/cover no-repeat !important;
+    #06180F !important;
   min-height: 560px !important;
 }
 
@@ -4183,10 +4183,6 @@ div[style*="background:var(--light)"] {
 }
 
 /* Per-page hero backgrounds (from pages/*.html — prefix: ../) */
-.hero-tv    { background-image: url('../16_9%20ratio/tv%2016_9/hf_20260506_191020_917e0f0f-53f4-4fc5-9f88-ef750bce547c.png'); }
-.hero-four  { background-image: url('../16_9%20ratio/four%2016_9/hf_20260506_193454_f7a8241f-197c-4878-b5b6-65b79170ad16.png'); }
-.hero-clim  { background-image: url('../16_9%20ratio/clim%2016_9/hf_20260507_084852_9c648fb2-ebcc-4b32-967c-7efb49dc8d49.png'); }
-.hero-frigo { background-image: url('../16_9%20ratio/refrig%2016_9/hf_20260507_100351_89ea745f-3cca-46ce-82d5-7d27d173370a.png'); }
 
 /* Benefits strip */
 .benefits-strip { color: #fff; }
@@ -5391,19 +5387,7 @@ img {
   }
 }
 
-/* ---- HERO BANNER MODE: remove 100vh min-height black gap on mobile ---- */
-@media (max-width: 768px) {
-  .hero.hero-banner-mode {
-    min-height: 0 !important;
-  }
-  .hero-banner-wrap {
-    min-height: 62vh !important;
-  }
-  .hero-sizer {
-    min-height: 62vh !important;
-    object-fit: cover !important;
-  }
-}
+
 @media (max-width: 480px) {
   .hero-banner-wrap {
     min-height: 58vh !important;
@@ -5645,4 +5629,31 @@ img {
   .order-success { padding: 36px 20px; }
   .order-trust-strip { gap: 16px; }
   .order-trust-item { font-size: .72rem; }
+}
+
+/* ---- HERO BANNER MODE: remove 100vh min-height black gap on mobile ---- */
+@media (max-width: 768px) {
+  .hero.hero-banner-mode {
+    min-height: 0 !important;
+  }
+  .hero-banner-wrap {
+    min-height: 62vh !important;
+  }
+  .hero-sizer {
+    min-height: 62vh !important;
+    object-fit: cover !important;
+  }
+}
+@media (max-width: 480px) {
+  .hero-banner-wrap {
+    min-height: 58vh !important;
+  }
+  .hero-sizer {
+    min-height: 58vh !important;
+  }
+}
+
+/* ── Hide hero CTA buttons on mobile only ── */
+@media (max-width: 768px) {
+  .hero-banner-btns { display: none !important; }
 }

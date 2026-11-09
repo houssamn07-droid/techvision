@@ -95,14 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const animateCounter = (el) => {
     const target = parseInt(el.dataset.count, 10);
     const suffix = el.dataset.suffix || '';
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-    const timer = setInterval(() => {
-      current = Math.min(current + step, target);
-      el.textContent = Math.floor(current).toLocaleString('fr-FR') + suffix;
-      if (current >= target) clearInterval(timer);
-    }, 16);
+    const duration = 1800;
+    const t0 = performance.now();
+    const ease = p => 1 - Math.pow(1 - p, 4);
+    const tick = (now) => {
+      const p = Math.min((now - t0) / duration, 1);
+      el.textContent = Math.round(target * ease(p)).toLocaleString('fr-FR') + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    setTimeout(() => { el.textContent = target.toLocaleString('fr-FR') + suffix; }, duration + 300);
   };
 
   const counterObserver = new IntersectionObserver((entries) => {
@@ -112,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animateCounter(entry.target);
       }
     });
-  }, { threshold: .5 });
+  }, { threshold: .2 });
 
   counters.forEach(c => counterObserver.observe(c));
 
@@ -144,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const applyLang = (lang) => {
     document.body.lang = lang;
+    document.documentElement.lang = lang;
     langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
     document.querySelectorAll('[data-fr]').forEach(el => {
       const content = lang === 'ar' ? (el.dataset.ar || el.dataset.fr) : el.dataset.fr;

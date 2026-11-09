@@ -3,3 +3,12 @@
 node_modules/
 .env
 Thumbs.db
+
+# Dossiers de travail (ne pas mettre en ligne)
+all-product-16-9/
+hero-bannier/
+video-demonstrative/
+_backup_2026-11-03/
+GOOGLE_APPS_SCRIPT.js
+_site.tgz
+_opt_*.tgz

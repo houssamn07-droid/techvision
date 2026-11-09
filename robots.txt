@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /_backup_2026-11-03/
+Disallow: /all-product-16-9/
+Disallow: /hero-bannier/
+Disallow: /video-demonstrative/
+
+Sitemap: https://www.techvisiion.com/sitemap.xml
